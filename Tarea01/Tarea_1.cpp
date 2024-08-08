@@ -1,3 +1,5 @@
+// ACTIVIDAD N°3: DESARROLLO DE UN VIDEOJUEGO
+// IDEA DE JUEGO: BATALLA POKEMON
 #include <iostream>
 #include <string>
 #include <vector>
