@@ -23,13 +23,14 @@ protected:
     string nombre;
     string tipo;
     int nivel;
+    int saludMaxima;
     int salud;
     int ataque;
     int defensa;
     vector<Movimiento> movimientos;
 
 public:
-    Pokemon(string nombre) : nombre(nombre), tipo("Normal"), nivel(1), salud(20), ataque(5), defensa(5) {
+    Pokemon(string nombre) : nombre(nombre), tipo("Normal"), nivel(1), saludMaxima(20), salud(20), ataque(5), defensa(5) {
         cout << nombre << " ha entrado al combate" << endl;
     }
 
@@ -38,14 +39,15 @@ public:
     string getNombre() const { return nombre; }
     string getTipo() const { return tipo; }
     int getSalud() const { return salud; }
+    int getSaludMaxima() const { return saludMaxima; }
 
     void recibirDanio(int danio) {
         salud = max(0, salud - danio);
-        cout << nombre << " ha recibido " << danio << " puntos de danio" << endl;
+        cout << nombre << " ha recibido " << danio << " puntos de daño" << endl;
         if (salud == 0) {
             cout << nombre << " se ha debilitado... Fuera de combate" << endl;
         } else {
-            cout << nombre << " tiene " << salud << " puntos de vida restantes" << endl << endl;
+            cout << nombre << " tiene " << salud << "/" << saludMaxima << " puntos de vida restantes" << endl << endl;
         }
     }
 
@@ -85,6 +87,7 @@ private:
                (tipoAtaque == "Planta" && tipoDefensa == "Agua");
     }
 };
+
 
 class PokemonAgua : public Pokemon {
 public:
@@ -209,7 +212,23 @@ void IniciarCombate() {
     delete oponente;
 }
 
+void mostrarArteASCII() {
+    cout << R"(                                  ,'\
+    _.----.        ____         ,'  _\   ___    ___     ____
+_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.
+\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |
+ \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |
+   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |
+    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |
+     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |
+      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |
+       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |
+        \_.-'       |__|    `-._ |              '-.|     '-.| |   |
+                                `'                            '-._|)" << endl;
+}
+
 int main() {
+    mostrarArteASCII();
     IniciarCombate();
     return 0;
 }
