@@ -57,7 +57,7 @@ public:
         : persona(p), departamento(dep), horasTrabajadas(horas) {}
 
     double calcularSalario() const {
-        double tarifaPorHora = 10.0; // Tarifa base por hora
+        double tarifaPorHora = 10.0;
         if (departamento == "IT") tarifaPorHora *= 1.5;
         else if (departamento == "Gerencia") tarifaPorHora *= 2.0;
         return tarifaPorHora * horasTrabajadas;
@@ -107,13 +107,13 @@ int main() {
     int opcion;
 
     do {
-        cout << "\nMenú de opciones:\n";
-        cout << "1. Agregar Empleado\n";
-        cout << "2. Agregar Estudiante\n";
-        cout << "3. Agregar Trabajador\n";
-        cout << "4. Mostrar Todo el Personal\n";
-        cout << "5. Salir\n";
-        cout << "Selecciona una opción: ";
+        cout << "\n----->Menú de opciones<-----\n";
+        cout << "[1]. Agregar Empleado\n";
+        cout << "[2]. Agregar Estudiante\n";
+        cout << "[3]. Agregar Trabajador\n";
+        cout << "[4]. Mostrar Todo el Personal\n";
+        cout << "[5]. Salir\n";
+        cout << "--->Selecciona una opción: ";
         cin >> opcion;
 
         switch (opcion) {
@@ -137,6 +137,8 @@ int main() {
                 
                 Empleado emp(nombre, edad, genero, salario, cargo);
                 sistema.agregarEmpleado(emp);
+                cout << "Se ha agregado un nuevo empleado...\n";
+                cin.ignore();
                 break;
             }
             case 2: {
@@ -156,6 +158,8 @@ int main() {
                 
                 Estudiante est(nombre, edad, genero, nota);
                 sistema.agregarEstudiante(est);
+                cout << "Se ha agregado un nuevo estudiante...\n";
+                cin.ignore();
                 break;
             }
             case 3: {
@@ -178,10 +182,13 @@ int main() {
                 Persona p(nombre, edad, genero);
                 Trabajador trab(p, departamento, horasTrabajadas);
                 sistema.agregarTrabajador(trab);
+                cout << "Se ha agregado un nuevo trabajador...\n";
+                cin.ignore();
                 break;
             }
             case 4:
                 sistema.mostrarTodoElPersonal();
+                cin.ignore();
                 break;
             case 5:
                 cout << "Saliendo del sistema de gestión de personal...\n";
