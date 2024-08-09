@@ -104,17 +104,93 @@ public:
 
 int main() {
     SistemaGestionPersonal sistema;
+    int opcion;
 
-    Empleado emp1("Juan Pérez", 30, "Masculino", 50000, "Gerente");
-    Estudiante est1("María García", 20, "Femenino", 9.5);
-    Persona p1("Carlos López", 25, "Masculino");
-    Trabajador trab1(p1, "IT", 160);
+    do {
+        cout << "\nMenú de opciones:\n";
+        cout << "1. Agregar Empleado\n";
+        cout << "2. Agregar Estudiante\n";
+        cout << "3. Agregar Trabajador\n";
+        cout << "4. Mostrar Todo el Personal\n";
+        cout << "5. Salir\n";
+        cout << "Selecciona una opción: ";
+        cin >> opcion;
 
-    sistema.agregarEmpleado(emp1);
-    sistema.agregarEstudiante(est1);
-    sistema.agregarTrabajador(trab1);
-
-    sistema.mostrarTodoElPersonal();
+        switch (opcion) {
+            case 1: {
+                string nombre, genero, cargo;
+                int edad;
+                double salario;
+                
+                cout << "Introduce el nombre del empleado: ";
+                cin.ignore();
+                getline(cin, nombre);
+                cout << "Introduce la edad del empleado: ";
+                cin >> edad;
+                cout << "Introduce el género del empleado: ";
+                cin >> genero;
+                cout << "Introduce el salario del empleado: ";
+                cin >> salario;
+                cout << "Introduce el cargo del empleado: ";
+                cin.ignore();
+                getline(cin, cargo);
+                
+                Empleado emp(nombre, edad, genero, salario, cargo);
+                sistema.agregarEmpleado(emp);
+                break;
+            }
+            case 2: {
+                string nombre, genero;
+                int edad;
+                double nota;
+                
+                cout << "Introduce el nombre del estudiante: ";
+                cin.ignore();
+                getline(cin, nombre);
+                cout << "Introduce la edad del estudiante: ";
+                cin >> edad;
+                cout << "Introduce el género del estudiante: ";
+                cin >> genero;
+                cout << "Introduce la nota del estudiante: ";
+                cin >> nota;
+                
+                Estudiante est(nombre, edad, genero, nota);
+                sistema.agregarEstudiante(est);
+                break;
+            }
+            case 3: {
+                string nombre, genero, departamento;
+                int edad, horasTrabajadas;
+                
+                cout << "Introduce el nombre del trabajador: ";
+                cin.ignore();
+                getline(cin, nombre);
+                cout << "Introduce la edad del trabajador: ";
+                cin >> edad;
+                cout << "Introduce el género del trabajador: ";
+                cin >> genero;
+                cout << "Introduce el departamento del trabajador: ";
+                cin.ignore();
+                getline(cin, departamento);
+                cout << "Introduce las horas trabajadas: ";
+                cin >> horasTrabajadas;
+                
+                Persona p(nombre, edad, genero);
+                Trabajador trab(p, departamento, horasTrabajadas);
+                sistema.agregarTrabajador(trab);
+                break;
+            }
+            case 4:
+                sistema.mostrarTodoElPersonal();
+                break;
+            case 5:
+                cout << "Saliendo del sistema de gestión de personal...\n";
+                break;
+            default:
+                cout << "Opción no válida. Intenta de nuevo.\n";
+                break;
+        }
+    } while (opcion != 5);
 
     return 0;
 }
