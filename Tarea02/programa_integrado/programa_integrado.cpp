@@ -91,13 +91,13 @@ public:
     }
 
     void mostrarTodoElPersonal() const {
-        cout << "Empleados:" << endl;
+        cout << "\nEmpleados:";
         for (const auto& emp : empleados) emp.mostrarInfo();
 
-        cout << "\nEstudiantes:" << endl;
+        cout << "\nEstudiantes:";
         for (const auto& est : estudiantes) est.mostrarInfo();
 
-        cout << "\nTrabajadores:" << endl;
+        cout << "\nTrabajadores:";
         for (const auto& trab : trabajadores) trab.mostrarInfo();
     }
 };
