@@ -108,12 +108,12 @@ int main() {
 
     do {
         cout << "\n----->Menú de opciones<-----\n";
-        cout << "[1]. Agregar Empleado\n";
-        cout << "[2]. Agregar Estudiante\n";
-        cout << "[3]. Agregar Trabajador\n";
-        cout << "[4]. Mostrar Todo el Personal\n";
-        cout << "[5]. Salir\n";
-        cout << "--->Selecciona una opción: ";
+        cout << "\n[1]. Agregar Empleado";
+        cout << "\n[2]. Agregar Estudiante";
+        cout << "\n[3]. Agregar Trabajador";
+        cout << "\n[4]. Mostrar Todo el Personal";
+        cout << "\n[5]. Salir";
+        cout << "\n--->Selecciona una opción: [ ]\b\b";
         cin >> opcion;
 
         switch (opcion) {
@@ -122,22 +122,22 @@ int main() {
                 int edad;
                 double salario;
                 
-                cout << "Introduce el nombre del empleado: ";
+                cout << "\nIntroduce el nombre del empleado: ";
                 cin.ignore();
                 getline(cin, nombre);
-                cout << "Introduce la edad del empleado: ";
+                cout << "\nIntroduce la edad del empleado: ";
                 cin >> edad;
-                cout << "Introduce el género del empleado: ";
+                cout << "\nIntroduce el género del empleado: ";
                 cin >> genero;
-                cout << "Introduce el salario del empleado: ";
+                cout << "\nIntroduce el salario del empleado: ";
                 cin >> salario;
-                cout << "Introduce el cargo del empleado: ";
+                cout << "\nIntroduce el cargo del empleado: ";
                 cin.ignore();
                 getline(cin, cargo);
                 
                 Empleado emp(nombre, edad, genero, salario, cargo);
                 sistema.agregarEmpleado(emp);
-                cout << "Se ha agregado un nuevo empleado...\n";
+                cout << "\nSe ha agregado un nuevo empleado...\n";
                 cin.ignore();
                 break;
             }
@@ -146,19 +146,19 @@ int main() {
                 int edad;
                 double nota;
                 
-                cout << "Introduce el nombre del estudiante: ";
+                cout << "\nIntroduce el nombre del estudiante: ";
                 cin.ignore();
                 getline(cin, nombre);
-                cout << "Introduce la edad del estudiante: ";
+                cout << "\nIntroduce la edad del estudiante: ";
                 cin >> edad;
-                cout << "Introduce el género del estudiante: ";
+                cout << "\nIntroduce el género del estudiante: ";
                 cin >> genero;
-                cout << "Introduce la nota del estudiante: ";
+                cout << "\nIntroduce la nota del estudiante: ";
                 cin >> nota;
                 
                 Estudiante est(nombre, edad, genero, nota);
                 sistema.agregarEstudiante(est);
-                cout << "Se ha agregado un nuevo estudiante...\n";
+                cout << "\nSe ha agregado un nuevo estudiante...\n";
                 cin.ignore();
                 break;
             }
@@ -166,23 +166,23 @@ int main() {
                 string nombre, genero, departamento;
                 int edad, horasTrabajadas;
                 
-                cout << "Introduce el nombre del trabajador: ";
+                cout << "\nIntroduce el nombre del trabajador: ";
                 cin.ignore();
                 getline(cin, nombre);
-                cout << "Introduce la edad del trabajador: ";
+                cout << "\nIntroduce la edad del trabajador: ";
                 cin >> edad;
-                cout << "Introduce el género del trabajador: ";
+                cout << "\nIntroduce el género del trabajador: ";
                 cin >> genero;
-                cout << "Introduce el departamento del trabajador: ";
+                cout << "\nIntroduce el departamento del trabajador: ";
                 cin.ignore();
                 getline(cin, departamento);
-                cout << "Introduce las horas trabajadas: ";
+                cout << "\nIntroduce las horas trabajadas: ";
                 cin >> horasTrabajadas;
                 
                 Persona p(nombre, edad, genero);
                 Trabajador trab(p, departamento, horasTrabajadas);
                 sistema.agregarTrabajador(trab);
-                cout << "Se ha agregado un nuevo trabajador...\n";
+                cout << "\nSe ha agregado un nuevo trabajador...\n";
                 cin.ignore();
                 break;
             }
@@ -191,10 +191,11 @@ int main() {
                 cin.ignore();
                 break;
             case 5:
-                cout << "Saliendo del sistema de gestión de personal...\n";
+                cout << "\nSaliendo del sistema de gestión de personal...\n";
+                cin.ignore();
                 break;
             default:
-                cout << "Opción no válida. Intenta de nuevo.\n";
+                cout << "\nOpción no válida. Intenta de nuevo.\n";
                 break;
         }
     } while (opcion != 5);
