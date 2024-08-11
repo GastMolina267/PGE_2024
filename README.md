@@ -46,7 +46,7 @@ Para compilar y ejecutar los ejemplos de este repositorio, necesitas tener insta
 
 1. **Clona el Repositorio**:
     ```sh
-    git clone https://github.com/tu-usuario/programacion-generica-y-eventos.git
+    git clone https://github.com/GastMolina267/programacion-generica-y-eventos.git
     ```
 
 2. **Compila y Ejecuta los Ejemplos**:

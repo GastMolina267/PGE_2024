@@ -64,7 +64,7 @@ Este repositorio contiene una serie de ejercicios diseñados para fortalecer tu 
 
 1. **Clona el Repositorio:** 
    ```bash
-   git clone https://github.com/TuUsuario/TuRepositorio.git
+   git clone https://github.com/GastMolina267/TuRepositorio.git
 
 2. **Navega a la Carpeta del Ejercicio:**
     Cada ejercicio tiene su propia carpeta en el repositorio. Navega a la carpeta correspondiente.
