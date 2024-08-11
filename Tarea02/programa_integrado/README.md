@@ -38,14 +38,14 @@
     El programa ofrece un menú interactivo que permite al usuario agregar empleados, estudiantes y trabajadores, y visualizar la información completa del personal registrado.
 
 ## 🎯 **Objetivos del Proyecto**
-    Comprender y Aplicar POO: Profundizar en conceptos clave de la Programación Orientada a Objetos, integrando varias clases en un programa cohesivo.
-    Desarrollar Código Modular: Fomentar la creación de clases reutilizables y fácilmente extensibles mediante el uso de herencia y composición.
-    Simulación de Escenarios Reales: Aplicar el conocimiento de POO para modelar escenarios laborales y educativos en un entorno de programación.
+- **Comprender y Aplicar POO:** Profundizar en conceptos clave de la Programación Orientada a Objetos, integrando varias clases en un programa cohesivo.
+- **Desarrollar Código Modular:** Fomentar la creación de clases reutilizables y fácilmente extensibles mediante el uso de herencia y composición.
+- **Simulación de Escenarios Reales:** Aplicar el conocimiento de POO para modelar escenarios laborales y educativos en un entorno de programación.
 
 ## 🌐 Recursos Adicionales
-    Documentación de C++: cppreference.com
-    Material de Clase: Revisa tus apuntes y ejemplos de clase para complementar el estudio.
-    Comunidad y Apoyo: Para cualquier duda, comunícate con el profesor o participa en las discusiones en el foro de la clase.
+- **Documentación de C++**: [cppreference.com](https://en.cppreference.com/w/)
+- **Material de Estudio**: Revisa los apuntes y ejemplos de clase para reforzar conceptos.
+- **Comunicación**: Si tienes dudas, no dudes en contactar al profesor o discutir en el foro de la clase.
 
 ## 🤝 Contribuciones
 Este proyecto es una parte fundamental del aprendizaje colaborativo, por lo que se anima a los estudiantes a compartir ideas y discutir diferentes enfoques en las sesiones grupales.
