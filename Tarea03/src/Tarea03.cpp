@@ -28,10 +28,11 @@ protected:
     int salud;
     int ataque;
     int defensa;
+    int combatesGanados;  // Nuevo atributo
     vector<Movimiento> movimientos;
 
 public:
-    Pokemon(string nombre) : nombre(nombre), tipo("Normal"), nivel(1), saludMaxima(20), salud(20), ataque(5), defensa(5) {
+    Pokemon(string nombre) : nombre(nombre), tipo("Normal"), nivel(1), saludMaxima(20), salud(20), ataque(5), defensa(5), combatesGanados(0) {
         cout << nombre << " ha entrado al combate" << endl;
     }
 
@@ -41,6 +42,7 @@ public:
     string getTipo() const { return tipo; }
     int getSalud() const { return salud; }
     int getSaludMaxima() const { return saludMaxima; }
+    int getNivel() const { return nivel; }  // Nuevo getter para nivel
 
     void recibirDanio(int danio) {
         salud = max(0, salud - danio);
@@ -81,11 +83,45 @@ public:
         return movimientos[dis(gen)];
     }
 
+        // Nuevo: Subir de nivel
+    void subirNivel() {
+        nivel++;
+        ataque += 2;   // Incremento de atributos al subir de nivel
+        defensa += 2;
+        saludMaxima += 10;
+        salud = saludMaxima;  // Curar al Pokémon completamente
+        cout << nombre << " ha subido al nivel " << nivel << " y se ha curado completamente!" << endl;
+        cout << "Salud: " << salud << "/" << saludMaxima << endl;
+    }
+
+    // Modificado: Subida progresiva de nivel
+    void ganarCombate() {
+        combatesGanados++;
+        if (experienciaSuficiente()) {
+            subirNivel();
+            combatesGanados = 0;  // Reiniciar el contador al subir de nivel
+        }
+    }
+
 private:
     bool esEfectivo(const string& tipoAtaque, const string& tipoDefensa) const {
         return (tipoAtaque == "Agua" && tipoDefensa == "Fuego") ||
                (tipoAtaque == "Fuego" && tipoDefensa == "Planta") ||
                (tipoAtaque == "Planta" && tipoDefensa == "Agua");
+    }
+
+    bool experienciaSuficiente() const {
+        return combatesGanados >= nivel;  // Progresión: 1 combate por nivel
+    }
+
+        void subirNivel() {
+        nivel++;
+        ataque += 2;
+        defensa += 2;
+        saludMaxima += 10;
+        salud = saludMaxima;
+        cout << nombre << " ha subido al nivel " << nivel << " y se ha curado completamente!" << endl;
+        cout << "Salud: " << salud << "/" << saludMaxima << endl;
     }
 };
 
@@ -129,9 +165,10 @@ public:
     string nombre;
     string descripcion;
     bool tieneCombate;
+    bool liderDerrotado;  // Nuevo atributo
 
     Ubicacion(string nombre, string descripcion, bool tieneCombate)
-        : nombre(nombre), descripcion(descripcion), tieneCombate(tieneCombate) {}
+        : nombre(nombre), descripcion(descripcion), tieneCombate(tieneCombate), liderDerrotado(false) {}
 };
 
 // Nuevo: Clase para representar el mapa del juego
@@ -229,17 +266,25 @@ Pokemon* seleccionarPokemonUsuario() {
     }
 }
 
-Pokemon* seleccionarPokemonAleatorio() {
+Pokemon* seleccionarPokemonAleatorio(int nivelJugador) {
     static random_device rd;
     static mt19937 gen(rd());
     uniform_int_distribution<> dis(1, 3);
 
+    Pokemon* enemigo;
     switch (dis(gen)) {
-        case 1: return new PokemonAgua("Squirtle");
-        case 2: return new PokemonFuego("Charmander");
-        case 3: return new PokemonPlanta("Bulbasaur");
-        default: return nullptr;
+        case 1: enemigo = new PokemonAgua("Squirtle"); break;
+        case 2: enemigo = new PokemonFuego("Charmander"); break;
+        case 3: enemigo = new PokemonPlanta("Bulbasaur"); break;
+        default: enemigo = new PokemonAgua("Squirtle"); break;
     }
+
+    // Ajustar nivel del enemigo al nivel del jugador
+    for (int i = 1; i < nivelJugador; i++) {
+        enemigo->ganarCombate();  // Subir el nivel del enemigo progresivamente
+    }
+
+    return enemigo;
 }
 
 void mostrarEstadoCombate(const Pokemon& jugador, const Pokemon& oponente) {
@@ -267,13 +312,15 @@ Movimiento seleccionarMovimientoUsuario(const Pokemon& pokemon) {
     return movimientos[opcion - 1];
 }
 
+// Modificación en la función de combate para subir de nivel al ganar
 void IniciarCombate(
     SeleccionPokemonCallback seleccionJugadorCallback,
     SeleccionPokemonCallback seleccionOponenteCallback,
     MovimientoCallback movimientoJugadorCallback,
     MovimientoCallback movimientoOponenteCallback,
     AtaqueCallback ataqueCallback,
-    MostrarEstadoCallback mostrarEstadoCallback
+    MostrarEstadoCallback mostrarEstadoCallback,
+    function<void()> onGanador  // Nuevo: Callback al ganar el combate
 ) {
     Pokemon* jugador = seleccionJugadorCallback();
     Pokemon* oponente = seleccionOponenteCallback();
@@ -294,10 +341,14 @@ void IniciarCombate(
     }
 
     mostrarEstadoCallback(*jugador, *oponente);
-    cout << (jugador->getSalud() > 0 ? jugador->getNombre() : oponente->getNombre()) << " ha ganado!" << endl;
+    if (jugador->getSalud() > 0) {
+        cout << jugador->getNombre() << " ha ganado!" << endl;
+        onGanador();  // Nuevo: Ejecutar la acción de ganar (como subir de nivel)
+    } else {
+        cout << oponente->getNombre() << " ha ganado!" << endl;
+    }
 
-    // No eliminamos `jugador` porque está gestionado por la clase `Jugador`
-    delete oponente;  // Solo eliminamos el oponente, ya que es dinámico y no está gestionado por otra clase.
+    delete oponente;
 }
 
 void mostrarArteASCII() {
@@ -330,7 +381,79 @@ Mapa inicializarMapa() {
     return mapa;
 }
 
-// Nuevo: Función principal del juego
+void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
+    bool jugando = true;
+
+    while (jugando) {
+        Ubicacion& ubicacionActual = mapa.getUbicacionActual();
+        cout << "\nEstás en: " << ubicacionActual.nombre << endl;
+        cout << ubicacionActual.descripcion << endl;
+
+        // Verificar si es un gimnasio con el líder derrotado
+        if (ubicacionActual.liderDerrotado) {
+            cout << "Ya has derrotado al líder de gimnasio aquí. No puedes entrar de nuevo." << endl;
+        } else if (ubicacionActual.tieneCombate && (rand() % 100 < 30)) {  // 30% de probabilidad de combate
+            cout << "¡Un Pokémon salvaje apareció!" << endl;
+
+            // Seleccionar Pokémon enemigo aleatorio, escalado al nivel del Pokémon del jugador
+            Pokemon* oponente = seleccionarPokemonAleatorio(jugador.equipo[0]->getNivel());
+
+            IniciarCombate(
+                [&jugador]() { return jugador.equipo[0]; },
+                [oponente]() { return oponente; },
+                seleccionarMovimientoUsuario,
+                [](const Pokemon& pokemon) { return pokemon.seleccionarMovimientoAleatorio(); },
+                [](Pokemon& atacante, Pokemon& objetivo, const Movimiento& movimiento) { atacante.atacar(objetivo, movimiento); },
+                mostrarEstadoCombate,
+                [&jugador]() { jugador.equipo[0]->ganarCombate(); }  // Ganar combate y subir nivel si es necesario
+            );
+
+            // Verificar si es un gimnasio y marcar líder como derrotado
+            if (ubicacionActual.nombre.find("Gimnasio") != string::npos) {
+                ubicacionActual.liderDerrotado = true;  // Marcar líder de gimnasio derrotado
+                cout << "¡Has derrotado al líder del gimnasio en " << ubicacionActual.nombre << "!" << endl;
+                continue;
+            }
+        }
+
+        // Despachar eventos según la entrada del jugador
+        cout << "\n¿Qué deseas hacer? (Mover [M], Curar [C], Salir [Q]): ";
+        char accion;
+        cin >> accion;
+
+        switch (toupper(accion)) {
+            case 'M': {
+                cout << "\n¿Hacia dónde quieres ir? (N/S/E/W): ";
+                char direccion;
+                cin >> direccion;
+
+                if (!mapa.mover(toupper(direccion))) {
+                    cout << "No puedes ir en esa dirección." << endl;
+                }
+                break;
+            }
+            case 'C': {
+                cout << "Curando a tus Pokémon en el Centro Pokémon..." << endl;
+                for (Pokemon* p : jugador.equipo) {
+                    if(p->getSalud() > 0){
+                        p->recibirDanio(-(p->getSaludMaxima()-p->getSalud()));  // Restaurar la salud al máximo
+                    }
+                }
+                break;
+            }
+            case 'Q': {
+                cout << "Gracias por jugar. ¡Hasta la próxima!" << endl;
+                jugando = false;
+                break;
+            }
+            default:
+                cout << "Acción no válida. Intenta de nuevo." << endl;
+                break;
+        }
+    }
+}
+
+// Modificación en la función principal del juego para gestionar correctamente la lógica tras derrotar al líder
 void jugarAventura() {
     cout << "\tBienvenido a la aventura Pokémon!" << endl;
     string nombreJugador;
@@ -342,40 +465,7 @@ void jugarAventura() {
 
     Mapa mapa = inicializarMapa();
 
-    while (true) {
-        Ubicacion& ubicacionActual = mapa.getUbicacionActual();
-        cout << "\nEstás en: " << ubicacionActual.nombre << endl;
-        cout << ubicacionActual.descripcion << endl;
-
-        if (ubicacionActual.tieneCombate && (rand() % 100 < 30)) {  // 30% de probabilidad de combate
-            cout << "¡Un Pokémon salvaje apareció!" << endl;
-            Pokemon* oponente = seleccionarPokemonAleatorio();
-            
-            IniciarCombate(
-                [&jugador]() { return jugador.equipo[0]; },
-                [oponente]() { return oponente; },
-                seleccionarMovimientoUsuario,
-                [](const Pokemon& pokemon) { return pokemon.seleccionarMovimientoAleatorio(); },
-                [](Pokemon& atacante, Pokemon& objetivo, const Movimiento& movimiento) { atacante.atacar(objetivo, movimiento); },
-                mostrarEstadoCombate
-            );
-
-            delete oponente;
-        }
-
-        cout << "\n¿Hacia dónde quieres ir? (N/S/E/W/Q para salir): ";
-        char direccion;
-        cin >> direccion;
-        
-        if (direccion == 'Q' || direccion == 'q') {
-            cout << "Gracias por jugar. ¡Hasta la próxima!" << endl;
-            break;
-        }
-
-        if (!mapa.mover(toupper(direccion))) {
-            cout << "No puedes ir en esa dirección." << endl;
-        }
-    }
+    despachadorDeEventos(jugador, mapa);
 }
 
 int main() {
