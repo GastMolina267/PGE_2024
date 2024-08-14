@@ -44,9 +44,6 @@ public:
     int getSaludMaxima() const { return saludMaxima; }
     int getNivel() const { return nivel; }  // Nuevo getter para nivel
 
-    void subirNivel();
-
-
     void recibirDanio(int danio) {
         salud = max(0, salud - danio);
         cout << nombre << " ha recibido " << danio << " puntos de daño" << endl;
@@ -86,8 +83,6 @@ public:
         return movimientos[dis(gen)];
     }
 
-
-
     // Modificado: Subida progresiva de nivel
     void ganarCombate() {
         combatesGanados++;
@@ -107,17 +102,17 @@ private:
     bool experienciaSuficiente() const {
         return combatesGanados >= nivel;  // Progresión: 1 combate por nivel
     }
-};
 
-void Pokemon::subirNivel() {
-    nivel++;
-    ataque += 2;
-    defensa += 2;
-    saludMaxima += 10;
-    salud = saludMaxima;
-    cout << nombre << " ha subido al nivel " << nivel << " y se ha curado completamente!" << endl;
-    cout << "Salud: " << salud << "/" << saludMaxima << endl;
-}
+        void subirNivel() {
+        nivel++;
+        ataque += 2;
+        defensa += 2;
+        saludMaxima += 10;
+        salud = saludMaxima;
+        cout << nombre << " ha subido al nivel " << nivel << " y se ha curado completamente!" << endl;
+        cout << "Salud: " << salud << "/" << saludMaxima << endl;
+    }
+};
 
 
 class PokemonAgua : public Pokemon {
@@ -306,7 +301,7 @@ Movimiento seleccionarMovimientoUsuario(const Pokemon& pokemon) {
     return movimientos[opcion - 1];
 }
 
-
+// Modificación en la función de combate para subir de nivel al ganar
 void IniciarCombate(
     SeleccionPokemonCallback seleccionJugadorCallback,
     SeleccionPokemonCallback seleccionOponenteCallback,
@@ -314,8 +309,7 @@ void IniciarCombate(
     MovimientoCallback movimientoOponenteCallback,
     AtaqueCallback ataqueCallback,
     MostrarEstadoCallback mostrarEstadoCallback,
-    function<void()> onGanador,  // Callback al ganar el combate
-    function<void()> onPerdedor  // Nuevo: Callback al perder el combate
+    function<void()> onGanador  // Nuevo: Callback al ganar el combate
 ) {
     Pokemon* jugador = seleccionJugadorCallback();
     Pokemon* oponente = seleccionOponenteCallback();
@@ -338,10 +332,9 @@ void IniciarCombate(
     mostrarEstadoCallback(*jugador, *oponente);
     if (jugador->getSalud() > 0) {
         cout << jugador->getNombre() << " ha ganado!" << endl;
-        onGanador();  // Ejecutar la acción de ganar
+        onGanador();  // Nuevo: Ejecutar la acción de ganar (como subir de nivel)
     } else {
         cout << oponente->getNombre() << " ha ganado!" << endl;
-        onPerdedor();  // Ejecutar la acción de perder
     }
 
     delete oponente;
@@ -377,7 +370,6 @@ Mapa inicializarMapa() {
     return mapa;
 }
 
-// Modificación en la función de eventos para mover al centro Pokémon si pierdes un combate
 void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
     bool jugando = true;
 
@@ -386,13 +378,13 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
         cout << "\nEstás en: " << ubicacionActual.nombre << endl;
         cout << ubicacionActual.descripcion << endl;
 
-
+        // Verificar si es un gimnasio con el líder derrotado
         if (ubicacionActual.liderDerrotado) {
             cout << "Ya has derrotado al líder de gimnasio aquí. No puedes entrar de nuevo." << endl;
-        } else if (ubicacionActual.tieneCombate && (rand() % 100 < 30)) {
+        } else if (ubicacionActual.tieneCombate && (rand() % 100 < 90)) {  // 30% de probabilidad de combate
             cout << "¡Un Pokémon salvaje apareció!" << endl;
 
-
+            // Seleccionar Pokémon enemigo aleatorio, escalado al nivel del Pokémon del jugador
             Pokemon* oponente = seleccionarPokemonAleatorio(jugador.equipo[0]->getNivel());
 
             IniciarCombate(
@@ -402,27 +394,18 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
                 [](const Pokemon& pokemon) { return pokemon.seleccionarMovimientoAleatorio(); },
                 [](Pokemon& atacante, Pokemon& objetivo, const Movimiento& movimiento) { atacante.atacar(objetivo, movimiento); },
                 mostrarEstadoCombate,
-                [&jugador]() { jugador.equipo[0]->ganarCombate(); },  // Ganar combate
-                [&jugador, &mapa]() {  // Perder combate
-                    cout << "¡Has sido derrotado! Llevando a tu Pokémon al Centro Pokémon para curarlo..." << endl;
-                    mapa.mover('S');  // Suponiendo que el centro Pokémon está al sur del jugador
-                    for (Pokemon* p : jugador.equipo) {
-                        if (p->getSalud() == 0) {
-                            p->recibirDanio(-(p->getSaludMaxima() - p->getSalud()));  // Restaurar la salud al máximo
-                        }
-                    }
-                }
+                [&jugador]() { jugador.equipo[0]->ganarCombate(); }  // Ganar combate y subir nivel si es necesario
             );
 
-
+            // Verificar si es un gimnasio y marcar líder como derrotado
             if (ubicacionActual.nombre.find("Gimnasio") != string::npos) {
-                ubicacionActual.liderDerrotado = true;
+                ubicacionActual.liderDerrotado = true;  // Marcar líder de gimnasio derrotado
                 cout << "¡Has derrotado al líder del gimnasio en " << ubicacionActual.nombre << "!" << endl;
                 continue;
             }
         }
 
-
+        // Despachar eventos según la entrada del jugador
         cout << "\n¿Qué deseas hacer? (Mover [M], Curar [C], Salir [Q]): ";
         char accion;
         cin >> accion;
@@ -441,7 +424,9 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
             case 'C': {
                 cout << "Curando a tus Pokémon en el Centro Pokémon..." << endl;
                 for (Pokemon* p : jugador.equipo) {
-                    p->recibirDanio(-(p->getSaludMaxima() - p->getSalud()));  // Restaurar la salud al máximo
+                    if(p->getSalud() >= 0){
+                        p->recibirDanio(-(p->getSaludMaxima()-p->getSalud()));  // Restaurar la salud al máximo
+                    }
                 }
                 break;
             }
