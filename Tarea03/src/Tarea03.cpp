@@ -168,7 +168,7 @@ private:
     int columnaActual;
 
 public:
-    Mapa(int filas, int columnas) : grid(filas, vector<Ubicacion>(columnas, Ubicacion("", "", false))), filaActual(1), columnaActual(1) {}
+    Mapa(int filas, int columnas) : grid(filas, vector<Ubicacion>(columnas, Ubicacion("", "", false))), filaActual(0), columnaActual(0) {}
 
     void setUbicacion(int fila, int columna, const Ubicacion& ubicacion) {
         if (fila >= 0 && fila < grid.size() && columna >= 0 && columna < grid[0].size()) {
@@ -199,6 +199,19 @@ public:
         }
         return false;
     }
+    // Función para mostrar el mapa visualmente
+    void mostrarMapa() {
+        for (int i = 0; i < grid.size(); ++i) {
+            for (int j = 0; j < grid[i].size(); ++j) {
+                if (i == filaActual && j == columnaActual) {
+                    cout << "[P] "; // El jugador está en esta posición
+                } else {
+                    cout << "[ ] "; // Posición vacía
+                }
+            }
+            cout << endl;
+        }
+    }
 };
 
 // Nuevo: Clase para representar al jugador
@@ -206,6 +219,7 @@ class Jugador {
 public:
     string nombre;
     vector<Pokemon*> equipo;
+    vector<Pokemon*> centroPokemon;  // Pokémon que están en el Centro Pokémon
 
     Jugador(string nombre) : nombre(nombre) {}
 
@@ -215,12 +229,150 @@ public:
         }
     }
 
+    bool tienePokemonDisponibles() const {
+        return !equipo.empty();
+    }
+
+    void enviarPokemonAlCentro(Pokemon* pokemon) {
+        auto it = find(equipo.begin(), equipo.end(), pokemon);
+        if (it != equipo.end()) {
+            centroPokemon.push_back(pokemon);
+            equipo.erase(it);
+        }
+    }
+
+    void recogerPokemonDelCentro() {
+        for (Pokemon* pokemon : centroPokemon) {
+            pokemon->recibirDanio(-(pokemon->getSaludMaxima() - pokemon->getSalud()));  // Curar al Pokémon
+            agregarPokemon(pokemon);  // Agregarlo de nuevo al equipo
+        }
+        centroPokemon.clear();
+    }
+
     ~Jugador() {
         for (auto pokemon : equipo) {
             delete pokemon;
         }
+        for (auto pokemon : centroPokemon) {
+            delete pokemon;
+        }
     }
 };
+
+void mostrarArtePokemon(const string& pokemon) {
+    if (pokemon == "Charmander") {
+        cout << R"(
+              _.--""`-..
+            ,'          `.
+          ,'          __  `.
+         /|          " __   \
+        , |           / |.   .
+        |,'          !_.'|   |
+      ,'             '   |   |
+     /              |`--'|   |
+    |                `---'   |
+     .   ,                   |                       ,".
+      ._     '           _'  |                    , ' \ `
+  `.. `.`-...___,...---""    |       __,.        ,`"   L,|
+  |, `- .`._        _,-,.'   .  __.-'-. /        .   ,    \
+-:..     `. `-..--_.,.<       `"      / `.        `-/ |   .
+  `,         """"'     `.              ,'         |   |  ',,
+    `.      '            '            /          '    |'. |/
+      `.   |              \       _,-'           |       ''
+        `._'               \   '"\                .      |
+           |                '     \                `._  ,'
+           |                 '     \                 .'|
+           |                 .      \                | |
+           |                 |       L              ,' |
+           `                 |       |             /   '
+            \                |       |           ,'   /
+          ,' \               |  _.._ ,-..___,..-'    ,'
+         /     .             .      `!             ,j'
+        /       `.          /        .           .'/
+       .          `.       /         |        _.'.'
+        `.          7`'---'          |------"'_.'
+       _,.`,_     _'                ,''-----"'
+   _,-_    '       `.     .'      ,\
+   -" /`.         _,'     | _  _  _.|
+    ""--'---"""""'        `' '! |! /
+                            `" " -' mh
+        )" << endl;
+        cout << "Charmander, te elijo a tí!"<< endl;
+    } else if (pokemon == "Squirtle") {
+        cout << R"(
+               _,........__
+            ,-'            "`-.
+          ,'                   `-.
+        ,'                        \
+      ,'                           .
+      .'\               ,"".       `
+     ._.'|             / |  `       \
+     |   |            `-.'  ||       `.
+     |   |            '-._,'||       | \
+     .`.,'             `..,'.'       , |`-.
+     l                       .'`.  _/  |   `.
+     `-.._'-   ,          _ _'   -" \  .     `
+`."""""'-.`-...,---------','         `. `....__.
+.'        `"-..___      __,'\          \  \     \
+\_ .          |   `""""'    `.           . \     \
+  `.          |              `.          |  .     L
+    `.        |`--...________.'.        j   |     |
+      `._    .'      |          `.     .|   ,     |
+         `--,\       .            `7""' |  ,      |
+            ` `      `            /     |  |      |    _,-'"""`-.
+             \ `.     .          /      |  '      |  ,'          `.
+              \  v.__  .        '       .   \    /| /              \
+               \/    `""\"""""""`.       \   \  /.''                |
+                `        .        `._ ___,j.  `/ .-       ,---.     |
+                ,`-.      \         ."     `.  |/        j     `    |
+               /    `.     \       /         \ /         |     /    j
+              |       `-.   7-.._ .          |"          '         /
+              |          `./_    `|          |            .     _,'
+              `.           / `----|          |-............`---'
+                \          \      |          |
+               ,'           )     `.         |
+                7____,,..--'      /          |
+                                  `---.__,--.'mh
+        )" << endl;
+        cout << "Squirtle, te elijo a tí!"<< endl;
+        cin.ignore();
+    } else if (pokemon == "Bulbauser") {
+        cout << R"(
+                                           /
+                        _,.------....___,.' ',.-.
+                     ,-'          _,.--"        |
+                   ,'         _.-'              .
+                  /   ,     ,'                   `
+                 .   /     /                     ``.
+                 |  |     .                       \.\
+       ____      |___._.  |       __               \ `.
+     .'    `---""       ``"-.--"'`  \               .  \
+    .  ,            __               `              |   .
+    `,'         ,-"'  .               \             |    L
+   ,'          '    _.'                -._          /    |
+  ,`-.    ,".   `--'                      >.      ,'     |
+ . .'\'   `-'       __    ,  ,-.         /  `.__.-      ,'
+ ||:, .           ,'  ;  /  / \ `        `.    .      .'/
+ j|:D  \          `--'  ' ,'_  . .         `.__, \   , /
+/ L:_  |                 .  "' :_;                `.'.'
+.    ""'                  """""'                    V
+ `.                                 .    `.   _,..  `
+   `,_   .    .                _,-'/    .. `,'   __  `
+    ) \`._        ___....----"'  ,'   .'  \ |   '  \  .
+   /   `. "`-.--"'         _,' ,'     `---' |    `./  |
+  .   _  `""'--.._____..--"   ,             '         |
+  | ." `. `-.                /-.           /          ,
+  | `._.'    `,_            ;  /         ,'          .
+ .'          /| `-.        . ,'         ,           ,
+ '-.__ __ _,','    '`-..___;-...__   ,.'\ ____.___.'
+ `"^--'..'   '-`-^-'"--    `-^-'`.''"""""`.,^.`.--' mh
+        )" << endl;
+        cout << "Bulbauser, te elijo a tí!"<< endl;
+        cin.ignore();
+    } else {
+        cout << "Pokémon no reconocido." << endl;
+    }
+}
 
 // Definición de tipos de callbacks
 using MovimientoCallback = function<Movimiento(const Pokemon&)>;
@@ -242,6 +394,17 @@ Pokemon* seleccionarPokemonUsuario() {
         cout << "Opción no válida. Por favor, elige 1, 2 o 3:" << endl;
     }
 
+    string nombrePokemon;
+    switch (opcion) {
+        case 1: nombrePokemon = "Squirtle"; break;
+        case 2: nombrePokemon = "Charmander"; break;
+        case 3: nombrePokemon = "Bulbasaur"; break;
+        default: return nullptr;
+    }
+
+    // Muestra el arte ASCII correspondiente
+    mostrarArtePokemon(nombrePokemon);
+
     string nombre;
     cout << "--->Introduce un nombre para tu Pokemon: ";
     cin.ignore();
@@ -253,6 +416,7 @@ Pokemon* seleccionarPokemonUsuario() {
         case 3: return new PokemonPlanta(nombre);
         default: return nullptr;
     }
+
 }
 
 Pokemon* seleccionarPokemonAleatorio(int nivelJugador) {
@@ -309,7 +473,9 @@ void IniciarCombate(
     MovimientoCallback movimientoOponenteCallback,
     AtaqueCallback ataqueCallback,
     MostrarEstadoCallback mostrarEstadoCallback,
-    function<void()> onGanador  // Nuevo: Callback al ganar el combate
+    function<void()> onGanador,  // Nuevo: Callback al ganar el combate
+    function<void()> onPerdedor  // Nuevo: Callback al perder el combate
+
 ) {
     Pokemon* jugador = seleccionJugadorCallback();
     Pokemon* oponente = seleccionOponenteCallback();
@@ -335,6 +501,7 @@ void IniciarCombate(
         onGanador();  // Nuevo: Ejecutar la acción de ganar (como subir de nivel)
     } else {
         cout << oponente->getNombre() << " ha ganado!" << endl;
+        onPerdedor();  // Ejecutar la acción de perder
     }
 
     delete oponente;
@@ -367,6 +534,8 @@ Mapa inicializarMapa() {
     mapa.setUbicacion(2, 0, Ubicacion("Ruta 2", "Un camino que lleva al Bosque Verde.", true));
     mapa.setUbicacion(2, 1, Ubicacion("Casa abandonada", "Una casa misteriosa y abandonada.", true));
     mapa.setUbicacion(2, 2, Ubicacion("Gimnasio de Ciudad Verde", "¡Enfréntate al líder de gimnasio!", true));
+
+    mapa.mostrarMapa();
     return mapa;
 }
 
@@ -382,6 +551,10 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
         if (ubicacionActual.liderDerrotado) {
             cout << "Ya has derrotado al líder de gimnasio aquí. No puedes entrar de nuevo." << endl;
         } else if (ubicacionActual.tieneCombate && (rand() % 100 < 90)) {  // 30% de probabilidad de combate
+            if (!jugador.tienePokemonDisponibles()) {
+                cout << "No tienes Pokémon disponibles para combatir. Debes recogerlos del Centro Pokémon." << endl;
+                continue;
+            }
             cout << "¡Un Pokémon salvaje apareció!" << endl;
 
             // Seleccionar Pokémon enemigo aleatorio, escalado al nivel del Pokémon del jugador
@@ -394,7 +567,8 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
                 [](const Pokemon& pokemon) { return pokemon.seleccionarMovimientoAleatorio(); },
                 [](Pokemon& atacante, Pokemon& objetivo, const Movimiento& movimiento) { atacante.atacar(objetivo, movimiento); },
                 mostrarEstadoCombate,
-                [&jugador]() { jugador.equipo[0]->ganarCombate(); }  // Ganar combate y subir nivel si es necesario
+                [&jugador]() { jugador.equipo[0]->ganarCombate(); },  // Ganar combate y subir nivel si es necesario
+                [&jugador]() { jugador.enviarPokemonAlCentro(jugador.equipo[0]); }  // Perder combate y enviar al Centro Pokémon
             );
 
             // Verificar si es un gimnasio y marcar líder como derrotado
@@ -406,7 +580,7 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
         }
 
         // Despachar eventos según la entrada del jugador
-        cout << "\n¿Qué deseas hacer? (Mover [M], Curar [C], Salir [Q]): ";
+        cout << "\n¿Qué deseas hacer? (Mover [M], Curar [C], Recoger Pokémon [R],Salir [Q]): ";
         char accion;
         cin >> accion;
 
@@ -418,16 +592,27 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
 
                 if (!mapa.mover(toupper(direccion))) {
                     cout << "No puedes ir en esa dirección." << endl;
+                }else{
+                    mapa.mostrarMapa();
                 }
                 break;
             }
             case 'C': {
-                cout << "Curando a tus Pokémon en el Centro Pokémon..." << endl;
                 for (Pokemon* p : jugador.equipo) {
-                    if(p->getSalud() >= 0){
+                    if(p->getSalud() == 0){
+                        cout << "El Pokemón se encuentra debilitado..." << endl;
+                        cout << "Se debe de ir a buscar al Centro Pokémon" << endl;
+                    }
+                    else if(p->getSalud() > 0){
+                        cout << "Curando a tus Pokémon en el Centro Pokémon..." << endl;
                         p->recibirDanio(-(p->getSaludMaxima()-p->getSalud()));  // Restaurar la salud al máximo
                     }
                 }
+                break;
+            }
+            case 'R': {
+                cout << "Recogiendo a tus Pokémon del Centro Pokémon..." << endl;
+                jugador.recogerPokemonDelCentro();
                 break;
             }
             case 'Q': {
