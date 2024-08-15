@@ -109,8 +109,8 @@ private:
         defensa += 2;
         saludMaxima += 10;
         salud = saludMaxima;
-        cout << nombre << " ha subido al nivel " << nivel << " y se ha curado completamente!" << endl;
-        cout << "Salud: " << salud << "/" << saludMaxima << endl;
+        cout <<nombre << " ha subido al nivel " << nivel << " y se ha curado completamente!" << endl;
+        cout <<"Salud: " << salud << "/" << saludMaxima << endl;
     }
 };
 
@@ -297,7 +297,7 @@ void mostrarArtePokemon(const string& pokemon) {
     ""--'---"""""'        `' '! |! /
                             `" " -' mh
         )" << endl;
-        cout << "Charmander, te elijo a tí!"<< endl;
+        cout << "\tCharmander, te elijo a tí!"<< endl;
     } else if (pokemon == "Squirtle") {
         cout << R"(
                _,........__
@@ -334,7 +334,7 @@ void mostrarArtePokemon(const string& pokemon) {
                 7____,,..--'      /          |
                                   `---.__,--.'mh
         )" << endl;
-        cout << "Squirtle, te elijo a tí!"<< endl;
+        cout << "\tSquirtle, te elijo a tí!"<< endl;
         cin.ignore();
     } else if (pokemon == "Bulbauser") {
         cout << R"(
@@ -367,10 +367,10 @@ void mostrarArtePokemon(const string& pokemon) {
  '-.__ __ _,','    '`-..___;-...__   ,.'\ ____.___.'
  `"^--'..'   '-`-^-'"--    `-^-'`.''"""""`.,^.`.--' mh
         )" << endl;
-        cout << "Bulbauser, te elijo a tí!"<< endl;
+        cout << "\tBulbauser, te elijo a tí!"<< endl;
         cin.ignore();
     } else {
-        cout << "Pokémon no reconocido." << endl;
+        cout << "\tPokémon no reconocido." << endl;
     }
 }
 
@@ -391,7 +391,7 @@ Pokemon* seleccionarPokemonUsuario() {
     while (!(cin >> opcion) || opcion < 1 || opcion > 3) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "Opción no válida. Por favor, elige 1, 2 o 3:" << endl;
+        cout << "\tOpción no válida. Por favor, elige 1, 2 o 3:" << endl;
     }
 
     string nombrePokemon;
@@ -406,7 +406,7 @@ Pokemon* seleccionarPokemonUsuario() {
     mostrarArtePokemon(nombrePokemon);
 
     string nombre;
-    cout << "--->Introduce un nombre para tu Pokemon: ";
+    cout << "---->Introduce un nombre para tu Pokemon: ";
     cin.ignore();
     getline(cin, nombre);
 
@@ -442,15 +442,15 @@ Pokemon* seleccionarPokemonAleatorio(int nivelJugador) {
 
 void mostrarEstadoCombate(const Pokemon& jugador, const Pokemon& oponente) {
     cout << string(50, '-') << endl;
-    cout << jugador.getNombre() << " (Tú) - Salud: " << jugador.getSalud() << "/" << jugador.getSaludMaxima() << endl;
+    cout << jugador.getNombre() << "\t(Tú) - Salud: " << jugador.getSalud() << "/" << jugador.getSaludMaxima() << endl;
     cout << string(25, '*') << endl;
-    cout << oponente.getNombre() << " (Oponente) - Salud: " << oponente.getSalud() << "/" << oponente.getSaludMaxima() << endl;
+    cout << oponente.getNombre() << "\t(Oponente) - Salud: " << oponente.getSalud() << "/" << oponente.getSaludMaxima() << endl;
     cout << string(50, '-') << endl;
 }
 
 Movimiento seleccionarMovimientoUsuario(const Pokemon& pokemon) {
     const vector<Movimiento>& movimientos = pokemon.getMovimientos();
-    cout << "Selecciona un movimiento:" << endl;
+    cout << "\tSelecciona un movimiento:" << endl;
     for (size_t i = 0; i < movimientos.size(); ++i) {
         cout << i + 1 << ". " << movimientos[i].nombre << " (Poder: " << movimientos[i].poder << ")" << endl;
     }
@@ -459,23 +459,19 @@ Movimiento seleccionarMovimientoUsuario(const Pokemon& pokemon) {
     while (!(cin >> opcion) || opcion < 1 || opcion > movimientos.size()) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "Opción no válida. Por favor, elige un número entre 1 y " << movimientos.size() << ":" << endl;
+        cout << "\tOpción no válida. Por favor, elige un número entre 1 y " << movimientos.size() << ":" << endl;
     }
     
     return movimientos[opcion - 1];
 }
 
-// Modificación en la función de combate para subir de nivel al ganar
-void IniciarCombate(
+bool IniciarCombate(
     SeleccionPokemonCallback seleccionJugadorCallback,
     SeleccionPokemonCallback seleccionOponenteCallback,
     MovimientoCallback movimientoJugadorCallback,
     MovimientoCallback movimientoOponenteCallback,
     AtaqueCallback ataqueCallback,
-    MostrarEstadoCallback mostrarEstadoCallback,
-    function<void()> onGanador,  // Nuevo: Callback al ganar el combate
-    function<void()> onPerdedor  // Nuevo: Callback al perder el combate
-
+    MostrarEstadoCallback mostrarEstadoCallback
 ) {
     Pokemon* jugador = seleccionJugadorCallback();
     Pokemon* oponente = seleccionOponenteCallback();
@@ -496,15 +492,18 @@ void IniciarCombate(
     }
 
     mostrarEstadoCallback(*jugador, *oponente);
-    if (jugador->getSalud() > 0) {
+
+    bool ganoCombate = jugador->getSalud() > 0;
+
+    if (ganoCombate) {
         cout << jugador->getNombre() << " ha ganado!" << endl;
-        onGanador();  // Nuevo: Ejecutar la acción de ganar (como subir de nivel)
+        jugador->ganarCombate();  // Subir de nivel si es necesario
     } else {
         cout << oponente->getNombre() << " ha ganado!" << endl;
-        onPerdedor();  // Ejecutar la acción de perder
     }
 
     delete oponente;
+    return ganoCombate;
 }
 
 void mostrarArteASCII() {
@@ -560,19 +559,19 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
             // Seleccionar Pokémon enemigo aleatorio, escalado al nivel del Pokémon del jugador
             Pokemon* oponente = seleccionarPokemonAleatorio(jugador.equipo[0]->getNivel());
 
-            IniciarCombate(
+            // Iniciar el combate y verificar si el jugador ganó
+            bool ganoCombate = IniciarCombate(
                 [&jugador]() { return jugador.equipo[0]; },
                 [oponente]() { return oponente; },
                 seleccionarMovimientoUsuario,
                 [](const Pokemon& pokemon) { return pokemon.seleccionarMovimientoAleatorio(); },
                 [](Pokemon& atacante, Pokemon& objetivo, const Movimiento& movimiento) { atacante.atacar(objetivo, movimiento); },
-                mostrarEstadoCombate,
-                [&jugador]() { jugador.equipo[0]->ganarCombate(); },  // Ganar combate y subir nivel si es necesario
-                [&jugador]() { jugador.enviarPokemonAlCentro(jugador.equipo[0]); }  // Perder combate y enviar al Centro Pokémon
+                mostrarEstadoCombate
             );
 
-            // Verificar si es un gimnasio y marcar líder como derrotado
-            if (ubicacionActual.nombre.find("Gimnasio") != string::npos) {
+
+            // Verificar si es un gimnasio y marcar líder como derrotado solo si se ganó el combate
+            if (ganoCombate && ubicacionActual.nombre.find("Gimnasio") != string::npos) {     
                 ubicacionActual.liderDerrotado = true;  // Marcar líder de gimnasio derrotado
                 cout << "¡Has derrotado al líder del gimnasio en " << ubicacionActual.nombre << "!" << endl;
                 continue;
@@ -580,7 +579,7 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
         }
 
         // Despachar eventos según la entrada del jugador
-        cout << "\n¿Qué deseas hacer? (Mover [M], Curar [C], Recoger Pokémon [R],Salir [Q]): ";
+        cout << "\n¿Qué deseas hacer? (Mover [M], Curar [C], Recoger Pokémon [R], Salir [Q]): ";
         char accion;
         cin >> accion;
 
@@ -592,20 +591,19 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
 
                 if (!mapa.mover(toupper(direccion))) {
                     cout << "No puedes ir en esa dirección." << endl;
-                }else{
+                } else {
                     mapa.mostrarMapa();
                 }
                 break;
             }
             case 'C': {
                 for (Pokemon* p : jugador.equipo) {
-                    if(p->getSalud() == 0){
-                        cout << "El Pokemón se encuentra debilitado..." << endl;
+                    if (p->getSalud() == 0) {
+                        cout << "El Pokémon se encuentra debilitado..." << endl;
                         cout << "Se debe de ir a buscar al Centro Pokémon" << endl;
-                    }
-                    else if(p->getSalud() > 0){
+                    } else if (p->getSalud() > 0) {
                         cout << "Curando a tus Pokémon en el Centro Pokémon..." << endl;
-                        p->recibirDanio(-(p->getSaludMaxima()-p->getSalud()));  // Restaurar la salud al máximo
+                        p->recibirDanio(-(p->getSaludMaxima() - p->getSalud()));  // Restaurar la salud al máximo
                     }
                 }
                 break;
