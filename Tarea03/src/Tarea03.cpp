@@ -476,15 +476,15 @@ Movimiento seleccionarMovimientoUsuario(const Pokemon& pokemon) {
     return movimientos[opcion - 1];
 }
 
-void IniciarCombate(
+bool IniciarCombate(
     SeleccionPokemonCallback seleccionJugadorCallback,
     SeleccionPokemonCallback seleccionOponenteCallback,
     MovimientoCallback movimientoJugadorCallback,
     MovimientoCallback movimientoOponenteCallback,
     AtaqueCallback ataqueCallback,
     MostrarEstadoCallback mostrarEstadoCallback,
-    function<void()> onGanador,  // Callback para ganar
-    function<void()> onPerdedor  // Callback para perder
+    function<void()> onGanador,
+    function<void()> onPerdedor
 ) {
     Pokemon* jugador = seleccionJugadorCallback();
     Pokemon* oponente = seleccionOponenteCallback();
@@ -505,15 +505,17 @@ void IniciarCombate(
     }
 
     mostrarEstadoCallback(*jugador, *oponente);
-    if (jugador->getSalud() > 0) {
+    bool gano = (jugador->getSalud() > 0);
+    if (gano) {
         cout << jugador->getNombre() << " ha ganado!" << endl;
         onGanador();
     } else {
         cout << oponente->getNombre() << " ha ganado!" << endl;
-        onPerdedor();  // Enviar al Pokémon debilitado al Centro Pokémon
+        onPerdedor();
     }
 
     delete oponente;
+    return gano;
 }
 
 void mostrarArteASCII() {
@@ -559,7 +561,7 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
         // Verificar si es un gimnasio con el líder derrotado
         if (ubicacionActual.liderDerrotado) {
             cout << "Ya has derrotado al líder de gimnasio aquí. No puedes entrar de nuevo." << endl;
-        } else if (ubicacionActual.tieneCombate && (rand() % 100 < 90)) {  // 30% de probabilidad de combate
+        } else if (ubicacionActual.tieneCombate && (rand() % 100 < 90)) {  // 90% de probabilidad de combate
             if (!jugador.tienePokemonDisponibles()) {
                 cout << "No tienes Pokémon disponibles para combatir. Debes recogerlos del Centro Pokémon." << endl;
                 continue;
@@ -569,29 +571,29 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
             // Seleccionar Pokémon enemigo aleatorio, escalado al nivel del Pokémon del jugador
             Pokemon* oponente = seleccionarPokemonAleatorio(jugador.equipo[0]->getNivel());
 
-            // Iniciar el combate y verificar si el jugador ganó
-            IniciarCombate(
+            bool ganoCombate = IniciarCombate(
                 [&jugador]() { return jugador.equipo[0]; },
                 [oponente]() { return oponente; },
                 seleccionarMovimientoUsuario,
                 [](const Pokemon& pokemon) { return pokemon.seleccionarMovimientoAleatorio(); },
                 [](Pokemon& atacante, Pokemon& objetivo, const Movimiento& movimiento) { atacante.atacar(objetivo, movimiento); },
                 mostrarEstadoCombate,
-                [&jugador]() { jugador.equipo[0]->ganarCombate(); },
-                [&jugador]() { jugador.enviarPokemonAlCentro(jugador.equipo[0]); }  // Enviar al Centro Pokémon si se pierde
+                [&jugador]() { jugador.equipo[0]->ganarCombate(); },  // Ganar combate y subir nivel si es necesario
+                [&jugador]() { jugador.enviarPokemonAlCentro(jugador.equipo[0]); }  // Perder combate y enviar al Centro Pokémon
             );
 
-
-            // Verificar si es un gimnasio y marcar líder como derrotado solo si se ganó el combate
-            if (ubicacionActual.nombre.find("Gimnasio") != string::npos) {     
+            // Verificar si es un gimnasio y marcar líder como derrotado
+            if (ubicacionActual.nombre.find("Gimnasio") != string::npos && ganoCombate) {
                 ubicacionActual.liderDerrotado = true;  // Marcar líder de gimnasio derrotado
                 cout << "¡Has derrotado al líder del gimnasio en " << ubicacionActual.nombre << "!" << endl;
                 continue;
+            } else if (ubicacionActual.nombre.find("Gimnasio") != string::npos && !ganoCombate) {
+                cout << "No has derrotado al líder del gimnasio. Intenta de nuevo cuando estés más preparado." << endl;
             }
         }
 
         // Despachar eventos según la entrada del jugador
-        cout << "\n¿Qué deseas hacer? (Mover [M], Curar [C], Recoger Pokémon [R], Salir [Q]): ";
+        cout << "\n¿Qué deseas hacer? (Mover [M], Curar [C], Recoger Pokémon [R],Salir [Q]): ";
         char accion;
         cin >> accion;
 
@@ -613,7 +615,7 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
                     if (p->getSalud() == 0) {
                         cout << "El Pokémon se encuentra debilitado..." << endl;
                         cout << "Se debe de ir a buscar al Centro Pokémon" << endl;
-                    } else if (p->getSalud() > 0) {
+                    } else {
                         cout << "Curando a tus Pokémon en el Centro Pokémon..." << endl;
                         p->recibirDanio(-(p->getSaludMaxima() - p->getSalud()));  // Restaurar la salud al máximo
                     }
