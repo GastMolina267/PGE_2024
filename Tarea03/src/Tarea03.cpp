@@ -238,24 +238,35 @@ public:
         if (it != equipo.end()) {
             centroPokemon.push_back(pokemon);
             equipo.erase(it);
+            cout << "Pokémon enviado al Centro Pokémon: " << pokemon->getNombre() << endl;
+        }
+        else {
+            cout << "El Pokémon no está en el equipo." << endl;
         }
     }
 
     void recogerPokemonDelCentro() {
+        if (centroPokemon.empty()) {
+            cout << "No hay Pokémon en el Centro Pokémon." << endl;
+            return;
+        }
         for (Pokemon* pokemon : centroPokemon) {
-            pokemon->recibirDanio(-(pokemon->getSaludMaxima() - pokemon->getSalud()));  // Curar al Pokémon
+            pokemon->recibirDanio(-(pokemon->getSaludMaxima() - pokemon->getSalud())); // Curar al Pokémon
             agregarPokemon(pokemon);  // Agregarlo de nuevo al equipo
+            cout << "Pokémon recogido del Centro Pokémon: " << pokemon->getNombre() << endl;
         }
         centroPokemon.clear();
     }
 
     ~Jugador() {
         for (auto pokemon : equipo) {
-            delete pokemon;
+            if (pokemon) delete pokemon;
         }
+        equipo.clear();
         for (auto pokemon : centroPokemon) {
-            delete pokemon;
+            if (pokemon) delete pokemon;
         }
+        centroPokemon.clear();
     }
 };
 
@@ -465,13 +476,15 @@ Movimiento seleccionarMovimientoUsuario(const Pokemon& pokemon) {
     return movimientos[opcion - 1];
 }
 
-bool IniciarCombate(
+void IniciarCombate(
     SeleccionPokemonCallback seleccionJugadorCallback,
     SeleccionPokemonCallback seleccionOponenteCallback,
     MovimientoCallback movimientoJugadorCallback,
     MovimientoCallback movimientoOponenteCallback,
     AtaqueCallback ataqueCallback,
-    MostrarEstadoCallback mostrarEstadoCallback
+    MostrarEstadoCallback mostrarEstadoCallback,
+    function<void()> onGanador,  // Callback para ganar
+    function<void()> onPerdedor  // Callback para perder
 ) {
     Pokemon* jugador = seleccionJugadorCallback();
     Pokemon* oponente = seleccionOponenteCallback();
@@ -492,18 +505,15 @@ bool IniciarCombate(
     }
 
     mostrarEstadoCallback(*jugador, *oponente);
-
-    bool ganoCombate = jugador->getSalud() > 0;
-
-    if (ganoCombate) {
+    if (jugador->getSalud() > 0) {
         cout << jugador->getNombre() << " ha ganado!" << endl;
-        jugador->ganarCombate();  // Subir de nivel si es necesario
+        onGanador();
     } else {
         cout << oponente->getNombre() << " ha ganado!" << endl;
+        onPerdedor();  // Enviar al Pokémon debilitado al Centro Pokémon
     }
 
     delete oponente;
-    return ganoCombate;
 }
 
 void mostrarArteASCII() {
@@ -560,18 +570,20 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
             Pokemon* oponente = seleccionarPokemonAleatorio(jugador.equipo[0]->getNivel());
 
             // Iniciar el combate y verificar si el jugador ganó
-            bool ganoCombate = IniciarCombate(
+            IniciarCombate(
                 [&jugador]() { return jugador.equipo[0]; },
                 [oponente]() { return oponente; },
                 seleccionarMovimientoUsuario,
                 [](const Pokemon& pokemon) { return pokemon.seleccionarMovimientoAleatorio(); },
                 [](Pokemon& atacante, Pokemon& objetivo, const Movimiento& movimiento) { atacante.atacar(objetivo, movimiento); },
-                mostrarEstadoCombate
+                mostrarEstadoCombate,
+                [&jugador]() { jugador.equipo[0]->ganarCombate(); },
+                [&jugador]() { jugador.enviarPokemonAlCentro(jugador.equipo[0]); }  // Enviar al Centro Pokémon si se pierde
             );
 
 
             // Verificar si es un gimnasio y marcar líder como derrotado solo si se ganó el combate
-            if (ganoCombate && ubicacionActual.nombre.find("Gimnasio") != string::npos) {     
+            if (ubicacionActual.nombre.find("Gimnasio") != string::npos) {     
                 ubicacionActual.liderDerrotado = true;  // Marcar líder de gimnasio derrotado
                 cout << "¡Has derrotado al líder del gimnasio en " << ubicacionActual.nombre << "!" << endl;
                 continue;
