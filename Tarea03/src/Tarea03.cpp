@@ -7,6 +7,7 @@
 #include <functional>
 #include <map>
 #include <memory>
+#include <windows.h>
 
 using namespace std;
 
@@ -552,6 +553,7 @@ Mapa inicializarMapa() {
 
 void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
     bool jugando = true;
+    bool mostrarUbicacion = true;
 
     while (jugando) {
         Ubicacion& ubicacionActual = mapa.getUbicacionActual();
@@ -655,6 +657,8 @@ void jugarAventura() {
 }
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
+
     mostrarArteASCII();
     jugarAventura();
     return 0;
