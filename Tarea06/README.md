@@ -1,4 +1,4 @@
-# 📊 Simple Calculator in C# - Tarea 06 (Programación Genérica y Eventos)
+# 📊 Calculadora Simple - C# 
 
 > **Nota:** Esta es la primera implementación y uso del lenguaje C#
 
@@ -24,7 +24,7 @@ Este proyecto consiste en el desarrollo de una calculadora simple en C#, que per
 1. **Clonar el repositorio**:
 
    ```bash
-   git clone https://github.com/tu-usuario/CalculadoraSimpleCSharp.git
+   git clone https://github.com/GastMolina267/CalculadoraCSharp.git
 2. **Navegar al directorio del proyecto:**
 
    ```bash
