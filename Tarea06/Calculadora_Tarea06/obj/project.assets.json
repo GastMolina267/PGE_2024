@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\Calculadora_Tarea06.csproj",
+      "projectUniqueName": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea06\\Calculadora_Tarea06\\Calculadora_Tarea06.csproj",
       "projectName": "Calculadora_Tarea06",
-      "projectPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\Calculadora_Tarea06.csproj",
+      "projectPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea06\\Calculadora_Tarea06\\Calculadora_Tarea06.csproj",
       "packagesPath": "C:\\Users\\marin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\obj\\",
+      "outputPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea06\\Calculadora_Tarea06\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marin\\AppData\\Roaming\\NuGet\\NuGet.Config",
