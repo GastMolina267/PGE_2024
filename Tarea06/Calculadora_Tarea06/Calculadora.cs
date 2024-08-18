@@ -9,9 +9,16 @@
         // Lista para almacenar el historial de operaciones
         List<string> historial = new List<string>();
 
+
+        // Definir un evento personalizado de error
+        public event EventHandler<ErrorEventArgs> ErrorOcurrido;
+
+
         public Calculadora()
         {
             InitializeComponent();
+            // Suscribirse al evento de error
+            this.ErrorOcurrido += MostrarError;
         }
 
         Clases.ClsSuma obj = new Clases.ClsSuma();
@@ -30,11 +37,6 @@
             operador = "+";
             primero = double.Parse(txtScreen.Text);
             txtScreen.Clear();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            txtScreen.Text = txtScreen.Text + "7";
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -77,6 +79,11 @@
         private void btnSeis_Click(object sender, EventArgs e)
         {
             txtScreen.Text = txtScreen.Text + "6";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtScreen.Text = txtScreen.Text + "7";
         }
 
         private void btnOcho_Click(object sender, EventArgs e)
@@ -174,6 +181,12 @@
             txtScreen.Clear();
         }
 
+        // Método para disparar el evento de error
+        private void DispararError(string mensajeError)
+        {
+            ErrorOcurrido?.Invoke(this, new ErrorEventArgs(mensajeError));
+        }
+
         private void btnIgual_Click(object sender, EventArgs e)
         {
             segundo = double.Parse(txtScreen.Text);
@@ -211,6 +224,8 @@
                         resultado = objRaizEnesima.Calcular(primero, segundo);
                         historial.Add($"{segundo}√{primero} = {resultado}");
                         break;
+                    default:
+                        throw new InvalidOperationException("Operador no válido."); 
                 }
                 txtScreen.Text = resultado.ToString();
                 lstHistorial.Items.Add(historial.Last());
@@ -219,6 +234,23 @@
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtScreen.Clear();
+            }
+        }
+
+        // Manejador del evento de error
+        private void MostrarError(object sender, ErrorEventArgs e)
+        {
+            MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        // Clase personalizada para el evento de error
+        public class ErrorEventArgs : EventArgs
+        {
+            public string Message { get; }
+
+            public ErrorEventArgs(string message)
+            {
+                Message = message;
             }
         }
     }
