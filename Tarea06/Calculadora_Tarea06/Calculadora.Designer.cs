@@ -48,6 +48,11 @@ namespace Calculadora_Tarea06
             btnPunto = new Button();
             btnCero = new Button();
             txtScreen = new TextBox();
+            btnRaiz = new Button();
+            btnExpo = new Button();
+            btnPoten = new Button();
+            btnRaizCua = new Button();
+            lstHistorial = new ListBox();
             SuspendLayout();
             // 
             // btnSuma
@@ -66,7 +71,7 @@ namespace Calculadora_Tarea06
             // 
             btnSiete.BackColor = SystemColors.GradientActiveCaption;
             btnSiete.Font = new Font("Verdana", 15.75F);
-            btnSiete.Location = new Point(14, 123);
+            btnSiete.Location = new Point(14, 174);
             btnSiete.Name = "btnSiete";
             btnSiete.Size = new Size(45, 45);
             btnSiete.TabIndex = 1;
@@ -78,7 +83,7 @@ namespace Calculadora_Tarea06
             // 
             btnCuatro.BackColor = SystemColors.GradientActiveCaption;
             btnCuatro.Font = new Font("Verdana", 15.75F);
-            btnCuatro.Location = new Point(14, 174);
+            btnCuatro.Location = new Point(14, 225);
             btnCuatro.Name = "btnCuatro";
             btnCuatro.Size = new Size(45, 45);
             btnCuatro.TabIndex = 2;
@@ -90,7 +95,7 @@ namespace Calculadora_Tarea06
             // 
             btnUno.BackColor = SystemColors.GradientActiveCaption;
             btnUno.Font = new Font("Verdana", 15.75F);
-            btnUno.Location = new Point(14, 225);
+            btnUno.Location = new Point(14, 276);
             btnUno.Name = "btnUno";
             btnUno.Size = new Size(45, 45);
             btnUno.TabIndex = 3;
@@ -102,7 +107,7 @@ namespace Calculadora_Tarea06
             // 
             btnDos.BackColor = SystemColors.GradientActiveCaption;
             btnDos.Font = new Font("Verdana", 15.75F);
-            btnDos.Location = new Point(65, 225);
+            btnDos.Location = new Point(65, 276);
             btnDos.Name = "btnDos";
             btnDos.Size = new Size(45, 45);
             btnDos.TabIndex = 7;
@@ -114,7 +119,7 @@ namespace Calculadora_Tarea06
             // 
             btnCinco.BackColor = SystemColors.GradientActiveCaption;
             btnCinco.Font = new Font("Verdana", 15.75F);
-            btnCinco.Location = new Point(65, 174);
+            btnCinco.Location = new Point(65, 225);
             btnCinco.Name = "btnCinco";
             btnCinco.Size = new Size(45, 45);
             btnCinco.TabIndex = 6;
@@ -126,7 +131,7 @@ namespace Calculadora_Tarea06
             // 
             btnOcho.BackColor = SystemColors.GradientActiveCaption;
             btnOcho.Font = new Font("Verdana", 15.75F);
-            btnOcho.Location = new Point(65, 123);
+            btnOcho.Location = new Point(65, 174);
             btnOcho.Name = "btnOcho";
             btnOcho.Size = new Size(45, 45);
             btnOcho.TabIndex = 5;
@@ -150,7 +155,7 @@ namespace Calculadora_Tarea06
             // 
             btnTres.BackColor = SystemColors.GradientActiveCaption;
             btnTres.Font = new Font("Verdana", 15.75F);
-            btnTres.Location = new Point(116, 225);
+            btnTres.Location = new Point(116, 276);
             btnTres.Name = "btnTres";
             btnTres.Size = new Size(45, 45);
             btnTres.TabIndex = 11;
@@ -162,7 +167,7 @@ namespace Calculadora_Tarea06
             // 
             btnSeis.BackColor = SystemColors.GradientActiveCaption;
             btnSeis.Font = new Font("Verdana", 15.75F);
-            btnSeis.Location = new Point(116, 174);
+            btnSeis.Location = new Point(116, 225);
             btnSeis.Name = "btnSeis";
             btnSeis.Size = new Size(45, 45);
             btnSeis.TabIndex = 10;
@@ -174,7 +179,7 @@ namespace Calculadora_Tarea06
             // 
             btnNueve.BackColor = SystemColors.GradientActiveCaption;
             btnNueve.Font = new Font("Verdana", 15.75F);
-            btnNueve.Location = new Point(116, 123);
+            btnNueve.Location = new Point(116, 174);
             btnNueve.Name = "btnNueve";
             btnNueve.Size = new Size(45, 45);
             btnNueve.TabIndex = 9;
@@ -198,7 +203,7 @@ namespace Calculadora_Tarea06
             // 
             btnBorrar.BackColor = Color.FromArgb(255, 128, 128);
             btnBorrar.Font = new Font("Verdana", 15.75F);
-            btnBorrar.Location = new Point(167, 174);
+            btnBorrar.Location = new Point(167, 225);
             btnBorrar.Name = "btnBorrar";
             btnBorrar.Size = new Size(45, 45);
             btnBorrar.TabIndex = 14;
@@ -210,7 +215,7 @@ namespace Calculadora_Tarea06
             // 
             btnClear.BackColor = Color.FromArgb(255, 128, 128);
             btnClear.Font = new Font("Verdana", 15.75F);
-            btnClear.Location = new Point(167, 123);
+            btnClear.Location = new Point(167, 174);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(45, 45);
             btnClear.TabIndex = 13;
@@ -234,7 +239,7 @@ namespace Calculadora_Tarea06
             // 
             btnIgual.BackColor = SystemColors.MenuHighlight;
             btnIgual.Font = new Font("Verdana", 15.75F);
-            btnIgual.Location = new Point(167, 225);
+            btnIgual.Location = new Point(167, 276);
             btnIgual.Name = "btnIgual";
             btnIgual.Size = new Size(45, 96);
             btnIgual.TabIndex = 19;
@@ -246,7 +251,7 @@ namespace Calculadora_Tarea06
             // 
             btnPunto.BackColor = SystemColors.GradientActiveCaption;
             btnPunto.Font = new Font("Verdana", 15.75F);
-            btnPunto.Location = new Point(116, 276);
+            btnPunto.Location = new Point(116, 327);
             btnPunto.Name = "btnPunto";
             btnPunto.Size = new Size(45, 45);
             btnPunto.TabIndex = 18;
@@ -258,7 +263,7 @@ namespace Calculadora_Tarea06
             // 
             btnCero.BackColor = SystemColors.GradientActiveCaption;
             btnCero.Font = new Font("Verdana", 15.75F);
-            btnCero.Location = new Point(14, 276);
+            btnCero.Location = new Point(14, 327);
             btnCero.Name = "btnCero";
             btnCero.Size = new Size(96, 45);
             btnCero.TabIndex = 16;
@@ -271,19 +276,83 @@ namespace Calculadora_Tarea06
             txtScreen.Anchor = AnchorStyles.None;
             txtScreen.BackColor = Color.DarkSeaGreen;
             txtScreen.Font = new Font("Minecraft", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtScreen.Location = new Point(12, 12);
+            txtScreen.Location = new Point(14, 24);
             txtScreen.Name = "txtScreen";
             txtScreen.ReadOnly = true;
             txtScreen.Size = new Size(200, 42);
             txtScreen.TabIndex = 20;
             txtScreen.TextAlign = HorizontalAlignment.Right;
             // 
+            // btnRaiz
+            // 
+            btnRaiz.BackColor = Color.FromArgb(255, 128, 128);
+            btnRaiz.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRaiz.Location = new Point(167, 123);
+            btnRaiz.Name = "btnRaiz";
+            btnRaiz.Size = new Size(45, 45);
+            btnRaiz.TabIndex = 24;
+            btnRaiz.Text = "y√x";
+            btnRaiz.UseVisualStyleBackColor = false;
+            btnRaiz.Click += btnRaiz_Click;
+            // 
+            // btnExpo
+            // 
+            btnExpo.BackColor = Color.FromArgb(255, 128, 128);
+            btnExpo.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnExpo.Location = new Point(116, 123);
+            btnExpo.Name = "btnExpo";
+            btnExpo.Size = new Size(45, 45);
+            btnExpo.TabIndex = 23;
+            btnExpo.Text = "e^x";
+            btnExpo.UseVisualStyleBackColor = false;
+            btnExpo.Click += btnExpo_Click;
+            // 
+            // btnPoten
+            // 
+            btnPoten.BackColor = Color.FromArgb(255, 128, 128);
+            btnPoten.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPoten.Location = new Point(65, 123);
+            btnPoten.Name = "btnPoten";
+            btnPoten.Size = new Size(45, 45);
+            btnPoten.TabIndex = 22;
+            btnPoten.Text = "x^y";
+            btnPoten.UseVisualStyleBackColor = false;
+            btnPoten.Click += btnPoten_Click;
+            // 
+            // btnRaizCua
+            // 
+            btnRaizCua.BackColor = Color.FromArgb(255, 128, 128);
+            btnRaizCua.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRaizCua.Location = new Point(14, 123);
+            btnRaizCua.Name = "btnRaizCua";
+            btnRaizCua.Size = new Size(45, 45);
+            btnRaizCua.TabIndex = 21;
+            btnRaizCua.Text = "√x";
+            btnRaizCua.UseVisualStyleBackColor = false;
+            btnRaizCua.Click += btnRaizCua_Click;
+            // 
+            // lstHistorial
+            // 
+            lstHistorial.BackColor = Color.Gray;
+            lstHistorial.BorderStyle = BorderStyle.FixedSingle;
+            lstHistorial.FormattingEnabled = true;
+            lstHistorial.ItemHeight = 15;
+            lstHistorial.Location = new Point(225, 24);
+            lstHistorial.Name = "lstHistorial";
+            lstHistorial.Size = new Size(101, 347);
+            lstHistorial.TabIndex = 25;
+            // 
             // Calculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
-            ClientSize = new Size(228, 334);
+            ClientSize = new Size(340, 382);
+            Controls.Add(lstHistorial);
+            Controls.Add(btnRaiz);
+            Controls.Add(btnExpo);
+            Controls.Add(btnPoten);
+            Controls.Add(btnRaizCua);
             Controls.Add(txtScreen);
             Controls.Add(btnIgual);
             Controls.Add(btnPunto);
@@ -335,5 +404,10 @@ namespace Calculadora_Tarea06
         private Button button19;
         private Button btnCero;
         private TextBox txtScreen;
+        private Button btnRaiz;
+        private Button btnExpo;
+        private Button btnPoten;
+        private Button btnRaizCua;
+        private ListBox lstHistorial;
     }
 }
