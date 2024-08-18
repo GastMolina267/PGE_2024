@@ -49,6 +49,18 @@ Crea una estructura jerárquica de clases para representar diferentes tipos de e
 - **`/docs`**: Documentación y diagramas UML que ilustran el diseño de la solución.
 - **`README.md`**: Este archivo, que describe el proyecto y proporciona instrucciones.
 
+## Instrucciones de Instalación🛠️ 
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/GastMolina267/Tarea01.git
+2. **Compilar el código:**
+    ```bash
+    g++ main.cpp -o tarea01
+3. **Ejecutar el programa:**
+    ```bash
+    ./Tarea01
+
 ## Recursos Adicionales 🌐
 
 - **Documentación de C++**: [cppreference.com](https://en.cppreference.com/w/)
