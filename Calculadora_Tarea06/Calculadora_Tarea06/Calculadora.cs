@@ -92,12 +92,59 @@ namespace Calculadora_Tarea06
             txtScreen.Clear();
             // Es un ejemplo
         }
-
         private void btnDiv_Click(object sender, EventArgs e)
         {
             operador = "/";
             primero = double.Parse(txtScreen.Text);
             txtScreen.Clear();
+        }
+
+        private void btnIgual_Click(object sender, EventArgs e)
+        {
+            segundo = double.Parse(txtScreen.Text);
+
+            double Sum;
+            double Res;
+            double Mul;
+            double Div;
+
+            switch (operador)
+            {
+                case "+":
+                    Sum = obj.Sumar((primero), (segundo));
+                    txtScreen.Text = Sum.ToString();
+                    break;
+                case "-":
+                    Res = obj2.Resta((primero), (segundo));
+                    txtScreen.Text = Res.ToString();
+                    break;
+                case "*":
+                    Mul = obj3.Multiplicar((primero), (segundo));
+                    txtScreen.Text = Mul.ToString();
+                    break;
+                case "/":
+                    Div = obj4.Division((primero), (segundo));
+                    txtScreen.Text = Div.ToString();
+                    break;
+
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtScreen.Clear();
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if(txtScreen.Text.Length == 1)
+            {
+                txtScreen.Text = "";
+            }
+            else
+            {
+                txtScreen.Text = txtScreen.Text.Substring(0,txtScreen.Text.Length - 1);
+            }
         }
     }
 }

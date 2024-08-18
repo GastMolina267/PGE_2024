@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08141EB8-C8A9-4740-804A-4C774EC10DAC}|Calculadora_Tarea06\\Calculadora_Tarea06.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\calculadora_tarea06\\calculadora_tarea06\\calculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{08141EB8-C8A9-4740-804A-4C774EC10DAC}|Calculadora_Tarea06\\Calculadora_Tarea06.csproj|C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\calculadora_tarea06\\calculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{08141EB8-C8A9-4740-804A-4C774EC10DAC}|Calculadora_Tarea06\\Calculadora_Tarea06.csproj|solutionrelative:calculadora_tarea06\\calculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08141EB8-C8A9-4740-804A-4C774EC10DAC}|Calculadora_Tarea06\\Calculadora_Tarea06.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\calculadora_tarea06\\calculadora_tarea06\\calculadora.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08141EB8-C8A9-4740-804A-4C774EC10DAC}|Calculadora_Tarea06\\Calculadora_Tarea06.csproj|solutionrelative:calculadora_tarea06\\calculadora.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08141EB8-C8A9-4740-804A-4C774EC10DAC}|Calculadora_Tarea06\\Calculadora_Tarea06.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\calculadora_tarea06\\calculadora_tarea06\\calculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08141EB8-C8A9-4740-804A-4C774EC10DAC}|Calculadora_Tarea06\\Calculadora_Tarea06.csproj|solutionrelative:calculadora_tarea06\\calculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08141EB8-C8A9-4740-804A-4C774EC10DAC}|Calculadora_Tarea06\\Calculadora_Tarea06.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\calculadora_tarea06\\calculadora_tarea06\\calculadora.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08141EB8-C8A9-4740-804A-4C774EC10DAC}|Calculadora_Tarea06\\Calculadora_Tarea06.csproj|solutionrelative:calculadora_tarea06\\calculadora.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08141EB8-C8A9-4740-804A-4C774EC10DAC}|Calculadora_Tarea06\\Calculadora_Tarea06.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\calculadora_tarea06\\calculadora_tarea06\\clases\\clsdivision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,11 +38,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Calculadora.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\Calculadora.cs",
+              "RelativeDocumentMoniker": "Calculadora_Tarea06\\Calculadora.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\Calculadora.cs*",
+              "RelativeToolTip": "Calculadora_Tarea06\\Calculadora.cs*",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAEwJEAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T22:58:09.044Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -50,8 +71,8 @@
               "Title": "Calculadora.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\Calculadora.cs",
               "RelativeDocumentMoniker": "Calculadora_Tarea06\\Calculadora.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\Calculadora.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Calculadora_Tarea06\\Calculadora.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\Calculadora.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Calculadora_Tarea06\\Calculadora.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T22:54:09.537Z",
               "EditorCaption": " [Dise\u00F1o]"
@@ -59,25 +80,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Calculadora.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\Calculadora.cs",
-              "RelativeDocumentMoniker": "Calculadora_Tarea06\\Calculadora.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\Calculadora.cs",
-              "RelativeToolTip": "Calculadora_Tarea06\\Calculadora.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAiwBAAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T22:58:09.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Calculadora.Designer.cs",
               "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\Calculadora.Designer.cs",
               "RelativeDocumentMoniker": "Calculadora_Tarea06\\Calculadora.Designer.cs",
               "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Calculadora_Tarea06\\Calculadora_Tarea06\\Calculadora.Designer.cs*",
               "RelativeToolTip": "Calculadora_Tarea06\\Calculadora.Designer.cs*",
-              "ViewState": "AgIAANMAAAAAAAAAAAAlwN8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQBAAAAAAAAAAAowDMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T23:01:03.144Z",
               "EditorCaption": ""
@@ -92,8 +100,7 @@
               "RelativeToolTip": "Calculadora_Tarea06\\Clases\\ClsDivision.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T23:37:38.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T23:37:38.138Z"
             },
             {
               "$type": "Document",
@@ -105,8 +112,7 @@
               "RelativeToolTip": "Calculadora_Tarea06\\Clases\\ClsMultiplicacion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T23:37:25.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T23:37:25.203Z"
             },
             {
               "$type": "Document",
@@ -118,8 +124,7 @@
               "RelativeToolTip": "Calculadora_Tarea06\\Clases\\ClsResta.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T23:37:11.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T23:37:11.396Z"
             },
             {
               "$type": "Document",
@@ -131,8 +136,7 @@
               "RelativeToolTip": "Calculadora_Tarea06\\Clases\\ClsSuma.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T23:36:51.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T23:36:51.674Z"
             }
           ]
         }
