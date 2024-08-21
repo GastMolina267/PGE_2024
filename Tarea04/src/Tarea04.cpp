@@ -566,6 +566,42 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
         } else if (ubicacionActual.tieneCombate && (rand() % 100 < 90)) {  // 90% de probabilidad de combate
             if (!jugador.tienePokemonDisponibles()) {
                 cout << "No tienes Pokémon disponibles para combatir. Debes recogerlos del Centro Pokémon." << endl;
+                // Verificar si el jugador está en el Centro Pokémon
+                bool enCentroPokemon = (ubicacionActual.nombre == "Centro Pokémon");
+
+                char accion;
+                do {
+                    cout << "\n¿Qué deseas hacer? (Mover [M],";
+                    if (enCentroPokemon) {
+                        cout << " Recoger Pokémon [R], ";
+                    }
+                    cout << " Volver al menú [Q]): ";
+                    cin >> accion;
+                    accion = toupper(accion);
+
+                    if (enCentroPokemon && accion == 'R') {
+                        jugador.recogerPokemonDelCentro();
+                    } else if (accion == 'Q') {
+                        cout << "Gracias por jugar. ¡Hasta la próxima!" << endl;
+                        jugando = false;
+                        break;
+                    } else if(accion == 'M'){
+                        cout << "\n¿Hacia dónde quieres ir? (N/S/E/W): ";
+                        char direccion;
+                        cin >> direccion;
+
+                        if (!mapa.mover(toupper(direccion))) {
+                            cout << "No puedes ir en esa dirección." << endl;
+                        } else {
+                            mapa.mostrarMapa();
+                        }
+                        break;
+                    } else {
+                        cout << "Acción no válida. Intenta de nuevo." << endl;
+                    }
+                } while ((!enCentroPokemon || accion != 'R') && accion != 'Q');
+
+                // Si se seleccionó Q, simplemente se vuelve al menú principal
                 continue;
             }
             cout << "¡Un Pokémon salvaje apareció!" << endl;
@@ -595,7 +631,7 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
         }
 
         // Despachar eventos según la entrada del jugador
-        cout << "\n¿Qué deseas hacer? (Mover [M], Curar [C], Recoger Pokémon [R],Salir [Q]): ";
+        cout << "\n¿Qué deseas hacer? (Mover [M], Curar [C], Recoger Pokémon [R], Salir [Q]): ";
         char accion;
         cin >> accion;
 
@@ -613,6 +649,7 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
                 break;
             }
             case 'C': {
+                bool hayPokemonParaCurar = false;
                 for (Pokemon* p : jugador.equipo) {
                     if (p->getSalud() == 0) {
                         cout << "El Pokémon se encuentra debilitado..." << endl;
@@ -620,13 +657,21 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
                     } else {
                         cout << "Curando a tus Pokémon en el Centro Pokémon..." << endl;
                         p->recibirDanio(-(p->getSaludMaxima() - p->getSalud()));  // Restaurar la salud al máximo
+                        hayPokemonParaCurar = true;
                     }
+                }
+                if (!hayPokemonParaCurar) {
+                    cout << "No hay Pokémon en tu equipo que necesiten ser curados." << endl;
                 }
                 break;
             }
             case 'R': {
-                cout << "Recogiendo a tus Pokémon del Centro Pokémon..." << endl;
-                jugador.recogerPokemonDelCentro();
+                if (ubicacionActual.nombre == "Centro Pokémon") {
+                    cout << "Recogiendo a tus Pokémon del Centro Pokémon..." << endl;
+                    jugador.recogerPokemonDelCentro();
+                } else {
+                    cout << "No estás en el Centro Pokémon. No puedes recoger a tus Pokémon aquí." << endl;
+                }
                 break;
             }
             case 'Q': {

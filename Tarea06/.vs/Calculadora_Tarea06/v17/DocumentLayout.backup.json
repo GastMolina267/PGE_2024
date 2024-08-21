@@ -55,14 +55,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Calculadora.cs [Dise\u00F1o]",
+              "Title": "Calculadora.cs [Design]",
               "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea06\\Calculadora_Tarea06\\Calculadora.cs",
               "RelativeDocumentMoniker": "Calculadora_Tarea06\\Calculadora.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea06\\Calculadora_Tarea06\\Calculadora.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Calculadora_Tarea06\\Calculadora.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea06\\Calculadora_Tarea06\\Calculadora.cs [Design]",
+              "RelativeToolTip": "Calculadora_Tarea06\\Calculadora.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T22:54:09.537Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -72,7 +72,7 @@
               "RelativeDocumentMoniker": "Calculadora_Tarea06\\Calculadora.cs",
               "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea06\\Calculadora_Tarea06\\Calculadora.cs",
               "RelativeToolTip": "Calculadora_Tarea06\\Calculadora.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAuwG4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAAAAEBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T22:58:09.044Z",
               "EditorCaption": ""
@@ -87,8 +87,7 @@
               "RelativeToolTip": "Calculadora_Tarea06\\Calculadora.Designer.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAowBcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T23:01:03.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T23:01:03.144Z"
             },
             {
               "$type": "Document",
