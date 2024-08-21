@@ -575,7 +575,7 @@ void despachadorDeEventos(Jugador& jugador, Mapa& mapa) {
                     if (enCentroPokemon) {
                         cout << " Recoger Pokémon [R], ";
                     }
-                    cout << " Volver al menú [Q]): ";
+                    cout << " Salir [Q]): ";
                     cin >> accion;
                     accion = toupper(accion);
 
