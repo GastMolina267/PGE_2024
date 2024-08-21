@@ -36,6 +36,7 @@
         {
             operador = "+";
             primero = double.Parse(txtScreen.Text);
+            txtScreen.Text += txtScreen.Text + " + ";  // Mostrar el operador en un Label adicional
             txtScreen.Clear();
         }
 
@@ -126,59 +127,95 @@
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            if (txtScreen.Text.Length == 1)
+            // Verificar si hay texto para borrar
+            if (txtScreen.Text.Length > 0)
             {
-                txtScreen.Text = "";
-            }
-            else
-            {
-                txtScreen.Text = txtScreen.Text.Substring(0, txtScreen.Text.Length - 1);
+                if (txtScreen.Text.Length == 1)
+                {
+                    txtScreen.Text = ""; // Si hay solo un carácter, borrar todo el texto
+                }
+                else
+                {
+                    // Eliminar el último carácter
+                    txtScreen.Text = txtScreen.Text.Substring(0, txtScreen.Text.Length - 1);
+                }
             }
         }
 
         private void btnRaizCua_Click(object sender, EventArgs e)
         {
-            operador = "raiz";
-            primero = double.Parse(txtScreen.Text);
-            txtScreen.Clear();
+            try
+            {
+                operador = "raiz";
+                primero = double.Parse(txtScreen.Text);
+                txtScreen.Clear();
 
-            // Directamente calcular la raíz cuadrada
-            double resultado = objRaizCuadrada.Calcular(primero);
-            txtScreen.Text = resultado.ToString();
+                double resultado = objRaizCuadrada.Calcular(primero);
+                txtScreen.Text = resultado.ToString();
 
-            // Agregar al historial
-            historial.Add($"√{primero} = {resultado}");
-            lstHistorial.Items.Add($"√{primero} = {resultado}");
-
+                historial.Add($"√{primero} = {resultado}");
+                lstHistorial.Items.Add($"√{primero} = {resultado}");
+            }
+            catch (FormatException)
+            {
+                DispararError("Entrada inválida para la raíz cuadrada.");
+            }
+            catch (Exception ex)
+            {
+                DispararError(ex.Message);
+            }
         }
 
         private void btnPoten_Click(object sender, EventArgs e)
         {
-            operador = "potencia";
-            primero = double.Parse(txtScreen.Text);
-            txtScreen.Clear();
+            try
+            {
+                operador = "potencia";
+                primero = double.Parse(txtScreen.Text);
+                txtScreen.Clear();
+            }
+            catch (FormatException)
+            {
+                DispararError("Entrada inválida para la potencia.");
+            }
         }
 
         private void btnExpo_Click(object sender, EventArgs e)
         {
-            operador = "exponencial";
-            primero = double.Parse(txtScreen.Text);
-            txtScreen.Clear();
+            try
+            {
+                operador = "exponencial";
+                primero = double.Parse(txtScreen.Text);
+                txtScreen.Clear();
 
-            // Directamente calcular el exponencial
-            double resultado = objExponencial.Calcular(primero);
-            txtScreen.Text = resultado.ToString();
+                double resultado = objExponencial.Calcular(primero);
+                txtScreen.Text = resultado.ToString();
 
-            // Agregar al historial
-            historial.Add($"e^{primero} = {resultado}");
-            lstHistorial.Items.Add($"e^{primero} = {resultado}");
+                historial.Add($"e^{primero} = {resultado}");
+                lstHistorial.Items.Add($"e^{primero} = {resultado}");
+            }
+            catch (FormatException)
+            {
+                DispararError("Entrada inválida para la operación exponencial.");
+            }
+            catch (Exception ex)
+            {
+                DispararError(ex.Message);
+            }
         }
 
         private void btnRaiz_Click(object sender, EventArgs e)
         {
-            operador = "raizenesima";
-            primero = double.Parse(txtScreen.Text);
-            txtScreen.Clear();
+            try
+            {
+                operador = "raizenesima";
+                primero = double.Parse(txtScreen.Text);
+                txtScreen.Clear();
+            }
+            catch (FormatException)
+            {
+                DispararError("Entrada inválida para la raíz enésima.");
+            }
         }
 
         // Método para disparar el evento de error
