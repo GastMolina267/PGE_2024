@@ -28,6 +28,15 @@ namespace Calculator
         public Form1()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
+
+            // Establece el foco inicial en el TextBox de entrada
+            textBox_OutPutValue.Focus();
+            textBox_OutPutValue.Select(textBox_OutPutValue.Text.Length, 0);
+
+            // Hace que el TextBox sea de solo lectura para evitar entrada directa
+            textBox_OutPutValue.ReadOnly = true;
         }
         Point lastPoint;
         //1. x (input operation) y = z for the first time -> onother operation without equals// calculate the current sum without "Btn_Equals_OnClick" method
@@ -291,6 +300,88 @@ namespace Calculator
             num_of_input_operation = 0;
         }
 
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Números
+            if ((e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9) || (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9))
+            {
+                string number = (e.KeyCode >= Keys.NumPad0) ? (e.KeyCode - Keys.NumPad0).ToString() : (e.KeyCode - Keys.D0).ToString();
+                SimulateButtonClick(number);
+            }
+            // Punto decimal
+            else if (e.KeyCode == Keys.Decimal || e.KeyCode == Keys.OemPeriod)
+            {
+                SimulateButtonClick(".");
+            }
+            // Operaciones
+            else if (e.KeyCode == Keys.Add || e.KeyCode == Keys.Oemplus)
+            {
+                SimulateButtonClick("+");
+            }
+            else if (e.KeyCode == Keys.Subtract || e.KeyCode == Keys.OemMinus)
+            {
+                SimulateButtonClick("-");
+            }
+            else if (e.KeyCode == Keys.Multiply)
+            {
+                SimulateButtonClick("x");
+            }
+            else if (e.KeyCode == Keys.Divide || e.KeyCode == Keys.OemQuestion)
+            {
+                SimulateButtonClick("/");
+            }
+            // Igual (Enter)
+            else if (e.KeyCode == Keys.Enter)
+            {
+                Btn_Equals_OnClick(sender, e);
+            }
+            // Borrar último dígito (Backspace o Delete)
+            else if (e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete)
+            {
+                DeleteLastDigit();
+            }
+            // Previene que la tecla presionada cambie el foco o realice acciones no deseadas
+            e.Handled = true;
+            e.SuppressKeyPress = true;
+
+            // Mantiene el foco en el TextBox después de cada operación
+            textBox_OutPutValue.Focus();
+            textBox_OutPutValue.Select(textBox_OutPutValue.Text.Length, 0);
+        }
+
+        private void SimulateButtonClick(string buttonText)
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is Button button && button.Text == buttonText)
+                {
+                    if (buttonText == "=")
+                    {
+                        Btn_Equals_OnClick(button, new EventArgs());
+                    }
+                    else
+                    {
+                        button.PerformClick();
+                    }
+                    return;
+                }
+            }
+        }
+
+        private void DeleteLastDigit()
+        {
+            if (textBox_OutPutValue.Text.Length > 0)
+            {
+                textBox_OutPutValue.Text = textBox_OutPutValue.Text.Substring(0, textBox_OutPutValue.Text.Length - 1);
+                if (textBox_OutPutValue.Text.Length == 0 || textBox_OutPutValue.Text == "-")
+                {
+                    textBox_OutPutValue.Text = "0";
+                    operationCondition = false;
+                }
+                lastInputNumber = double.Parse(textBox_OutPutValue.Text);
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -331,6 +422,11 @@ namespace Calculator
         }
 
         private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

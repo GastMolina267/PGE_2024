@@ -29,7 +29,6 @@ namespace Calculator
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Btn_0 = new System.Windows.Forms.Button();
             this.textBox_OutPutValue = new System.Windows.Forms.TextBox();
             this.Btn_Dot = new System.Windows.Forms.Button();
@@ -83,11 +82,11 @@ namespace Calculator
             this.textBox_OutPutValue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_OutPutValue.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_OutPutValue.ForeColor = System.Drawing.Color.White;
-            this.textBox_OutPutValue.Location = new System.Drawing.Point(6, 56);
+            this.textBox_OutPutValue.Location = new System.Drawing.Point(6, 70);
             this.textBox_OutPutValue.MaxLength = 1;
             this.textBox_OutPutValue.Name = "textBox_OutPutValue";
             this.textBox_OutPutValue.ReadOnly = true;
-            this.textBox_OutPutValue.Size = new System.Drawing.Size(254, 64);
+            this.textBox_OutPutValue.Size = new System.Drawing.Size(254, 43);
             this.textBox_OutPutValue.TabIndex = 2;
             this.textBox_OutPutValue.Text = "0";
             this.textBox_OutPutValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -95,6 +94,7 @@ namespace Calculator
             // Btn_Dot
             // 
             this.Btn_Dot.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.Btn_Dot.CausesValidation = false;
             this.Btn_Dot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Dot.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Dot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -465,7 +465,7 @@ namespace Calculator
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 45);
+            this.label1.Size = new System.Drawing.Size(118, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Calculator";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -476,15 +476,16 @@ namespace Calculator
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(34, 449);
+            this.label2.Location = new System.Drawing.Point(62, 450);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(296, 32);
+            this.label2.Size = new System.Drawing.Size(158, 21);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Calculator by Ruben Roy";
+            this.label2.Text = "Calculator by G.M.T";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(271, 478);
@@ -517,7 +518,6 @@ namespace Calculator
             this.Controls.Add(this.Btn_0);
             this.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
