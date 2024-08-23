@@ -428,7 +428,6 @@ namespace Calculator
             }
         }
 
-
         private void DeleteLastDigit()
         {
             if (textBox_OutPutValue.Text.Length > 0)
@@ -442,7 +441,6 @@ namespace Calculator
                 lastInputNumber = double.Parse(textBox_OutPutValue.Text);
             }
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -466,7 +464,6 @@ namespace Calculator
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
