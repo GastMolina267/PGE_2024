@@ -61,6 +61,10 @@ namespace Calculator
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.Btn_NthRoot_Click = new System.Windows.Forms.Button();
+            this.Btn_Square_Click = new System.Windows.Forms.Button();
+            this.Btn_Expo = new System.Windows.Forms.Button();
+            this.Btn_Backspace_Click = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +74,7 @@ namespace Calculator
             this.Btn_0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_0.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_0.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_0.Location = new System.Drawing.Point(10, 396);
+            this.Btn_0.Location = new System.Drawing.Point(74, 453);
             this.Btn_0.Name = "Btn_0";
             this.Btn_0.Size = new System.Drawing.Size(58, 51);
             this.Btn_0.TabIndex = 1;
@@ -100,7 +104,7 @@ namespace Calculator
             this.Btn_Dot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Dot.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Dot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Dot.Location = new System.Drawing.Point(74, 396);
+            this.Btn_Dot.Location = new System.Drawing.Point(10, 453);
             this.Btn_Dot.Name = "Btn_Dot";
             this.Btn_Dot.Size = new System.Drawing.Size(58, 51);
             this.Btn_Dot.TabIndex = 3;
@@ -114,7 +118,7 @@ namespace Calculator
             this.Btn_2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_2.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_2.Location = new System.Drawing.Point(74, 339);
+            this.Btn_2.Location = new System.Drawing.Point(74, 396);
             this.Btn_2.Name = "Btn_2";
             this.Btn_2.Size = new System.Drawing.Size(58, 51);
             this.Btn_2.TabIndex = 4;
@@ -128,7 +132,7 @@ namespace Calculator
             this.Btn_1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_1.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_1.Location = new System.Drawing.Point(10, 339);
+            this.Btn_1.Location = new System.Drawing.Point(10, 396);
             this.Btn_1.Name = "Btn_1";
             this.Btn_1.Size = new System.Drawing.Size(58, 51);
             this.Btn_1.TabIndex = 5;
@@ -142,7 +146,7 @@ namespace Calculator
             this.Btn_Equals.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.Btn_Equals.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Equals.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Equals.Location = new System.Drawing.Point(138, 396);
+            this.Btn_Equals.Location = new System.Drawing.Point(138, 453);
             this.Btn_Equals.Name = "Btn_Equals";
             this.Btn_Equals.Size = new System.Drawing.Size(122, 51);
             this.Btn_Equals.TabIndex = 6;
@@ -156,7 +160,7 @@ namespace Calculator
             this.Btn_8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_8.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_8.Location = new System.Drawing.Point(74, 225);
+            this.Btn_8.Location = new System.Drawing.Point(74, 282);
             this.Btn_8.Name = "Btn_8";
             this.Btn_8.Size = new System.Drawing.Size(58, 51);
             this.Btn_8.TabIndex = 7;
@@ -170,7 +174,7 @@ namespace Calculator
             this.Btn_7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_7.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_7.Location = new System.Drawing.Point(10, 225);
+            this.Btn_7.Location = new System.Drawing.Point(10, 282);
             this.Btn_7.Name = "Btn_7";
             this.Btn_7.Size = new System.Drawing.Size(58, 51);
             this.Btn_7.TabIndex = 8;
@@ -184,7 +188,7 @@ namespace Calculator
             this.Btn_6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_6.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_6.Location = new System.Drawing.Point(138, 282);
+            this.Btn_6.Location = new System.Drawing.Point(138, 339);
             this.Btn_6.Name = "Btn_6";
             this.Btn_6.Size = new System.Drawing.Size(58, 51);
             this.Btn_6.TabIndex = 9;
@@ -198,7 +202,7 @@ namespace Calculator
             this.Btn_5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_5.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_5.Location = new System.Drawing.Point(74, 282);
+            this.Btn_5.Location = new System.Drawing.Point(74, 339);
             this.Btn_5.Name = "Btn_5";
             this.Btn_5.Size = new System.Drawing.Size(58, 51);
             this.Btn_5.TabIndex = 10;
@@ -212,7 +216,7 @@ namespace Calculator
             this.Btn_4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_4.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_4.Location = new System.Drawing.Point(10, 282);
+            this.Btn_4.Location = new System.Drawing.Point(10, 339);
             this.Btn_4.Name = "Btn_4";
             this.Btn_4.Size = new System.Drawing.Size(58, 51);
             this.Btn_4.TabIndex = 11;
@@ -226,7 +230,7 @@ namespace Calculator
             this.Btn_3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_3.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_3.Location = new System.Drawing.Point(138, 339);
+            this.Btn_3.Location = new System.Drawing.Point(138, 396);
             this.Btn_3.Name = "Btn_3";
             this.Btn_3.Size = new System.Drawing.Size(58, 51);
             this.Btn_3.TabIndex = 12;
@@ -240,7 +244,7 @@ namespace Calculator
             this.Btn_9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_9.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_9.Location = new System.Drawing.Point(138, 225);
+            this.Btn_9.Location = new System.Drawing.Point(138, 282);
             this.Btn_9.Name = "Btn_9";
             this.Btn_9.Size = new System.Drawing.Size(58, 51);
             this.Btn_9.TabIndex = 13;
@@ -254,7 +258,7 @@ namespace Calculator
             this.Btn_Minus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Minus.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Minus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Minus.Location = new System.Drawing.Point(202, 282);
+            this.Btn_Minus.Location = new System.Drawing.Point(202, 339);
             this.Btn_Minus.Name = "Btn_Minus";
             this.Btn_Minus.Size = new System.Drawing.Size(58, 51);
             this.Btn_Minus.TabIndex = 14;
@@ -282,7 +286,7 @@ namespace Calculator
             this.Btn_Multiply.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Multiply.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Multiply.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Multiply.Location = new System.Drawing.Point(202, 168);
+            this.Btn_Multiply.Location = new System.Drawing.Point(202, 282);
             this.Btn_Multiply.Name = "Btn_Multiply";
             this.Btn_Multiply.Size = new System.Drawing.Size(58, 51);
             this.Btn_Multiply.TabIndex = 16;
@@ -299,7 +303,7 @@ namespace Calculator
             this.Btn_Plus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Plus.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Plus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Plus.Location = new System.Drawing.Point(202, 339);
+            this.Btn_Plus.Location = new System.Drawing.Point(202, 396);
             this.Btn_Plus.Name = "Btn_Plus";
             this.Btn_Plus.Size = new System.Drawing.Size(58, 50);
             this.Btn_Plus.TabIndex = 17;
@@ -314,7 +318,7 @@ namespace Calculator
             this.Btn_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Remove.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Remove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Remove.Location = new System.Drawing.Point(10, 168);
+            this.Btn_Remove.Location = new System.Drawing.Point(138, 168);
             this.Btn_Remove.Name = "Btn_Remove";
             this.Btn_Remove.Size = new System.Drawing.Size(58, 51);
             this.Btn_Remove.TabIndex = 18;
@@ -343,7 +347,7 @@ namespace Calculator
             this.Btn_SquareRoot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_SquareRoot.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_SquareRoot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_SquareRoot.Location = new System.Drawing.Point(138, 168);
+            this.Btn_SquareRoot.Location = new System.Drawing.Point(74, 225);
             this.Btn_SquareRoot.Name = "Btn_SquareRoot";
             this.Btn_SquareRoot.Size = new System.Drawing.Size(58, 51);
             this.Btn_SquareRoot.TabIndex = 20;
@@ -519,12 +523,75 @@ namespace Calculator
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // Btn_NthRoot_Click
+            // 
+            this.Btn_NthRoot_Click.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.Btn_NthRoot_Click.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_NthRoot_Click.Font = new System.Drawing.Font("Nirmala UI", 13F, System.Drawing.FontStyle.Bold);
+            this.Btn_NthRoot_Click.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_NthRoot_Click.Location = new System.Drawing.Point(12, 225);
+            this.Btn_NthRoot_Click.Name = "Btn_NthRoot_Click";
+            this.Btn_NthRoot_Click.Size = new System.Drawing.Size(58, 51);
+            this.Btn_NthRoot_Click.TabIndex = 33;
+            this.Btn_NthRoot_Click.Text = "y√x";
+            this.Btn_NthRoot_Click.UseVisualStyleBackColor = false;
+            this.Btn_NthRoot_Click.Click += new System.EventHandler(this.Btn_NthRoot_Click_Click);
+            // 
+            // Btn_Square_Click
+            // 
+            this.Btn_Square_Click.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.Btn_Square_Click.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Square_Click.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_Square_Click.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold);
+            this.Btn_Square_Click.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Square_Click.Location = new System.Drawing.Point(138, 225);
+            this.Btn_Square_Click.Name = "Btn_Square_Click";
+            this.Btn_Square_Click.Size = new System.Drawing.Size(58, 51);
+            this.Btn_Square_Click.TabIndex = 32;
+            this.Btn_Square_Click.Text = "x^2";
+            this.Btn_Square_Click.UseVisualStyleBackColor = false;
+            this.Btn_Square_Click.Click += new System.EventHandler(this.Btn_Square_Click_Click);
+            // 
+            // Btn_Expo
+            // 
+            this.Btn_Expo.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.Btn_Expo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Expo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_Expo.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold);
+            this.Btn_Expo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Expo.Location = new System.Drawing.Point(10, 168);
+            this.Btn_Expo.Name = "Btn_Expo";
+            this.Btn_Expo.Size = new System.Drawing.Size(58, 51);
+            this.Btn_Expo.TabIndex = 31;
+            this.Btn_Expo.Text = "e^x";
+            this.Btn_Expo.UseVisualStyleBackColor = false;
+            this.Btn_Expo.Click += new System.EventHandler(this.Btn_Expo_Click);
+            // 
+            // Btn_Backspace_Click
+            // 
+            this.Btn_Backspace_Click.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.Btn_Backspace_Click.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_Backspace_Click.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Backspace_Click.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_Backspace_Click.Location = new System.Drawing.Point(202, 168);
+            this.Btn_Backspace_Click.Name = "Btn_Backspace_Click";
+            this.Btn_Backspace_Click.Size = new System.Drawing.Size(58, 51);
+            this.Btn_Backspace_Click.TabIndex = 30;
+            this.Btn_Backspace_Click.Text = "←";
+            this.Btn_Backspace_Click.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_Backspace_Click.UseVisualStyleBackColor = false;
+            this.Btn_Backspace_Click.Click += new System.EventHandler(this.Btn_Backspace_Click_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(491, 455);
+            this.ClientSize = new System.Drawing.Size(491, 521);
+            this.Controls.Add(this.Btn_NthRoot_Click);
+            this.Controls.Add(this.Btn_Square_Click);
+            this.Controls.Add(this.Btn_Expo);
+            this.Controls.Add(this.Btn_Backspace_Click);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.listBox1);
@@ -599,6 +666,10 @@ namespace Calculator
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Btn_NthRoot_Click;
+        private System.Windows.Forms.Button Btn_Square_Click;
+        private System.Windows.Forms.Button Btn_Expo;
+        private System.Windows.Forms.Button Btn_Backspace_Click;
     }
 }
 

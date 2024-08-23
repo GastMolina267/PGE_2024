@@ -150,7 +150,7 @@ namespace Calculator
             {
                 textBox_OutPutValue.Text = total.ToString();
                 firstNum = total;
-                totalSum = total;// stores the current sum for  "Btn_Equals_OnClick" method !
+                totalSum = total;
             }
 
             if (((Button)sender).Text != "√")
@@ -459,7 +459,7 @@ namespace Calculator
             memoryValue += currentValue;
             textBox_OutPutValue.Tag = memoryValue;
 
-            memoryList.Add($"{currentValue} Total memory: {memoryValue}");
+            memoryList.Add($"{memoryValue}");
         }
 
         private void button21_Click(object sender, EventArgs e) // M-
@@ -469,13 +469,13 @@ namespace Calculator
             memoryValue -= currentValue;
             textBox_OutPutValue.Tag = memoryValue;
 
-            memoryList.Add($"-{currentValue} Total memory: {memoryValue}");
+            memoryList.Add($"{memoryValue}");
         }
 
         private void button22_Click(object sender, EventArgs e) // MR
         {
             textBox_OutPutValue.Text = (textBox_OutPutValue.Tag ?? "0").ToString();
-            memoryList.Add($"Memory recalled: {textBox_OutPutValue.Text}");
+            memoryList.Add($"{textBox_OutPutValue.Text}");
         }
 
         private void button19_Click(object sender, EventArgs e) // MC
@@ -509,6 +509,38 @@ namespace Calculator
             {
                 listBox1.Items.Add(entry);
             }
+        }
+
+        private void Btn_Backspace_Click_Click(object sender, EventArgs e)
+        {
+            DeleteLastDigit();
+        }
+
+        private void Btn_Square_Click_Click(object sender, EventArgs e)
+        {
+            double currentValue = double.Parse(textBox_OutPutValue.Text);
+            double squaredValue = Math.Pow(currentValue, 2);
+            textBox_OutPutValue.Text = squaredValue.ToString();
+            Lbl_1.Text = $"{currentValue}² = {squaredValue}";
+            AddToHistory($"{currentValue}²", squaredValue.ToString());
+        }
+
+        private void Btn_NthRoot_Click_Click(object sender, EventArgs e)
+        {
+            double currentValue = double.Parse(textBox_OutPutValue.Text);
+            double nthRootValue = Math.Pow(currentValue, 1.0 / 3);  // Cambia el "3" por cualquier otro valor si quieres una raíz enésima diferente.
+            textBox_OutPutValue.Text = nthRootValue.ToString();
+            Lbl_1.Text = $"√{currentValue} = {nthRootValue}";
+            AddToHistory($"√{currentValue}", nthRootValue.ToString());
+        }
+
+        private void Btn_Expo_Click(object sender, EventArgs e)
+        {
+            double currentValue = double.Parse(textBox_OutPutValue.Text);
+            double exponentialValue = Math.Exp(currentValue);
+            textBox_OutPutValue.Text = exponentialValue.ToString();
+            Lbl_1.Text = $"exp({currentValue}) = {exponentialValue}";
+            AddToHistory($"exp({currentValue})", exponentialValue.ToString());
         }
     }
 }
