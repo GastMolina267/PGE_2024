@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Calculator
 {
     public partial class Form1 : Form
@@ -20,6 +21,10 @@ namespace Calculator
         double beforeLastInputNumber;
         string number;
         bool a = true;
+        // Declaración de las listas
+        private List<string> historyList = new List<string>();
+        private List<string> memoryList = new List<string>();
+        private bool showingHistory = true; // Para alternar entre historial y memoria
         ///
         int num_of_input_operation = 0;
         double firstNum;
@@ -298,6 +303,8 @@ namespace Calculator
                 Lbl_1.Font = new Font("Nirmala UI", 9, FontStyle.Bold);
             }
             num_of_input_operation = 0;
+            listBox1.Items.Add(Lbl_1.Text + textBox_OutPutValue.Text); // Añadir
+            historyList.Add(Lbl_1.Text + textBox_OutPutValue.Text);
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -334,6 +341,7 @@ namespace Calculator
             else if (e.KeyCode == Keys.Enter)
             {
                 Btn_Equals_OnClick(sender, e);
+                //listBox1.Items.Add(Lbl_1.Text + textBox_OutPutValue.Text); // Añadir al ListBox
             }
             // Borrar último dígito (Backspace o Delete)
             else if (e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete)
@@ -429,6 +437,78 @@ namespace Calculator
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        // Método para añadir al historial y actualizar el ListBox
+        private void AddToHistory(string operation, string result)
+        {
+            string entry = $"{operation} = {result}";
+            historyList.Add(entry);
+
+            if (showingHistory)
+            {
+                listBox1.Items.Add(entry);
+            }
+        }
+
+        // Modificar los botones de memoria (M+, M-, MR, MC) para actualizar la lista de memoria
+        private void button20_Click(object sender, EventArgs e) // M+
+        {
+            double currentValue = double.Parse(textBox_OutPutValue.Text);
+            double memoryValue = Convert.ToDouble(textBox_OutPutValue.Tag ?? "0");
+            memoryValue += currentValue;
+            textBox_OutPutValue.Tag = memoryValue;
+
+            memoryList.Add($"{currentValue} Total memory: {memoryValue}");
+        }
+
+        private void button21_Click(object sender, EventArgs e) // M-
+        {
+            double currentValue = double.Parse(textBox_OutPutValue.Text);
+            double memoryValue = Convert.ToDouble(textBox_OutPutValue.Tag ?? "0");
+            memoryValue -= currentValue;
+            textBox_OutPutValue.Tag = memoryValue;
+
+            memoryList.Add($"-{currentValue} Total memory: {memoryValue}");
+        }
+
+        private void button22_Click(object sender, EventArgs e) // MR
+        {
+            textBox_OutPutValue.Text = (textBox_OutPutValue.Tag ?? "0").ToString();
+            memoryList.Add($"Memory recalled: {textBox_OutPutValue.Text}");
+        }
+
+        private void button19_Click(object sender, EventArgs e) // MC
+        {
+            textBox_OutPutValue.Tag = "0";
+            memoryList.Add("Memory cleared.");
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // Botón de History: muestra el historial
+        private void button3_Click(object sender, EventArgs e)
+        {
+            showingHistory = true;
+            listBox1.Items.Clear();
+            foreach (string entry in historyList)
+            {
+                listBox1.Items.Add(entry);
+            }
+        }
+
+        // Botón de Memory: muestra la memoria
+        private void button4_Click(object sender, EventArgs e)
+        {
+            showingHistory = false;
+            listBox1.Items.Clear();
+            foreach (string entry in memoryList)
+            {
+                listBox1.Items.Add(entry);
+            }
         }
     }
 }

@@ -2,9 +2,9 @@ C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea07\Calculator\Calculator\bin\De
 C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea07\Calculator\Calculator\bin\Debug\Calculator.exe
 C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea07\Calculator\Calculator\bin\Debug\Calculator.pdb
 C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea07\Calculator\Calculator\obj\Debug\Calculator.csproj.AssemblyReference.cache
-C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea07\Calculator\Calculator\obj\Debug\Calculator.Form1.resources
 C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea07\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
 C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea07\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
 C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea07\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea07\Calculator\Calculator\obj\Debug\Calculator.exe
 C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea07\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea07\Calculator\Calculator\obj\Debug\Calculator.Form1.resources

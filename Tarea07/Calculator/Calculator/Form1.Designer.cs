@@ -58,7 +58,9 @@ namespace Calculator
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,12 +139,12 @@ namespace Calculator
             // Btn_Equals
             // 
             this.Btn_Equals.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.Btn_Equals.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_Equals.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.Btn_Equals.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Equals.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_Equals.Location = new System.Drawing.Point(138, 396);
             this.Btn_Equals.Name = "Btn_Equals";
-            this.Btn_Equals.Size = new System.Drawing.Size(58, 51);
+            this.Btn_Equals.Size = new System.Drawing.Size(122, 51);
             this.Btn_Equals.TabIndex = 6;
             this.Btn_Equals.Text = "=";
             this.Btn_Equals.UseVisualStyleBackColor = false;
@@ -292,13 +294,14 @@ namespace Calculator
             // Btn_Plus
             // 
             this.Btn_Plus.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.Btn_Plus.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Btn_Plus.FlatAppearance.BorderSize = 0;
             this.Btn_Plus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Plus.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Plus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Btn_Plus.Location = new System.Drawing.Point(202, 339);
             this.Btn_Plus.Name = "Btn_Plus";
-            this.Btn_Plus.Size = new System.Drawing.Size(58, 108);
+            this.Btn_Plus.Size = new System.Drawing.Size(58, 50);
             this.Btn_Plus.TabIndex = 17;
             this.Btn_Plus.Text = "+";
             this.Btn_Plus.UseVisualStyleBackColor = false;
@@ -362,6 +365,7 @@ namespace Calculator
             this.button19.TabIndex = 21;
             this.button19.Text = "MC";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
@@ -377,6 +381,7 @@ namespace Calculator
             this.button20.TabIndex = 22;
             this.button20.Text = "M+";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button21
             // 
@@ -392,6 +397,7 @@ namespace Calculator
             this.button21.TabIndex = 23;
             this.button21.Text = "M-";
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 
@@ -407,6 +413,7 @@ namespace Calculator
             this.button22.TabIndex = 24;
             this.button22.Text = "MR";
             this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // Lbl_1
             // 
@@ -427,7 +434,7 @@ namespace Calculator
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(-4, -17);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(282, 54);
+            this.panel1.Size = new System.Drawing.Size(495, 54);
             this.panel1.TabIndex = 26;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -438,7 +445,7 @@ namespace Calculator
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(180, 21);
+            this.button2.Location = new System.Drawing.Point(398, 20);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(44, 30);
             this.button2.TabIndex = 2;
@@ -451,7 +458,7 @@ namespace Calculator
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(228, 21);
+            this.button1.Location = new System.Drawing.Point(448, 20);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(44, 30);
             this.button1.TabIndex = 1;
@@ -471,25 +478,56 @@ namespace Calculator
             this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
-            // label2
+            // listBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(62, 450);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Calculator by G.M.T";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.listBox1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 17;
+            this.listBox1.Location = new System.Drawing.Point(276, 70);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(203, 293);
+            this.listBox1.TabIndex = 27;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(275, 44);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "History";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(357, 44);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 29;
+            this.button4.Text = "Memory";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(271, 478);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(491, 455);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Lbl_1);
             this.Controls.Add(this.button22);
@@ -558,7 +596,9 @@ namespace Calculator
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
