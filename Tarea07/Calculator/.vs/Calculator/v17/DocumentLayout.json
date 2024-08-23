@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea07\\Calculator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{02399273-3797-418B-99BB-40E9EBC0A2E3}|Calculator\\Calculator.csproj|C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea07\\Calculator\\calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{02399273-3797-418B-99BB-40E9EBC0A2E3}|Calculator\\Calculator.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea07\\calculator\\calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{02399273-3797-418B-99BB-40E9EBC0A2E3}|Calculator\\Calculator.csproj|solutionrelative:calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02399273-3797-418B-99BB-40E9EBC0A2E3}|Calculator\\Calculator.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea07\\calculator\\calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{02399273-3797-418B-99BB-40E9EBC0A2E3}|Calculator\\Calculator.csproj|C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea07\\Calculator\\calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02399273-3797-418B-99BB-40E9EBC0A2E3}|Calculator\\Calculator.csproj|solutionrelative:calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -57,7 +57,7 @@
               "RelativeDocumentMoniker": "Calculator\\Form1.cs",
               "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea07\\Calculator\\Calculator\\Form1.cs",
               "RelativeToolTip": "Calculator\\Form1.cs",
-              "ViewState": "AgIAAGMBAAAAAAAAAAAQwHcBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAPsBAAAAAAAAAAA1wAwCAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T19:18:08.043Z",
               "EditorCaption": ""

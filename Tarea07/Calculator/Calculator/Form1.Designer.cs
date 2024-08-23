@@ -77,6 +77,9 @@ namespace Calculator
             // 
             // Btn_0
             // 
+            this.Btn_0.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_0.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_0.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,6 +94,9 @@ namespace Calculator
             // 
             // textBox_OutPutValue
             // 
+            this.textBox_OutPutValue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_OutPutValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.textBox_OutPutValue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_OutPutValue.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,6 +112,9 @@ namespace Calculator
             // 
             // Btn_Dot
             // 
+            this.Btn_Dot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Dot.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Dot.CausesValidation = false;
             this.Btn_Dot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -121,6 +130,9 @@ namespace Calculator
             // 
             // Btn_2
             // 
+            this.Btn_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_2.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_2.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,6 +147,9 @@ namespace Calculator
             // 
             // Btn_1
             // 
+            this.Btn_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_1.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,6 +164,9 @@ namespace Calculator
             // 
             // Btn_Equals
             // 
+            this.Btn_Equals.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Equals.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Equals.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.Btn_Equals.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,6 +181,9 @@ namespace Calculator
             // 
             // Btn_8
             // 
+            this.Btn_8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_8.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_8.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,6 +198,9 @@ namespace Calculator
             // 
             // Btn_7
             // 
+            this.Btn_7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_7.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_7.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -191,6 +215,9 @@ namespace Calculator
             // 
             // Btn_6
             // 
+            this.Btn_6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_6.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_6.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,6 +232,9 @@ namespace Calculator
             // 
             // Btn_5
             // 
+            this.Btn_5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_5.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_5.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,6 +249,9 @@ namespace Calculator
             // 
             // Btn_4
             // 
+            this.Btn_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_4.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_4.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,6 +266,9 @@ namespace Calculator
             // 
             // Btn_3
             // 
+            this.Btn_3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_3.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_3.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,6 +283,9 @@ namespace Calculator
             // 
             // Btn_9
             // 
+            this.Btn_9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_9.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_9.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -261,6 +300,9 @@ namespace Calculator
             // 
             // Btn_Minus
             // 
+            this.Btn_Minus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Minus.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Minus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Minus.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -275,6 +317,9 @@ namespace Calculator
             // 
             // Btn_Divide
             // 
+            this.Btn_Divide.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Divide.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Divide.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Divide.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -289,6 +334,9 @@ namespace Calculator
             // 
             // Btn_Multiply
             // 
+            this.Btn_Multiply.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Multiply.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Multiply.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Multiply.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -304,6 +352,9 @@ namespace Calculator
             // 
             // Btn_Plus
             // 
+            this.Btn_Plus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Plus.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Plus.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Btn_Plus.FlatAppearance.BorderSize = 0;
@@ -320,6 +371,9 @@ namespace Calculator
             // 
             // Btn_Remove
             // 
+            this.Btn_Remove.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Remove.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Remove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -335,6 +389,9 @@ namespace Calculator
             // 
             // Btn_Percent
             // 
+            this.Btn_Percent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Percent.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Percent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Percent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -350,6 +407,9 @@ namespace Calculator
             // 
             // Btn_SquareRoot
             // 
+            this.Btn_SquareRoot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_SquareRoot.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_SquareRoot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_SquareRoot.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -364,6 +424,9 @@ namespace Calculator
             // 
             // button19
             // 
+            this.button19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button19.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -380,6 +443,9 @@ namespace Calculator
             // 
             // button20
             // 
+            this.button20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button20.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -396,6 +462,9 @@ namespace Calculator
             // 
             // button21
             // 
+            this.button21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button21.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -412,6 +481,9 @@ namespace Calculator
             // 
             // button22
             // 
+            this.button22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button22.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -428,6 +500,9 @@ namespace Calculator
             // 
             // Lbl_1
             // 
+            this.Lbl_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.Lbl_1.Location = new System.Drawing.Point(62, 33);
@@ -438,6 +513,9 @@ namespace Calculator
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -491,6 +569,9 @@ namespace Calculator
             // 
             // listBox1
             // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.listBox1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -504,6 +585,9 @@ namespace Calculator
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -518,6 +602,9 @@ namespace Calculator
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -532,6 +619,9 @@ namespace Calculator
             // 
             // Btn_NthRoot_Click
             // 
+            this.Btn_NthRoot_Click.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_NthRoot_Click.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_NthRoot_Click.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_NthRoot_Click.Font = new System.Drawing.Font("Nirmala UI", 13F, System.Drawing.FontStyle.Bold);
@@ -546,6 +636,9 @@ namespace Calculator
             // 
             // Btn_Square_Click
             // 
+            this.Btn_Square_Click.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Square_Click.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Square_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Square_Click.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -561,6 +654,9 @@ namespace Calculator
             // 
             // Btn_Expo
             // 
+            this.Btn_Expo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Expo.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Expo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Expo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -576,6 +672,9 @@ namespace Calculator
             // 
             // Btn_Backspace_Click
             // 
+            this.Btn_Backspace_Click.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Backspace_Click.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Backspace_Click.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Backspace_Click.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -591,6 +690,9 @@ namespace Calculator
             // 
             // Btn_Cos
             // 
+            this.Btn_Cos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Cos.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Cos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Cos.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold);
@@ -605,6 +707,9 @@ namespace Calculator
             // 
             // Btn_Sen
             // 
+            this.Btn_Sen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Sen.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Sen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Sen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -620,6 +725,9 @@ namespace Calculator
             // 
             // Btn_Log
             // 
+            this.Btn_Log.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Log.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Log.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Log.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold);
@@ -634,6 +742,9 @@ namespace Calculator
             // 
             // Btn_Tan
             // 
+            this.Btn_Tan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Tan.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Tan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Tan.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold);
@@ -648,6 +759,9 @@ namespace Calculator
             // 
             // Btn_Ln
             // 
+            this.Btn_Ln.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Ln.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_Ln.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Ln.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold);
@@ -662,6 +776,9 @@ namespace Calculator
             // 
             // Btn_Pi
             // 
+            this.Btn_Pi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Pi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.Btn_Pi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Btn_Pi.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -678,6 +795,9 @@ namespace Calculator
             // 
             // Btn_ChangeSign
             // 
+            this.Btn_ChangeSign.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_ChangeSign.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btn_ChangeSign.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_ChangeSign.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold);
@@ -694,6 +814,7 @@ namespace Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(557, 521);
             this.Controls.Add(this.Btn_ChangeSign);

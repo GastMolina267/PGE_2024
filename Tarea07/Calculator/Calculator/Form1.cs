@@ -63,12 +63,23 @@ namespace Calculator
                     break;
 
                 case "/":
+                    if (secondNum == 0)
+                    {
+                        ShowError("Cannot divide by zero");
+                        return 0; // Devuelve 0 o el valor que consideres adecuado
+                    }
                     sum = firstNum / secondNum;
                     break;
-
                 case "√":
-                    textBox_OutPutValue.Text = Math.Sqrt(totalSum).ToString();
-                    operationCondition = false;
+                    if (totalSum < 0)
+                    { 
+                        operationCondition = false;
+                    }
+                    else
+                    {
+                        sum = Math.Sqrt(totalSum);
+                        textBox_OutPutValue.Text = sum.ToString();
+                    }
                     break;
 
                 default:
@@ -119,7 +130,6 @@ namespace Calculator
             }
         }
 
-
         private void Btn_Clear(object sender, EventArgs e)
         {
             textBox_OutPutValue.Font = new Font("Nirmala UI", 24, FontStyle.Bold);
@@ -136,6 +146,14 @@ namespace Calculator
             number = null;
             operationCondition = false;
             firstNum = 0;
+        }
+
+        // Método auxiliar para mostrar errores
+        private void ShowError(string errorMessage)
+        {
+            textBox_OutPutValue.Text = "Error";
+            Lbl_1.Text = errorMessage;
+            AddToHistory("Error", errorMessage);
         }
 
         private void Operation_Click(object sender, EventArgs e)
@@ -265,8 +283,16 @@ namespace Calculator
                         break;
 
                     case "√":
-                        textBox_OutPutValue.Text = Math.Sqrt(totalSum).ToString();
-                        operationCondition = false;
+                        if (totalSum < 0)
+                        {
+                            ShowError("Cannot evalute a negative");
+                            operationCondition = false;
+                        }
+                        else
+                        {
+                            textBox_OutPutValue.Text = Math.Sqrt(totalSum).ToString();
+                            operationCondition = false;
+                        }
                         break;
 
                     default:
@@ -401,6 +427,7 @@ namespace Calculator
                 }
             }
         }
+
 
         private void DeleteLastDigit()
         {
@@ -572,6 +599,11 @@ namespace Calculator
         private void Btn_Ln_Click(object sender, EventArgs e)
         {
             double currentValue = double.Parse(textBox_OutPutValue.Text);
+            if (currentValue <= 0)
+            {
+                ShowError("El logaritmo natural solo acepta números positivos");
+                return;
+            }
             double lnValue = Math.Log(currentValue);
             textBox_OutPutValue.Text = lnValue.ToString();
             Lbl_1.Text = $"ln({currentValue}) = {lnValue}";
@@ -581,6 +613,11 @@ namespace Calculator
         private void Btn_Log_Click(object sender, EventArgs e)
         {
             double currentValue = double.Parse(textBox_OutPutValue.Text);
+            if (currentValue <= 0)
+            {
+                ShowError("El logaritmo solo acepta números positivos");
+                return;
+            }
             double logValue = Math.Log10(currentValue);
             textBox_OutPutValue.Text = logValue.ToString();
             Lbl_1.Text = $"log({currentValue}) = {logValue}";
@@ -591,6 +628,11 @@ namespace Calculator
         {
             double currentValue = double.Parse(textBox_OutPutValue.Text);
             double tanValue = Math.Tan(currentValue);
+            if (double.IsInfinity(tanValue))
+            {
+                ShowError("Tangente indefinida para este ángulo");
+                return;
+            }
             textBox_OutPutValue.Text = tanValue.ToString();
             Lbl_1.Text = $"tan({currentValue}) = {tanValue}";
             AddToHistory($"tan({currentValue})", tanValue.ToString());
