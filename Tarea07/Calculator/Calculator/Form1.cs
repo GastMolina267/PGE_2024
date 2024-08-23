@@ -348,6 +348,32 @@ namespace Calculator
             {
                 DeleteLastDigit();
             }
+            // Nuevas teclas para las funciones trigonométricas y logarítmicas
+            else if (e.KeyCode == Keys.S)
+            {
+                Btn_Sen_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.C)
+            {
+                Btn_Cos_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.T)
+            {
+                Btn_Tan_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.L)
+            {
+                Btn_Log_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.N)
+            {
+                Btn_Ln_Click(sender, e);
+            }
+            // Nuevas teclas para Pi y cambio de signo
+            else if (e.KeyCode == Keys.P)
+            {
+                Btn_Pi_Click(sender, e);
+            }
             // Previene que la tecla presionada cambie el foco o realice acciones no deseadas
             e.Handled = true;
             e.SuppressKeyPress = true;
@@ -541,6 +567,70 @@ namespace Calculator
             textBox_OutPutValue.Text = exponentialValue.ToString();
             Lbl_1.Text = $"exp({currentValue}) = {exponentialValue}";
             AddToHistory($"exp({currentValue})", exponentialValue.ToString());
+        }
+
+        private void Btn_Ln_Click(object sender, EventArgs e)
+        {
+            double currentValue = double.Parse(textBox_OutPutValue.Text);
+            double lnValue = Math.Log(currentValue);
+            textBox_OutPutValue.Text = lnValue.ToString();
+            Lbl_1.Text = $"ln({currentValue}) = {lnValue}";
+            AddToHistory($"ln({currentValue})", lnValue.ToString());
+        }
+
+        private void Btn_Log_Click(object sender, EventArgs e)
+        {
+            double currentValue = double.Parse(textBox_OutPutValue.Text);
+            double logValue = Math.Log10(currentValue);
+            textBox_OutPutValue.Text = logValue.ToString();
+            Lbl_1.Text = $"log({currentValue}) = {logValue}";
+            AddToHistory($"log({currentValue})", logValue.ToString());
+        }
+
+        private void Btn_Tan_Click(object sender, EventArgs e)
+        {
+            double currentValue = double.Parse(textBox_OutPutValue.Text);
+            double tanValue = Math.Tan(currentValue);
+            textBox_OutPutValue.Text = tanValue.ToString();
+            Lbl_1.Text = $"tan({currentValue}) = {tanValue}";
+            AddToHistory($"tan({currentValue})", tanValue.ToString());
+        }
+
+        private void Btn_Cos_Click(object sender, EventArgs e)
+        {
+            double currentValue = double.Parse(textBox_OutPutValue.Text);
+            double cosValue = Math.Cos(currentValue);
+            textBox_OutPutValue.Text = cosValue.ToString();
+            Lbl_1.Text = $"cos({currentValue}) = {cosValue}";
+            AddToHistory($"cos({currentValue})", cosValue.ToString());
+        }
+
+        private void Btn_Sen_Click(object sender, EventArgs e)
+        {
+            double currentValue = double.Parse(textBox_OutPutValue.Text);
+            double sinValue = Math.Sin(currentValue);
+            textBox_OutPutValue.Text = sinValue.ToString();
+            Lbl_1.Text = $"sin({currentValue}) = {sinValue}";
+            AddToHistory($"sin({currentValue})", sinValue.ToString());
+        }
+
+        private void Btn_Pi_Click(object sender, EventArgs e)
+        {
+            textBox_OutPutValue.Text = Math.PI.ToString();
+            Lbl_1.Text = "π";
+            AddToHistory("π", Math.PI.ToString());
+        }
+
+        private void Btn_ChangeSign_Click(object sender, EventArgs e)
+        {
+            if (textBox_OutPutValue.Text != "0")
+            {
+                double currentValue = double.Parse(textBox_OutPutValue.Text);
+                double newValue = -currentValue;
+                textBox_OutPutValue.Text = newValue.ToString();
+                Lbl_1.Text = $"±({currentValue}) = {newValue}";
+                AddToHistory($"±({currentValue})", newValue.ToString());
+            }
         }
     }
 }
