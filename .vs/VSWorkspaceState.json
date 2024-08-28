@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Tarea07",
     "\\Tarea07\\Calculator",
-    "\\Tarea07\\Calculator\\Calculator"
+    "\\Tarea07\\Calculator\\Calculator",
+    "\\Tarea08",
+    "\\Tarea08\\Parte02"
   ],
-  "SelectedNode": "\\Tarea07\\excepcion.cs",
+  "SelectedNode": "\\Tarea08\\Parte02\\Parte02.cs",
   "PreviewInSolutionExplorer": false
 }
