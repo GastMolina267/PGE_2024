@@ -1,4 +1,6 @@
 /*
+CÓDIGO ANTES
+
 right_key = keyboard_check(vk_right);
 left_key = keyboard_check(vk_left);
 down_key = keyboard_check(vk_down);
@@ -30,6 +32,42 @@ if(xspd != 0 or yspd != 0){
 	image_speed = 0;
 	image_index = 0;
 }
+
+x += xspd;
+y += yspd;
+*/
+
+/* 
+CÓDIGO DESPUÉS
+
+right_key = keyboard_check(vk_right);
+left_key = keyboard_check(vk_left);
+down_key = keyboard_check(vk_down);
+up_key = keyboard_check(vk_up);
+// Movimientos
+xspd = (right_key - left_key) * move_spd;
+yspd = (down_key - up_key) * move_spd;
+
+// Colisiones
+if place_meeting(x + xspd, y, oWall) {
+    xspd = 0;
+}
+if place_meeting(x, y + yspd, oWall) {
+    yspd = 0;
+}
+
+// Animación
+if xspd != 0 {
+    sprite_index = (xspd > 0) ? sPlayerRight : sPlayerLeft;
+} else if yspd != 0 {
+    sprite_index = (yspd > 0) ? sPlayerDown : sPlayerUp;
+}
+
+image_speed = (xspd != 0 || yspd != 0) ? 1 : 0;
+if image_speed == 0 {
+    image_index = 0;
+}
+
 
 x += xspd;
 y += yspd;
