@@ -1,5 +1,5 @@
 /*
-CÓDIGO ANTES
+----> CÓDIGO ORIGINAL
 
 right_key = keyboard_check(vk_right);
 left_key = keyboard_check(vk_left);
@@ -38,7 +38,7 @@ y += yspd;
 */
 
 /* 
-CÓDIGO DESPUÉS
+----> CÓDIGO MODIFICADO
 
 right_key = keyboard_check(vk_right);
 left_key = keyboard_check(vk_left);
