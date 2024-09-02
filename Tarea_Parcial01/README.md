@@ -18,4 +18,4 @@ Este proyecto forma parte del **primer parcial** de la materia **Programación G
 - **Lenguaje GML**: Lenguaje de programación utilizado para la implementación de la lógica del juego.
 - **Sprites y Gráficos**: Elementos visuales inspirados en el estilo retro de Undertale.
 
-🎨 Capturas de Pantalla
+## 🎨 Capturas de Pantalla
