@@ -37,7 +37,7 @@ Este proyecto se centra en la creación de un **prototipo** que recrea elementos
 4. Interactúa con los personajes y observa cómo el sistema maneja los diálogos y eventos.
 
 ## 🎨 **Capturas de Pantalla**
-
+![Manejo_de_Dialogos](./Images/Captura%20de%20pantalla%20(420).png)
 *(Inserta aquí capturas de pantalla del prototipo en acción)*
 
 ## 🤝 **Contribuciones**
