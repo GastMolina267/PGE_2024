@@ -11,9 +11,18 @@ function setup_textbox() {
         text_x_offset[p] = 80;
         portrait_x_offset[p] = 50;
         line_width = textbox_width - border*2 - text_x_offset[p];
-        if (speaker_sprite[0] == noone) {
-            text_x_offset[p] = 15;
-            line_width = textbox_width - border*2;
+        
+        // Determinar si el hablante es el NPC o el Player
+        if (speaker[p] == 0) {  // NPC
+            if (speaker_sprite[p] == noone) {
+                text_x_offset[p] = 15;
+                line_width = textbox_width - border*2;
+            }
+        } else {  // Player
+            if (player_sprite[p] == noone) {
+                text_x_offset[p] = 15;
+                line_width = textbox_width - border*2;
+            }
         }
     }
 }
@@ -23,6 +32,17 @@ function update_text() {
     if (draw_char < text_length[page]) {
         draw_char += text_speed;
         draw_char = clamp(draw_char, 0, text_length[page]);
+
+        // Verificar si el carácter ha cambiado y reproducir el sonido
+        if old_draw_char != draw_char {
+            if (speaker[page] == 0) {
+                audio_play_sound(txtb_snd, 10, false);  // Sonido del NPC
+            } else if (speaker[page] == 1) {
+                audio_play_sound(txtb_sound_player, 10, false);  // Sonido del Player
+            }
+        }
+
+        old_draw_char = draw_char;
     }
 }
 
@@ -33,6 +53,14 @@ function handle_page_navigation() {
             if (page < page_number - 1) {
                 page++;
                 draw_char = 0;
+
+                // Reproducir el sonido adecuado para el siguiente hablante
+                if (speaker[page] == 0) {
+                    audio_play_sound(txtb_snd, 10, false);
+                } else if (speaker[page] == 1) {
+                    audio_play_sound(txtb_sound_player, 10, false);
+                }
+
             } else {
                 oPlayer.can_move = true;
                 instance_destroy();
@@ -43,6 +71,7 @@ function handle_page_navigation() {
     }
 }
 
+
 // Callback para dibujar el texto
 function draw_textbox() {
     txtb_image += txtb_image_spd;
@@ -50,19 +79,25 @@ function draw_textbox() {
     var txtb_sprite_h = sprite_get_height(txtb_sprite);
 
     draw_sprite_ext(txtb_sprite, txtb_image, textbox_x, textbox_y, textbox_width / txtb_sprite_w, textbox_height / txtb_sprite_h, 0, c_white, 1);
-    
-    if (speaker_sprite[0] != noone) {
-        var _speaker_x = textbox_x + portrait_x_offset[page];
+
+    var _speaker_x = textbox_x + portrait_x_offset[page];
+
+    if (speaker[page] == 0 && speaker_sprite[page] != noone) {  // Si el NPC está hablando
         sprite_index = speaker_sprite[page];
-        if (draw_char == text_length[page]) {
-            image_index = 0;
-        }
-        draw_sprite_ext(sprite_index, image_index, _speaker_x, textbox_y + (textbox_height / 2), 55 / sprite_width, 55 / sprite_height, 0, c_white, 1);
+    } else if (speaker[page] == 1 && player_sprite[page] != noone) {  // Si el Player está hablando
+        sprite_index = player_sprite[page];
     }
+    
+    if (draw_char == text_length[page]) {
+        image_index = 0;
+    }
+    
+    draw_sprite_ext(sprite_index, image_index, _speaker_x, textbox_y + (textbox_height / 2), 55 / sprite_width, 55 / sprite_height, 0, c_white, 1);
 
     var _drawtext = string_copy(text[page], 1, draw_char);
     draw_text_ext(textbox_x + text_x_offset[page] + border, textbox_y + border, _drawtext, line_sep, line_width);
 }
+
 
 
 // Obtención de entradas

@@ -46,6 +46,8 @@
     {"name":"sPlayerLeft","order":3,"path":"sprites/sPlayerLeft/sPlayerLeft.yy",},
     {"name":"sPlayerRight","order":2,"path":"sprites/sPlayerRight/sPlayerRight.yy",},
     {"name":"sPlayerUp","order":1,"path":"sprites/sPlayerUp/sPlayerUp.yy",},
+    {"name":"sSansDefault","order":3,"path":"sprites/sSansDefault/sSansDefault.yy",},
+    {"name":"sSansDefault2","order":4,"path":"sprites/sSansDefault2/sSansDefault2.yy",},
     {"name":"sSave","order":9,"path":"sprites/sSave/sSave.yy",},
     {"name":"sTextBox","order":1,"path":"sprites/sTextBox/sTextBox.yy",},
     {"name":"sTextBoxOpener","order":3,"path":"sprites/sTextBoxOpener/sTextBoxOpener.yy",},

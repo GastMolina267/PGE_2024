@@ -71,6 +71,8 @@
     {"id":{"name":"sPlayerLeft","path":"sprites/sPlayerLeft/sPlayerLeft.yy",},},
     {"id":{"name":"sPlayerRight","path":"sprites/sPlayerRight/sPlayerRight.yy",},},
     {"id":{"name":"sPlayerUp","path":"sprites/sPlayerUp/sPlayerUp.yy",},},
+    {"id":{"name":"sSansDefault","path":"sprites/sSansDefault/sSansDefault.yy",},},
+    {"id":{"name":"sSansDefault2","path":"sprites/sSansDefault2/sSansDefault2.yy",},},
     {"id":{"name":"sSansRoom","path":"sprites/sSansRoom/sSansRoom.yy",},},
     {"id":{"name":"sSave","path":"sprites/sSave/sSave.yy",},},
     {"id":{"name":"sSoul","path":"sprites/sSoul/sSoul.yy",},},
