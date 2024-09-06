@@ -108,5 +108,162 @@ namespace Tarea09
                 txtDisplay.Text = "0";
             }
         }
+
+        private void Btn_9_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Añadir el número al TextBox
+                txtDisplay.Text += btn.Text; // txtScreen es tu TextBox
+            }
+        }
+
+        private void Btn_8_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Añadir el número al TextBox
+                txtDisplay.Text += btn.Text; // txtScreen es tu TextBox
+            }
+        }
+
+        private void Btn_7_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Añadir el número al TextBox
+                txtDisplay.Text += btn.Text; // txtScreen es tu TextBox
+            }
+        }
+
+        private void Btn_6_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Añadir el número al TextBox
+                txtDisplay.Text += btn.Text; // txtScreen es tu TextBox
+            }
+        }
+
+        private void Btn_5_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Añadir el número al TextBox
+                txtDisplay.Text += btn.Text; // txtScreen es tu TextBox
+            }
+        }
+
+        private void Btn_4_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Añadir el número al TextBox
+                txtDisplay.Text += btn.Text; // txtScreen es tu TextBox
+            }
+        }
+
+        private void Btn_3_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Añadir el número al TextBox
+                txtDisplay.Text += btn.Text; // txtScreen es tu TextBox
+            }
+        }
+
+        private void Btn_2_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Añadir el número al TextBox
+                txtDisplay.Text += btn.Text; // txtScreen es tu TextBox
+            }
+        }
+
+        private void Btn_1_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Añadir el número al TextBox
+                txtDisplay.Text += btn.Text; // txtScreen es tu TextBox
+            }
+        }
+
+        private void Btn_0_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Añadir el número al TextBox
+                txtDisplay.Text += btn.Text; // txtScreen es tu TextBox
+            }
+        }
+
+        private void Btn_Dot_Click(object sender, EventArgs e)
+        {
+            // Verificar que no haya ya un punto en el número
+            if (!txtDisplay.Text.Contains("."))
+            {
+                txtDisplay.Text += ".";
+            }
+        }
+
+        private void btnSum_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Guardar el primer número y el operador
+                firstNum = double.Parse(txtDisplay.Text);
+                inputOperator = btn.Text; // El texto del botón será el operador (+, -, *, /)
+                txtDisplay.Clear();   // Limpiar el TextBox para el siguiente número
+            }
+        }
+
+        private void btnSubstract_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Guardar el primer número y el operador
+                firstNum = double.Parse(txtDisplay.Text);
+                inputOperator = btn.Text; // El texto del botón será el operador (+, -, *, /)
+                txtDisplay.Clear();   // Limpiar el TextBox para el siguiente número
+            }
+        }
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Guardar el primer número y el operador
+                firstNum = double.Parse(txtDisplay.Text);
+                inputOperator = btn.Text; // El texto del botón será el operador (+, -, *, /)
+                txtDisplay.Clear();   // Limpiar el TextBox para el siguiente número
+            }
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                // Guardar el primer número y el operador
+                firstNum = double.Parse(txtDisplay.Text);
+                inputOperator = btn.Text; // El texto del botón será el operador (+, -, *, /)
+                txtDisplay.Clear();   // Limpiar el TextBox para el siguiente número
+            }
+        }
     }
 }

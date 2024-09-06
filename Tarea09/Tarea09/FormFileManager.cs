@@ -29,7 +29,11 @@ namespace Tarea09
             try
             {
                 string filePath = "archivoEjemplo.txt";
-                File.WriteAllText(filePath, "Este es un ejemplo de texto en el archivo.");
+                // Usar StreamWriter en un bloque using para gestionar la escritura del archivo
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    writer.WriteLine("Este es un ejemplo de texto en el archivo.");
+                }
                 MessageBox.Show("Archivo creado exitosamente");
             }
             catch (Exception ex)
@@ -45,8 +49,12 @@ namespace Tarea09
                 string filePath = "archivoEjemplo.txt";
                 if (File.Exists(filePath))
                 {
-                    string content = File.ReadAllText(filePath);
-                    MessageBox.Show(content);
+                    // Usar StreamReader en un bloque using para gestionar la lectura del archivo
+                    using (StreamReader reader = new StreamReader(filePath))
+                    {
+                        string content = reader.ReadToEnd();
+                        MessageBox.Show(content);
+                    }
                 }
                 else
                 {
@@ -59,5 +67,4 @@ namespace Tarea09
             }
         }
     }
-
 }

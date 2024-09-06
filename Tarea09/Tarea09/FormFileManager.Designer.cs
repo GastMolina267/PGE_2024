@@ -35,44 +35,55 @@
             // 
             // btnCreateFile
             // 
-            btnCreateFile.Location = new Point(73, 84);
+            btnCreateFile.BackColor = Color.Maroon;
+            btnCreateFile.Font = new Font("Determination Sans Web", 15.75F, FontStyle.Bold);
+            btnCreateFile.Location = new Point(49, 69);
             btnCreateFile.Name = "btnCreateFile";
-            btnCreateFile.Size = new Size(75, 23);
+            btnCreateFile.Size = new Size(122, 32);
             btnCreateFile.TabIndex = 0;
+            btnCreateFile.TabStop = false;
             btnCreateFile.Text = "CreateFile";
-            btnCreateFile.UseVisualStyleBackColor = true;
+            btnCreateFile.UseVisualStyleBackColor = false;
             btnCreateFile.Click += btnCreateFile_Click;
             // 
             // btnReadFile
             // 
-            btnReadFile.Location = new Point(230, 84);
+            btnReadFile.BackColor = Color.Maroon;
+            btnReadFile.Font = new Font("Determination Sans Web", 15.75F, FontStyle.Bold);
+            btnReadFile.Location = new Point(206, 69);
             btnReadFile.Name = "btnReadFile";
-            btnReadFile.Size = new Size(75, 23);
+            btnReadFile.Size = new Size(122, 32);
             btnReadFile.TabIndex = 1;
+            btnReadFile.TabStop = false;
             btnReadFile.Text = "ReadFile";
-            btnReadFile.UseVisualStyleBackColor = true;
+            btnReadFile.UseVisualStyleBackColor = false;
             btnReadFile.Click += btnReadFile_Click;
             // 
             // btnBackToMain
             // 
-            btnBackToMain.Location = new Point(150, 169);
+            btnBackToMain.BackColor = Color.Maroon;
+            btnBackToMain.Font = new Font("Determination Sans Web", 15.75F, FontStyle.Bold);
+            btnBackToMain.Location = new Point(126, 154);
             btnBackToMain.Name = "btnBackToMain";
-            btnBackToMain.Size = new Size(75, 23);
+            btnBackToMain.Size = new Size(122, 32);
             btnBackToMain.TabIndex = 2;
+            btnBackToMain.TabStop = false;
             btnBackToMain.Text = "Volver";
-            btnBackToMain.UseVisualStyleBackColor = true;
+            btnBackToMain.UseVisualStyleBackColor = false;
             btnBackToMain.Click += btnBackToMain_Click;
             // 
             // FormFileManager
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(377, 228);
             Controls.Add(btnBackToMain);
             Controls.Add(btnReadFile);
             Controls.Add(btnCreateFile);
+            MinimumSize = new Size(393, 267);
             Name = "FormFileManager";
-            Text = "Form1";
+            Text = "File_Manager";
             ResumeLayout(false);
         }
 

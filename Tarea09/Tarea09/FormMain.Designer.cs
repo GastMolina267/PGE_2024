@@ -34,33 +34,40 @@
             // 
             // btnOpenCalculator
             // 
-            btnOpenCalculator.Location = new Point(125, 119);
+            btnOpenCalculator.BackColor = Color.Maroon;
+            btnOpenCalculator.Font = new Font("Determination Sans Web", 15.75F, FontStyle.Bold);
+            btnOpenCalculator.Location = new Point(79, 121);
             btnOpenCalculator.Name = "btnOpenCalculator";
-            btnOpenCalculator.Size = new Size(81, 23);
+            btnOpenCalculator.Size = new Size(142, 60);
             btnOpenCalculator.TabIndex = 0;
+            btnOpenCalculator.TabStop = false;
             btnOpenCalculator.Text = "Calculator";
-            btnOpenCalculator.UseVisualStyleBackColor = true;
+            btnOpenCalculator.UseVisualStyleBackColor = false;
             btnOpenCalculator.Click += btnOpenCalculator_Click;
             // 
             // btnOpenFileManager
             // 
-            btnOpenFileManager.Location = new Point(238, 119);
+            btnOpenFileManager.BackColor = Color.Maroon;
+            btnOpenFileManager.Font = new Font("Determination Sans Web", 15.75F, FontStyle.Bold);
+            btnOpenFileManager.Location = new Point(242, 121);
             btnOpenFileManager.Name = "btnOpenFileManager";
-            btnOpenFileManager.Size = new Size(86, 23);
+            btnOpenFileManager.Size = new Size(142, 60);
             btnOpenFileManager.TabIndex = 1;
+            btnOpenFileManager.TabStop = false;
             btnOpenFileManager.Text = "FileManager";
-            btnOpenFileManager.UseVisualStyleBackColor = true;
+            btnOpenFileManager.UseVisualStyleBackColor = false;
             btnOpenFileManager.Click += btnOpenFileManager_Click;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(462, 299);
             Controls.Add(btnOpenFileManager);
             Controls.Add(btnOpenCalculator);
             Name = "FormMain";
-            Text = "Form1";
+            Text = "Main";
             ResumeLayout(false);
         }
 

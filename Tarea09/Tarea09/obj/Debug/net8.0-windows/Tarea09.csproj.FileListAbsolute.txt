@@ -17,3 +17,4 @@ C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea09\Tarea09\obj\Debug\net8.0-win
 C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea09\Tarea09\obj\Debug\net8.0-windows\Tarea09.pdb
 C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea09\Tarea09\obj\Debug\net8.0-windows\Tarea09.genruntimeconfig.cache
 C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea09\Tarea09\obj\Debug\net8.0-windows\ref\Tarea09.dll
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea09\Tarea09\obj\Debug\net8.0-windows\Tarea09.Properties.Resources.resources
