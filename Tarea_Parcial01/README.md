@@ -2,7 +2,7 @@
 
 ¡Bienvenido/a al repositorio del **Primer Parcial** de la materia **Programación Genérica y Eventos (PGE)**! 🌟
 
-Este proyecto se centra en la creación de un **prototipo** que recrea elementos clave del icónico juego **Undertale**. A través de este prototipo, exploramos y optimizamos la interacción de diálogos entre personajes y la generación de texto interactivo, todo implementado utilizando **callbacks** y un **despachador de eventos**. Cabe destacar que este prototipo es solo un **vistazo interactivo** y no abarca todo el juego.
+Este proyecto se centra en la creación de un **prototipo** que recrea elementos clave del icónico juego **Undertale**. A través de este prototipo, exploramos y optimizamos la interacción de diálogos entre personajes y la generación de texto interactivo, todo implementado utilizando **callbacks** y un **despachador de eventos**. Cabe destacar que este prototipo es solo un **vistazo interactivo** y no abarca todo el juego, es sólo una experiencia brevia para testear posibles mejoras en la lógica y optimización.
 
 ## ✨ **Objetivos del Proyecto**
 
