@@ -1,1 +1,0 @@
-text[0] = "Papyrus's bed"
