@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formcalculator.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formcalculator.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\tarea09\\formfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formfilemanager.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formfilemanager.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\tarea09\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A69287D-BCAD-4BFD-B453-533C01EB5CE3}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormCalculator.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormCalculator.cs",
+              "RelativeDocumentMoniker": "Tarea09\\FormCalculator.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormCalculator.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Tarea09\\FormCalculator.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T19:02:48.534Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCalculator.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormCalculator.Designer.cs",
+              "RelativeDocumentMoniker": "Tarea09\\FormCalculator.Designer.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormCalculator.Designer.cs",
+              "RelativeToolTip": "Tarea09\\FormCalculator.Designer.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAmwKcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T19:03:02.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormCalculator.cs",
+              "RelativeDocumentMoniker": "Tarea09\\FormCalculator.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormCalculator.cs",
+              "RelativeToolTip": "Tarea09\\FormCalculator.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAADwvyoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T19:26:56.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormFileManager.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormFileManager.cs",
+              "RelativeDocumentMoniker": "Tarea09\\FormFileManager.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormFileManager.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Tarea09\\FormFileManager.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T19:04:41.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormFileManager.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormFileManager.cs",
+              "RelativeDocumentMoniker": "Tarea09\\FormFileManager.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormFileManager.cs",
+              "RelativeToolTip": "Tarea09\\FormFileManager.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T19:15:03.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormMain.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormMain.cs",
+              "RelativeDocumentMoniker": "Tarea09\\FormMain.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormMain.cs",
+              "RelativeToolTip": "Tarea09\\FormMain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T19:09:33.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormFileManager.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormFileManager.Designer.cs",
+              "RelativeDocumentMoniker": "Tarea09\\FormFileManager.Designer.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormFileManager.Designer.cs",
+              "RelativeToolTip": "Tarea09\\FormFileManager.Designer.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T19:05:07.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormMain.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormMain.cs",
+              "RelativeDocumentMoniker": "Tarea09\\FormMain.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormMain.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Tarea09\\FormMain.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T19:01:33.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormMain.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormMain.Designer.cs",
+              "RelativeDocumentMoniker": "Tarea09\\FormMain.Designer.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormMain.Designer.cs",
+              "RelativeToolTip": "Tarea09\\FormMain.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T19:03:13.882Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
