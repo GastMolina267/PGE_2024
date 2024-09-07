@@ -38,6 +38,8 @@ Este proyecto se centra en la creación de un **prototipo** que recrea elementos
 
 ## 🎨 **Capturas de Pantalla**
 ![Manejo_de_Dialogos](./Images/Captura%20de%20pantalla%20(420).png)
+![Manejo_de_Dialogos](./Images/Captura%20de%20pantalla%20(424).png)
+![Manejo_de_Dialogos](./Images/Captura%20de%20pantalla%20(425).png)
 *(Inserta aquí capturas de pantalla del prototipo en acción)*
 
 ## 🤝 **Contribuciones**
