@@ -1,9 +1,0 @@
-text[0] = "Papyrus keeps his things here";
-text[1] = "SHOULD NOT REVIEW";
-text[2] = "... or maybe yes...";
-speaker[0] = 1;
-player_sprite[0] = sInvisible;
-speaker[1] = 1;
-player_sprite [1] = sInvisible;
-speaker[2] = 1;
-player_sprite [2] = sInvisible;
