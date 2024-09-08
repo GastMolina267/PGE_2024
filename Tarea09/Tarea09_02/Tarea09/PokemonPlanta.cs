@@ -11,10 +11,10 @@ namespace Tarea09
         public PokemonPlanta(string nombre) : base(nombre)
         {
             tipo = "Planta";
-            AgregarMovimiento(new Movimiento("Látigo Cepa", 6, "Planta"));
-            AgregarMovimiento(new Movimiento("Hoja Afilada", 5, "Planta"));
-            AgregarMovimiento(new Movimiento("Placaje", 5, "Normal"));
-            AgregarMovimiento(new Movimiento("Gruñido", 4, "Normal"));
+            AgregarMovimiento(new Movimiento("Látigo Cepa", 6, "Planta", 0.3));
+            AgregarMovimiento(new Movimiento("Hoja Afilada", 5, "Planta", 0.2));
+            AgregarMovimiento(new Movimiento("Placaje", 5, "Normal", 0.2));
+            AgregarMovimiento(new Movimiento("Gruñido", 4, "Normal", 0.3));
         }
     }
 

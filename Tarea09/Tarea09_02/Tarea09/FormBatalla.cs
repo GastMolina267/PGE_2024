@@ -12,6 +12,8 @@ namespace Tarea09
         private Pokemon jugador;
         private Pokemon oponente;
         private Random rand = new Random();
+        private int victoriasConsecutivas = 0; // Número de victorias necesarias para subir de nivel
+        private int combatesGanados = 0; // Combates ganados por el jugador
 
         public FormBatalla(string pokemonSeleccionado)
         {
@@ -32,17 +34,23 @@ namespace Tarea09
                 default:
                     throw new ArgumentException("Pokémon seleccionado no válido.");
             }
+            // Inicializar contador de victorias para subir de nivel
+            victoriasConsecutivas = 1;
 
             // Generar un oponente aleatorio
-            oponente = GenerarOponenteAleatorio();
+            oponente = GenerarOponenteAleatorio(jugador.Nivel);
             IniciarCombate(jugador, oponente);
 
             // Configurar los botones de movimientos
             ConfigurarBotonesMovimientos();
+            // Deshabilitar el botón "Volver" inicialmente
+            btnVolver.Enabled = false;
+            // Habilitar el botón de curar
+            btnCurar.Enabled = true;
         }
 
         // Método para generar un oponente aleatorio
-        private Pokemon GenerarOponenteAleatorio()
+        private Pokemon GenerarOponenteAleatorio(int nivelJugador)
         {
             int oponenteAleatorio = rand.Next(1, 4); // Elige entre 1 y 3
             Pokemon oponente;
@@ -62,6 +70,7 @@ namespace Tarea09
                     oponente = new PokemonAgua("Squirtle");
                     break;
             }
+            oponente.Nivel = nivelJugador; // Escalar nivel del oponente
 
             return oponente;
         }
@@ -70,6 +79,10 @@ namespace Tarea09
         {
             lblPokemonJugador.Text = jugador.Nombre;
             lblPokemonOponente.Text = oponente.Nombre;
+
+            // Mostrar las imágenes de los Pokémon
+            CargarImagenPokemon(pbPokemonJugador, jugador.Nombre);
+            CargarImagenPokemon(pbPokemonOponente, oponente.Nombre);
 
             progressBarJugador.Maximum = jugador.SaludMaxima;
             progressBarJugador.Value = jugador.Salud;
@@ -80,6 +93,24 @@ namespace Tarea09
             lblVidaOponente.Text = $"HP: {oponente.Salud}/{oponente.SaludMaxima}";
 
             lblEstadoCombate.Text = "¡Es tu turno!";
+        }
+
+        // Método para cargar las imágenes de los Pokémon en los PictureBox
+        private void CargarImagenPokemon(PictureBox pb, string nombrePokemon)
+        {
+            switch (nombrePokemon)
+            {
+                case "Charmander":
+                    pb.Image = Properties.Resources.Charmander;
+                    break;
+                case "Squirtle":
+                    pb.Image = Properties.Resources.Squirtle;
+                    break;
+                case "Bulbasaur":
+                    pb.Image = Properties.Resources.Bulbasaur;
+                    break;
+            }
+            pb.SizeMode = PictureBoxSizeMode.StretchImage; // Ajustar el tamaño de la imagen en el PictureBox
         }
 
         private void ConfigurarBotonesMovimientos()
@@ -115,6 +146,15 @@ namespace Tarea09
             lblMovimiento.Text = $"{jugador.Nombre} usa {movimiento.Nombre}";
             int danio = jugador.Atacar(oponente, movimiento);
 
+            if (danio > 0)
+            {
+                lblMovimiento.Text += $" y causa {danio} de daño.";
+            }
+            else
+            {
+                lblMovimiento.Text += " pero el ataque falló.";
+            }
+
             // Actualizar la barra de progreso del oponente
             progressBarOponente.Value = Math.Max(0, Math.Min(oponente.Salud, progressBarOponente.Maximum));
             lblVidaOponente.Text = $"HP: {oponente.Salud}/{oponente.SaludMaxima}";
@@ -125,6 +165,22 @@ namespace Tarea09
             if (oponente.Salud <= 0)
             {
                 lblEstadoCombate.Text = $"{oponente.Nombre} se ha debilitado. ¡Ganaste!";
+                combatesGanados++; // Aumentar el contador de combates ganados
+
+                // Lógica de subida de nivel
+                SubirDeNivel();
+
+                // Habilitar el botón "Volver"
+                btnVolver.Enabled = true;
+
+                // Esperar un segundo antes de continuar
+                await Task.Delay(1000);
+
+                // Generar un nuevo oponente
+                oponente = GenerarOponenteAleatorio(jugador.Nivel);
+
+                // Reiniciar el combate con el nuevo oponente
+                IniciarCombate(jugador, oponente);
                 return;
             }
 
@@ -149,6 +205,7 @@ namespace Tarea09
             if (jugador.Salud <= 0)
             {
                 lblEstadoCombate.Text = $"{jugador.Nombre} se ha debilitado. ¡Perdiste!";
+                this.Close(); // Cerrar la pantalla si el jugador pierde
             }
             else
             {
@@ -156,9 +213,89 @@ namespace Tarea09
             }
         }
 
+        private void CurarPokemon(int cantidad)
+        {
+            jugador.Salud = Math.Min(jugador.Salud + cantidad, jugador.SaludMaxima);
+            progressBarJugador.Value = jugador.Salud;
+            lblVidaJugador.Text = $"HP: {jugador.Salud}/{jugador.SaludMaxima}";
+            lblMovimiento.Text = $"{jugador.Nombre} se ha curado con caramelos.";
+        }
+
+        // El método para que el oponente ataque
+        private async void AtacarOponente()
+        {
+            Movimiento movimientoOponente = oponente.SeleccionarMovimientoAleatorio();
+            if (movimientoOponente == null)
+            {
+                lblEstadoCombate.Text = $"{oponente.Nombre} no tiene movimientos disponibles.";
+                return;
+            }
+
+            lblMovimiento.Text = $"{oponente.Nombre} usa {movimientoOponente.Nombre}";
+            int danioOponente = oponente.Atacar(jugador, movimientoOponente);
+
+            if (danioOponente > 0)
+            {
+                lblMovimiento.Text += $" y causa {danioOponente} de daño.";
+            }
+            else
+            {
+                lblMovimiento.Text += " pero el ataque falló.";
+            }
+
+            // Actualizar la barra de progreso del jugador
+            progressBarJugador.Value = Math.Max(0, Math.Min(jugador.Salud, progressBarJugador.Maximum));
+            lblVidaJugador.Text = $"HP: {jugador.Salud}/{jugador.SaludMaxima}";
+
+            await Task.Delay(1000); // Pausa de 1 segundo entre turnos
+
+            // Verificar si el jugador se ha debilitado
+            if (jugador.Salud <= 0)
+            {
+                lblEstadoCombate.Text = $"{jugador.Nombre} se ha debilitado. ¡Perdiste!";
+                this.Close(); // Cerrar la pantalla si el jugador pierde
+            }
+            else
+            {
+                lblEstadoCombate.Text = "¡Es tu turno!";
+                btnCurar.Enabled = true; // Habilitar el botón de curar nuevamente
+            }
+        }
+
+        private async void btnCurar_Click(object sender, EventArgs e)
+        {
+            // Aplicar caramelos al Pokémon jugador
+            CurarPokemon(7);
+
+            // Deshabilitar el botón de curar para que el jugador no pueda curar continuamente en el mismo turno
+            btnCurar.Enabled = false;
+            await Task.Delay(1000); // Pausa de 1 segundo entre turnos
+            // El jugador pierde su turno de atacar, por lo que se debe hacer que el oponente ataque a continuación
+            AtacarOponente();
+        }
+
+        // Verificar si el jugador puede subir de nivel
+        private void SubirDeNivel()
+        {
+            // Lógica de subida de nivel escalada
+            int combatesRequeridos = (jugador.Nivel * (jugador.Nivel + 1)) / 2; // Ejemplo de lógica escalada
+
+            if (combatesGanados >= combatesRequeridos)
+            {
+                jugador.Nivel++; // Subir de nivel
+                jugador.RecuperarSaludCompleta(); // Recuperar salud tras subir de nivel
+                lblEstadoCombate.Text = $"{jugador.Nombre} ha subido al nivel {jugador.Nivel}.";
+                combatesGanados = 0; // Reiniciar el contador de combates ganados
+            }
+        }
+
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (jugador.Salud > 0 && combatesGanados >= victoriasConsecutivas)
+            {
+                // Solo se permite volver si el jugador ha ganado
+                this.Close();
+            }
         }
     }
 }

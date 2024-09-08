@@ -23,17 +23,39 @@ namespace Tarea09
             this.tipo = "Normal";
             this.nivel = 1;
             this.saludMaxima = 20;
-            this.salud = 20;
+            this.salud = saludMaxima;
             this.ataque = 5;
             this.defensa = 5;
             this.movimientos = new List<Movimiento>();
         }
 
+        // Propiedad para obtener el nombre del Pokémon
         public string Nombre => nombre;
+
+        // Propiedad para obtener el tipo del Pokémon
         public string Tipo => tipo;
-        public int Salud => salud;
+
+        // Propiedad para obtener y establecer el nivel del Pokémon
+        public int Nivel
+        {
+            get => nivel;
+            set
+            {
+                nivel = value;
+                // Ajustar estadísticas del Pokémon según el nivel
+                ActualizarEstadisticasPorNivel();
+            }
+        }
+
+        // Propiedades para la salud y salud máxima
+        public int Salud
+        {
+            get => salud;
+            set { salud = value; }
+        }
         public int SaludMaxima => saludMaxima;
 
+        // Método para recibir daño
         public void RecibirDanio(int danio)
         {
             salud = Math.Max(0, salud - danio);
@@ -43,6 +65,7 @@ namespace Tarea09
             }
         }
 
+        // Método para agregar movimientos al Pokémon (máximo 4 movimientos)
         public void AgregarMovimiento(Movimiento movimiento)
         {
             if (movimientos.Count < 4)
@@ -51,9 +74,18 @@ namespace Tarea09
             }
         }
 
+        // Método para atacar a un objetivo usando un movimiento
         public virtual int Atacar(Pokemon objetivo, Movimiento movimiento)
         {
+            Random rand = new Random();
             int danio = movimiento.Poder + ataque;
+
+            // Verificar si el ataque falla
+            if (rand.NextDouble() < movimiento.ProbabilidadFallo)
+            {
+                // El ataque falla
+                return 0;
+            }
             if (movimiento.Tipo == objetivo.Tipo)
             {
                 danio /= 2; // No es efectivo
@@ -66,8 +98,10 @@ namespace Tarea09
             return danio;
         }
 
+        // Propiedad para obtener los movimientos del Pokémon
         public List<Movimiento> Movimientos => movimientos;
 
+        // Método para determinar si un ataque es efectivo o no
         private bool EsEfectivo(string tipoAtaque, string tipoDefensa)
         {
             return (tipoAtaque == "Agua" && tipoDefensa == "Fuego") ||
@@ -75,6 +109,7 @@ namespace Tarea09
                    (tipoAtaque == "Planta" && tipoDefensa == "Agua");
         }
 
+        // Método para seleccionar un movimiento aleatorio
         public Movimiento SeleccionarMovimientoAleatorio()
         {
             if (movimientos.Count > 0)
@@ -89,5 +124,20 @@ namespace Tarea09
             }
         }
 
+        // Método para recuperar la salud máxima
+        public void RecuperarSaludCompleta()
+        {
+            salud = saludMaxima;
+            Console.WriteLine($"{nombre} ha recuperado toda su salud.");
+        }
+
+        // Método para actualizar las estadísticas al subir de nivel
+        private void ActualizarEstadisticasPorNivel()
+        {
+            saludMaxima = 20 + (nivel * 5); // Ejemplo de incremento de salud máxima por nivel
+            ataque = 5 + (nivel * 2); // Incremento de ataque por nivel
+            defensa = 5 + (nivel * 2); // Incremento de defensa por nivel
+            RecuperarSaludCompleta(); // Recuperar salud completa al subir de nivel
+        }
     }
 }

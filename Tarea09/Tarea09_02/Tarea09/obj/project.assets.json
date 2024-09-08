@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\Tarea09.csproj",
+      "projectUniqueName": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\Tarea09.csproj",
       "projectName": "Tarea09",
-      "projectPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\Tarea09.csproj",
+      "projectPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\Tarea09.csproj",
       "packagesPath": "C:\\Users\\marin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\obj\\",
+      "outputPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marin\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -5,6 +5,7 @@ namespace Tarea09
         public FormPrincipal()
         {
             InitializeComponent();
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void btnIniciarBatalla_Click(object sender, EventArgs e)

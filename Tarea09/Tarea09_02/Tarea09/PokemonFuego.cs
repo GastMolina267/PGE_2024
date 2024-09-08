@@ -11,10 +11,10 @@ namespace Tarea09
         public PokemonFuego(string nombre) : base(nombre)
         {
             tipo = "Fuego";
-            AgregarMovimiento(new Movimiento("Ascuas", 6, "Fuego"));
-            AgregarMovimiento(new Movimiento("Giro Fuego", 5, "Fuego"));
-            AgregarMovimiento(new Movimiento("Arañazo", 5, "Normal"));
-            AgregarMovimiento(new Movimiento("Gruñido", 4, "Normal"));
+            AgregarMovimiento(new Movimiento("Ascuas", 6, "Fuego", 0.3));
+            AgregarMovimiento(new Movimiento("Giro Fuego", 5, "Fuego", 0.2));
+            AgregarMovimiento(new Movimiento("Arañazo", 5, "Normal", 0.2));
+            AgregarMovimiento(new Movimiento("Gruñido", 4, "Normal", 0.3));
         }
     }
 

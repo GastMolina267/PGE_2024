@@ -1,46 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\",
+  "WorkspaceRootPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formbatalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09_02\\tarea09\\formbatalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formbatalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formbatalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formbatalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\formprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\pokemonagua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09_02\\tarea09\\pokemonagua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\pokemonagua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\pokemonfuego.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\pokemonfuego.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\pokemonplanta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09_02\\tarea09\\pokemonplanta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\pokemonplanta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09_02\\tarea09\\pokemonfuego.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\pokemonfuego.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09_02\\tarea09\\pokemon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\pokemon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\tarea09\\formbatalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formbatalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\tarea09\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09_02\\tarea09\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09_02\\tarea09\\formprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\formprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea09\\tarea09_02\\tarea09\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10E1DD2A-67BC-4636-9B4D-B22D43B828A0}|Tarea09\\Tarea09.csproj|solutionrelative:tarea09\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,37 +66,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "PokemonAgua.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\PokemonAgua.cs",
+              "RelativeDocumentMoniker": "Tarea09\\PokemonAgua.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\PokemonAgua.cs",
+              "RelativeToolTip": "Tarea09\\PokemonAgua.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAtwA0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T21:09:11.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "FormBatalla.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormBatalla.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\FormBatalla.cs",
               "RelativeDocumentMoniker": "Tarea09\\FormBatalla.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormBatalla.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\FormBatalla.cs",
               "RelativeToolTip": "Tarea09\\FormBatalla.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAswDoAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAANsAAAAAAAAAAADwv+sAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T15:43:08.666Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormPrincipal.cs",
-              "RelativeDocumentMoniker": "Tarea09\\FormPrincipal.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormPrincipal.cs",
-              "RelativeToolTip": "Tarea09\\FormPrincipal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAewA8AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "PokemonFuego.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\PokemonFuego.cs",
+              "RelativeDocumentMoniker": "Tarea09\\PokemonFuego.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\PokemonFuego.cs",
+              "RelativeToolTip": "Tarea09\\PokemonFuego.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T15:38:52.987Z",
+              "WhenOpened": "2024-09-07T15:31:19.592Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "PokemonPlanta.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\PokemonPlanta.cs",
+              "RelativeDocumentMoniker": "Tarea09\\PokemonPlanta.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\PokemonPlanta.cs",
+              "RelativeToolTip": "Tarea09\\PokemonPlanta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T15:31:37.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Pokemon.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\Pokemon.cs",
+              "RelativeDocumentMoniker": "Tarea09\\Pokemon.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\Pokemon.cs",
+              "RelativeToolTip": "Tarea09\\Pokemon.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAcwFcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T20:06:01.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "FormPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\FormPrincipal.cs",
               "RelativeDocumentMoniker": "Tarea09\\FormPrincipal.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormPrincipal.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\FormPrincipal.cs [Dise\u00F1o]",
               "RelativeToolTip": "Tarea09\\FormPrincipal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T15:28:16.377Z",
@@ -104,11 +143,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "FormBatalla.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormBatalla.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\FormBatalla.cs",
               "RelativeDocumentMoniker": "Tarea09\\FormBatalla.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormBatalla.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\FormBatalla.cs [Dise\u00F1o]",
               "RelativeToolTip": "Tarea09\\FormBatalla.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T15:32:11.138Z",
@@ -116,11 +155,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
+              "Title": "FormPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\FormPrincipal.cs",
+              "RelativeDocumentMoniker": "Tarea09\\FormPrincipal.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\FormPrincipal.cs",
+              "RelativeToolTip": "Tarea09\\FormPrincipal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T15:38:52.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "FormPrincipal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormPrincipal.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\FormPrincipal.Designer.cs",
               "RelativeDocumentMoniker": "Tarea09\\FormPrincipal.Designer.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\FormPrincipal.Designer.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\FormPrincipal.Designer.cs",
               "RelativeToolTip": "Tarea09\\FormPrincipal.Designer.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -129,68 +181,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\Program.cs",
               "RelativeDocumentMoniker": "Tarea09\\Program.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\Program.cs",
+              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09_02\\Tarea09\\Program.cs",
               "RelativeToolTip": "Tarea09\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T15:35:44.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PokemonAgua.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\PokemonAgua.cs",
-              "RelativeDocumentMoniker": "Tarea09\\PokemonAgua.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\PokemonAgua.cs",
-              "RelativeToolTip": "Tarea09\\PokemonAgua.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T15:30:51.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PokemonFuego.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\PokemonFuego.cs",
-              "RelativeDocumentMoniker": "Tarea09\\PokemonFuego.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\PokemonFuego.cs",
-              "RelativeToolTip": "Tarea09\\PokemonFuego.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T15:31:19.592Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PokemonPlanta.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\PokemonPlanta.cs",
-              "RelativeDocumentMoniker": "Tarea09\\PokemonPlanta.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\PokemonPlanta.cs",
-              "RelativeToolTip": "Tarea09\\PokemonPlanta.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T15:31:37.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Movimiento.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\Movimiento.cs",
-              "RelativeDocumentMoniker": "Tarea09\\Movimiento.cs",
-              "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea09\\Tarea09\\Movimiento.cs",
-              "RelativeToolTip": "Tarea09\\Movimiento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T15:31:53.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-07T15:35:44.948Z"
             }
           ]
         }

@@ -34,21 +34,25 @@
             // 
             // btnIniciarBatalla
             // 
-            btnIniciarBatalla.Location = new Point(70, 88);
+            btnIniciarBatalla.BackColor = Color.Yellow;
+            btnIniciarBatalla.Font = new Font("Determination Sans Web", 12F, FontStyle.Bold);
+            btnIniciarBatalla.ForeColor = Color.DodgerBlue;
+            btnIniciarBatalla.Location = new Point(114, 73);
             btnIniciarBatalla.Name = "btnIniciarBatalla";
             btnIniciarBatalla.Size = new Size(75, 23);
             btnIniciarBatalla.TabIndex = 0;
             btnIniciarBatalla.Text = "Iniciar";
-            btnIniciarBatalla.UseVisualStyleBackColor = true;
+            btnIniciarBatalla.UseVisualStyleBackColor = false;
             btnIniciarBatalla.Click += btnIniciarBatalla_Click;
             // 
             // comboBoxSeleccionPokemon
             // 
+            comboBoxSeleccionPokemon.Font = new Font("Determination Sans Web", 12F, FontStyle.Bold);
             comboBoxSeleccionPokemon.FormattingEnabled = true;
             comboBoxSeleccionPokemon.Items.AddRange(new object[] { "Charmander", "Squirtle", "Bulbasaur" });
-            comboBoxSeleccionPokemon.Location = new Point(210, 89);
+            comboBoxSeleccionPokemon.Location = new Point(242, 73);
             comboBoxSeleccionPokemon.Name = "comboBoxSeleccionPokemon";
-            comboBoxSeleccionPokemon.Size = new Size(121, 23);
+            comboBoxSeleccionPokemon.Size = new Size(157, 24);
             comboBoxSeleccionPokemon.TabIndex = 1;
             comboBoxSeleccionPokemon.Text = "Selección Pokemon";
             // 
@@ -56,9 +60,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(386, 284);
+            BackgroundImage = Properties.Resources.Logo;
+            ClientSize = new Size(463, 287);
             Controls.Add(comboBoxSeleccionPokemon);
             Controls.Add(btnIniciarBatalla);
+            DoubleBuffered = true;
             Name = "FormPrincipal";
             Text = "Form1";
             ResumeLayout(false);
