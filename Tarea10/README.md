@@ -1,16 +1,6 @@
 # 🧮 Tarea 10: Migración de Calculadora y Manejo de Excepciones
 
-![Versión](https://img.shields.io/badge/versión-1.0-blue)
-![Plataforma](https://img.shields.io/badge/plataforma-WPF-brightgreen)
-![Licencia](https://img.shields.io/badge/licencia-MIT-green)
-
-<div align="center">
-
-![Calculadora WPF](https://via.placeholder.com/500x300?text=Calculadora+WPF)
-
-*Tu nueva calculadora en WPF*
-
-</div>
+---
 
 ## 📝 Descripción del Proyecto
 
