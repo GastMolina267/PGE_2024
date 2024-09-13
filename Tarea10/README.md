@@ -1,7 +1,5 @@
 # 🧮 Tarea 10: Migración de Calculadora y Manejo de Excepciones
 
----
-
 ## 📝 Descripción del Proyecto
 
 Este proyecto es parte de la emocionante Tarea 10, donde damos vida a nuestra calculadora simple, migrándola a una nueva y brillante interfaz en WPF (Windows Presentation Foundation) y la dotamos de superpoderes para manejar excepciones como un campeón.
@@ -54,7 +52,7 @@ Cuando ocurre una excepción, la aplicación muestra un mensaje de error amigabl
 ---
 
 <div align="center">
-Hecho con ❤️ por [Tu Nombre]
+Hecho con ❤️ por **SigmaMan**
 </div>
 
 </div>
