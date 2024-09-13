@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Tarea06\\Calculadora_Tarea06",
-    "\\Tarea07\\Calculator",
-    "\\Tarea07\\Calculator\\Calculator",
-    "\\Tarea08\\Parte02",
-    "\\Tarea08\\Parte04"
+    "\\Tarea09",
+    "\\Tarea09\\Tarea09_01",
+    "\\Tarea09\\Tarea09_01\\Tarea09"
   ],
+  "SelectedNode": "\\Tarea09\\Tarea09_01\\Tarea09\\FormFileManager.cs",
   "PreviewInSolutionExplorer": false
 }
