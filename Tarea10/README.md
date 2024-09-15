@@ -51,8 +51,6 @@ Cuando ocurre una excepción, la aplicación muestra un mensaje de error amigabl
 
 ---
 
----
-
 <div align="center">
   <p style="font-style: oblique; font-weight: bold; font-size: 120%; font-family: cursive;">
     Hecho con ❤️ por <strong>SigmaMan</strong>
