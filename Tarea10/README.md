@@ -33,6 +33,26 @@ Este proyecto es parte de la emocionante Tarea 10, donde damos vida a nuestra ca
 
 ---
 
+## ¿Qué es WPF?
+
+**WPF (Windows Presentation Foundation)** es un framework desarrollado por Microsoft para la creación de **interfaces gráficas de usuario (GUI)** en aplicaciones de escritorio de Windows. WPF permite diseñar y desarrollar aplicaciones visualmente atractivas utilizando **XAML (Extensible Application Markup Language)** para definir la interfaz y **C#** o **VB.NET** para la lógica de la aplicación.
+
+### Características principales:
+- **Diseño visual avanzado**: Permite crear interfaces ricas en gráficos, incluyendo soporte para **2D**, **3D**, y **multimedia**.
+- **Data Binding**: Facilita la vinculación de elementos de la interfaz con datos de forma eficiente y escalable.
+- **Layout flexible**: Los elementos de la interfaz pueden ajustarse dinámicamente a diferentes tamaños de ventana y resoluciones de pantalla.
+- **Modelo de gráficos basado en vectores**: Esto garantiza que los componentes de la interfaz se escalen sin pérdida de calidad.
+- **Soporte para animaciones y estilos**: Puedes definir animaciones, temas y estilos para mejorar la experiencia de usuario.
+
+### Ventajas de WPF:
+- Separación clara entre la lógica de la aplicación y la interfaz de usuario (a través de **XAML**).
+- Gran capacidad para crear **interfaces personalizadas y modernas**.
+- Integración con tecnologías como **DirectX** para mejorar el rendimiento gráfico.
+
+WPF es ampliamente utilizado para el desarrollo de **aplicaciones de escritorio** que requieren interfaces gráficas avanzadas y personalizables.
+
+---
+
 ## 🛡️ Manejo de Excepciones
 
 Nuestra calculadora ahora viene equipada con un escudo protector contra:
