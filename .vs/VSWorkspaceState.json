@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Tarea09",
-    "\\Tarea09\\Tarea09_01",
-    "\\Tarea09\\Tarea09_01\\Tarea09"
+    "\\Tarea07\\Calculator",
+    "\\Tarea07\\Calculator\\Calculator"
   ],
-  "SelectedNode": "\\Tarea09\\Tarea09_01\\Tarea09\\FormFileManager.cs",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
