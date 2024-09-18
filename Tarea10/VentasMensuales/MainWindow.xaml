@@ -1,0 +1,22 @@
+﻿<Window x:Class="VentasMensuales.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        Title="Visualización de Ventas Mensuales" Height="450" Width="800">
+    <Grid>
+        <!-- ComboBox para seleccionar el producto -->
+        <ComboBox Name="cbProductos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150"
+                  SelectionChanged="cbProductos_SelectionChanged">
+            <ComboBoxItem Content="Producto A" />
+            <ComboBoxItem Content="Producto B" />
+        </ComboBox>
+
+        <!-- Botón para actualizar el gráfico -->
+        <Button Content="Actualizar Gráfico" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Margin="160,0,0,0" Width="150" Click="btnActualizar_Click"/>
+
+        <!-- Control para mostrar el gráfico de barras -->
+        <oxy:PlotView Name="plotView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                      Margin="10,40,10,10" />
+    </Grid>
+</Window>
