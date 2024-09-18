@@ -1,0 +1,10 @@
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\RegistroDeGastos\bin\Debug\RegistroDeGastos.exe.config
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\RegistroDeGastos\bin\Debug\RegistroDeGastos.exe
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\RegistroDeGastos\bin\Debug\RegistroDeGastos.pdb
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\RegistroDeGastos\obj\Debug\RegistroDeGastos.csproj.AssemblyReference.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\RegistroDeGastos\obj\Debug\RegistroDeGastos.Form1.resources
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\RegistroDeGastos\obj\Debug\RegistroDeGastos.Properties.Resources.resources
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\RegistroDeGastos\obj\Debug\RegistroDeGastos.csproj.GenerateResource.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\RegistroDeGastos\obj\Debug\RegistroDeGastos.csproj.CoreCompileInputs.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\RegistroDeGastos\obj\Debug\RegistroDeGastos.exe
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\RegistroDeGastos\obj\Debug\RegistroDeGastos.pdb
