@@ -1,0 +1,10 @@
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\ConvertirTemperatura\bin\Debug\ConvertirTemperatura.exe.config
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\ConvertirTemperatura\bin\Debug\ConvertirTemperatura.exe
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\ConvertirTemperatura\bin\Debug\ConvertirTemperatura.pdb
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\ConvertirTemperatura\obj\Debug\ConvertirTemperatura.csproj.AssemblyReference.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\ConvertirTemperatura\obj\Debug\ConvertirTemperatura.Form1.resources
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\ConvertirTemperatura\obj\Debug\ConvertirTemperatura.Properties.Resources.resources
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\ConvertirTemperatura\obj\Debug\ConvertirTemperatura.csproj.GenerateResource.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\ConvertirTemperatura\obj\Debug\ConvertirTemperatura.csproj.CoreCompileInputs.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\ConvertirTemperatura\obj\Debug\ConvertirTemperatura.exe
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\ConvertirTemperatura\obj\Debug\ConvertirTemperatura.pdb
