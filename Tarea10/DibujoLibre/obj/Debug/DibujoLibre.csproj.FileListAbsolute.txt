@@ -1,0 +1,14 @@
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\bin\Debug\DibujoLibre.exe.config
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\bin\Debug\DibujoLibre.exe
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\bin\Debug\DibujoLibre.pdb
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\obj\Debug\DibujoLibre.csproj.AssemblyReference.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\obj\Debug\MainWindow.baml
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\obj\Debug\MainWindow.g.cs
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\obj\Debug\App.g.cs
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\obj\Debug\DibujoLibre_MarkupCompile.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\obj\Debug\DibujoLibre.g.resources
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\obj\Debug\DibujoLibre.Properties.Resources.resources
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\obj\Debug\DibujoLibre.csproj.GenerateResource.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\obj\Debug\DibujoLibre.csproj.CoreCompileInputs.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\obj\Debug\DibujoLibre.exe
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\DibujoLibre\obj\Debug\DibujoLibre.pdb
