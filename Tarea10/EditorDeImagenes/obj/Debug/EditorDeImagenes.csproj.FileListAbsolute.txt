@@ -1,0 +1,10 @@
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\EditorDeImagenes\obj\Debug\EditorDeImagenes.csproj.AssemblyReference.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\EditorDeImagenes\obj\Debug\EditorDeImagenes.Form1.resources
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\EditorDeImagenes\obj\Debug\EditorDeImagenes.Properties.Resources.resources
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\EditorDeImagenes\obj\Debug\EditorDeImagenes.csproj.GenerateResource.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\EditorDeImagenes\obj\Debug\EditorDeImagenes.csproj.CoreCompileInputs.cache
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\EditorDeImagenes\bin\Debug\EditorDeImagenes.exe.config
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\EditorDeImagenes\bin\Debug\EditorDeImagenes.exe
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\EditorDeImagenes\bin\Debug\EditorDeImagenes.pdb
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\EditorDeImagenes\obj\Debug\EditorDeImagenes.exe
+C:\Users\marin\OneDrive\Escritorio\PGE_2024\Tarea10\EditorDeImagenes\obj\Debug\EditorDeImagenes.pdb
