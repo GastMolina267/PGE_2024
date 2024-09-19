@@ -1,97 +1,110 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using OxyPlot;
-using OxyPlot.Series;
-using OxyPlot.Wpf;
+using LiveCharts;
+using LiveCharts.Wpf;
 
 namespace VentasMensuales
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        private PlotModel plotModel;
+        private SeriesCollection _coleccionSeries;
+        public SeriesCollection ColeccionSeries
+        {
+            get { return _coleccionSeries; }
+            set
+            {
+                _coleccionSeries = value;
+                OnPropertyChanged(nameof(ColeccionSeries));
+            }
+        }
+
+        public string[] Etiquetas { get; set; }
+        public Func<double, string> Formateador { get; set; }
+
+        public ObservableCollection<VentaMensual> VentasMensuales { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
-            plotModel = new PlotModel { Title = "Ventas Mensuales" };
-            plotView.Model = plotModel;
 
-            // Generar gráfico inicial para "Producto A"
-            GenerarGrafico("Producto A");
-        }
-
-        // Método para generar el gráfico basado en el producto seleccionado
-        private void GenerarGrafico(string producto)
-        {
-            plotModel.Series.Clear();
-
-            // Datos de ventas ficticios por mes
-            var ventasMensuales = ObtenerDatosVentas(producto);
-
-            // Crear una serie de columnas (gráfico de barras)
-            var barSeries = new ColumnSeries
+            VentasMensuales = new ObservableCollection<VentaMensual>
             {
-                Title = producto,
-                FillColor = OxyColors.Blue
+                new VentaMensual("Ene", 0),
+                new VentaMensual("Feb", 0),
+                new VentaMensual("Mar", 0),
+                new VentaMensual("Abr", 0),
+                new VentaMensual("May", 0),
+                new VentaMensual("Jun", 0),
+                new VentaMensual("Jul", 0),
+                new VentaMensual("Ago", 0),
+                new VentaMensual("Sep", 0),
+                new VentaMensual("Oct", 0),
+                new VentaMensual("Nov", 0),
+                new VentaMensual("Dic", 0)
             };
 
-            // Agregar datos de ventas a la serie
-            foreach (var venta in ventasMensuales)
-            {
-                barSeries.Items.Add(new ColumnItem(venta));
-            }
+            ActualizarGrafico();
 
-            // Agregar la serie al modelo de gráfico
-            plotModel.Series.Add(barSeries);
+            Etiquetas = VentasMensuales.Select(v => v.Mes).ToArray();
+            Formateador = valor => valor.ToString("C");
 
-            // Actualizar el gráfico
-            plotView.InvalidatePlot(true);
+            DataContext = this;
         }
 
-        // Método que retorna ventas mensuales ficticias
-        private List<double> ObtenerDatosVentas(string producto)
+        private void ActualizarGrafico()
         {
-            // Ventas ficticias por mes
-            if (producto == "Producto A")
+            ColeccionSeries = new SeriesCollection
             {
-                return new List<double> { 150, 180, 120, 140, 200, 220, 210, 190, 170, 160, 180, 200 };
-            }
-            else if (producto == "Producto B")
-            {
-                return new List<double> { 130, 160, 110, 130, 190, 210, 220, 180, 160, 140, 170, 190 };
-            }
-
-            return new List<double>();
+                new ColumnSeries
+                {
+                    Title = "Ventas 2023",
+                    Values = new ChartValues<double>(VentasMensuales.Select(v => v.Ventas))
+                }
+            };
         }
 
-        // Evento para actualizar el gráfico cuando se selecciona un producto diferente
-        private void cbProductos_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (cbProductos.SelectedItem is System.Windows.Controls.ComboBoxItem selectedItem)
+            ActualizarGrafico();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+
+    public class VentaMensual : INotifyPropertyChanged
+    {
+        public string Mes { get; set; }
+        private double _ventas;
+        public double Ventas
+        {
+            get { return _ventas; }
+            set
             {
-                GenerarGrafico(selectedItem.Content.ToString());
+                _ventas = value;
+                OnPropertyChanged(nameof(Ventas));
             }
         }
 
-        // Evento para actualizar el gráfico al hacer clic en el botón
-        private void btnActualizar_Click(object sender, RoutedEventArgs e)
+        public VentaMensual(string mes, double ventas)
         {
-            if (cbProductos.SelectedItem is System.Windows.Controls.ComboBoxItem selectedItem)
-            {
-                GenerarGrafico(selectedItem.Content.ToString());
-            }
+            Mes = mes;
+            Ventas = ventas;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
