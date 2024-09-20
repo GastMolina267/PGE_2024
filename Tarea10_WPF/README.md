@@ -1,16 +1,14 @@
 # 🧮 Calculadora WPF
 
-## Descripción del Proyecto
+## 🎯 Descripción del Proyecto
 
 Este proyecto consiste en la implementación de una calculadora sencilla utilizando **Windows Presentation Foundation (WPF)** en C#. La calculadora permite realizar operaciones básicas como suma, resta, multiplicación y división, con una interfaz gráfica moderna y personalizable.
-
-![Captura de Pantalla](./screenshots/calculadora.png)
 
 ## ¿Qué es WPF?
 
 **Windows Presentation Foundation (WPF)** es una tecnología de Microsoft utilizada para desarrollar aplicaciones de escritorio en el entorno .NET. WPF permite crear interfaces de usuario avanzadas y personalizadas, combinando el uso de XAML para el diseño de la interfaz y C# para la lógica de la aplicación.
 
-### Diferencias entre WPF y Windows Forms
+### 📝 Diferencias entre WPF y Windows Forms
 
 | Característica                 | WPF                                   | Windows Forms                      |
 |--------------------------------|---------------------------------------|------------------------------------|
@@ -48,14 +46,14 @@ Este proyecto consiste en la implementación de una calculadora sencilla utiliza
 - Visual Studio 2022 (o superior)
 - .NET Framework 4.8 (o superior)
 
-## Implementación
+## 👨‍💻 Implementación
 
 ### Requisitos Previos
 
 - Visual Studio 2022 (o superior)
 - .NET Framework 4.8 (o superior)
 
-### Estructura del Proyecto
+### 🗂️ Estructura del Proyecto
 
 ```plaintext
 CalculadoraWPF/
@@ -66,7 +64,7 @@ CalculadoraWPF/
 └── README.md                 # Este archivo
 ```
 
-### Código Principal (MainWindow.xaml.cs)
+### 🛠️ Código Principal (MainWindow.xaml.cs)
 
 ```csharp
 using System.Windows;
@@ -107,5 +105,5 @@ namespace CalculadoraWPF
 }
 ```
 
-### Contribuciones
+### ✨ Contribuciones
 ¡Las contribuciones son bienvenidas! Si deseas mejorar la calculadora o agregar nuevas funcionalidades, no dudes en hacer un fork del proyecto y enviar un pull request.
