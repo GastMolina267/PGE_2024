@@ -48,9 +48,23 @@ Este proyecto consiste en la implementación de una calculadora sencilla utiliza
 - Visual Studio 2022 (o superior)
 - .NET Framework 4.8 (o superior)
 
+## Implementación
+
+### Requisitos Previos
+
+- Visual Studio 2022 (o superior)
+- .NET Framework 4.8 (o superior)
+
 ### Estructura del Proyecto
 
-CalculadoraWPF/ ├── CalculadoraWPF.sln # Solución de Visual Studio ├── MainWindow.xaml # Diseño de la interfaz (XAML) ├── MainWindow.xaml.cs # Lógica de la calculadora (C#) ├── Assets/ # Recursos como iconos y capturas └── README.md # Este archivo
+```plaintext
+CalculadoraWPF/
+├── CalculadoraWPF.sln        # Solución de Visual Studio
+├── MainWindow.xaml           # Diseño de la interfaz (XAML)
+├── MainWindow.xaml.cs        # Lógica de la calculadora (C#)
+├── Assets/                   # Recursos como iconos y capturas
+└── README.md                 # Este archivo
+```
 
 ### Código Principal (MainWindow.xaml.cs)
 
@@ -91,6 +105,7 @@ namespace CalculadoraWPF
         }
     }
 }
+```
 
-Contribuciones
+### Contribuciones
 ¡Las contribuciones son bienvenidas! Si deseas mejorar la calculadora o agregar nuevas funcionalidades, no dudes en hacer un fork del proyecto y enviar un pull request.
