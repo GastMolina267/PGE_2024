@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{AAD96499-B994-49EC-9DF9-3D1AB9E05288}|VentasMensuales.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAD96499-B994-49EC-9DF9-3D1AB9E05288}|VentasMensuales.csproj|c:\\users\\marin\\onedrive\\escritorio\\pge_2024\\tarea10\\ventasmensuales\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{AAD96499-B994-49EC-9DF9-3D1AB9E05288}|VentasMensuales.csproj|C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea10\\VentasMensuales\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AAD96499-B994-49EC-9DF9-3D1AB9E05288}|VentasMensuales.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -41,8 +41,7 @@
               "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea10\\VentasMensuales\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-19T18:48:20.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T18:48:20.607Z"
             },
             {
               "$type": "Document",
@@ -52,7 +51,7 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\marin\\OneDrive\\Escritorio\\PGE_2024\\Tarea10\\VentasMensuales\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAA0wBAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-19T18:48:19.086Z",
               "EditorCaption": ""
