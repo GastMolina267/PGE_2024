@@ -105,5 +105,5 @@ namespace CalculadoraWPF
 }
 ```
 
-### ✨ Contribuciones
+✨ **Contribuciones** ✨
 ¡Las contribuciones son bienvenidas! Si deseas mejorar la calculadora o agregar nuevas funcionalidades, no dudes en hacer un fork del proyecto y enviar un pull request.
