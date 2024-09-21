@@ -75,4 +75,5 @@ private void DibujoCanvas_MouseUp(object sender, MouseButtonEventArgs e)
 **.NET Core 3.1 o superior.**
 **Visual Studio 2019 o superior.**
 
+---
 **¡Diviértete creando tus dibujos en esta aplicación de Dibujo Libre! 🎨** 
