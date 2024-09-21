@@ -73,6 +73,7 @@ private void DibujoCanvas_MouseUp(object sender, MouseButtonEventArgs e)
 
 ## 📦 Requisitos
 **.NET Core 3.1 o superior.**
+
 **Visual Studio 2019 o superior.**
 
 ---
