@@ -101,8 +101,8 @@ private double ObtenerTasaCambio(string moneda)
 4. Ingresa una temperatura en Celsius, haz clic en "Convertir" y observa el resultado en Fahrenheit.
 
 ## 📦 Requisitos
-**.NET Framework 4.7.2 o superior.**
-**Visual Studio 2019 o superior.**
+1. **.NET Framework 4.7.2 o superior.**
+2. **Visual Studio 2019 o superior.**
 
 ---
 **¡Gestiona tus finanzas fácilmente con esta aplicación de Registro de Gastos! 💸**
