@@ -72,8 +72,7 @@ private void DibujoCanvas_MouseUp(object sender, MouseButtonEventArgs e)
 4. Usa el mouse para dibujar en el lienzo.
 
 ## 📦 Requisitos
-**.NET Core 3.1 o superior.**
-
+**.NET Framework 4.7.2 o superior.**
 **Visual Studio 2019 o superior.**
 
 ---
