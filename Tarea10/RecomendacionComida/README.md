@@ -90,4 +90,5 @@ private void btnCalificar_Click(object sender, RoutedEventArgs e)
 2. Visual Studio 2019 o superior.
 3. Imágenes de productos y estrellas colocadas en la carpeta Img del proyecto.
 
+---
 **¡Explora y califica tus comidas favoritas con esta aplicación de Recomendación de Comida en WPF! 🍕🍟🥤**

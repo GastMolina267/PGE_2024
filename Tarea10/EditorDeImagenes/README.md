@@ -83,4 +83,5 @@ private void btnRedimensionar_Click(object sender, EventArgs e)
 1. .NET Framework 4.7.2 o superior.
 2. Visual Studio 2019 o superior.
 
+---
 **¡Empieza a editar y transformar tus imágenes con esta poderosa herramienta! 🖌️**

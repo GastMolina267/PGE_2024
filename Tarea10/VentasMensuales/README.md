@@ -77,4 +77,5 @@ private List<double> ObtenerDatosVentas(string producto)
 2. Visual Studio 2019 o superior.
 3. Librería OxyPlot.Wpf instalada (se puede agregar usando NuGet).
 
+---
 **¡Visualiza y analiza fácilmente las ventas mensuales con esta aplicación en WPF! 📈**
