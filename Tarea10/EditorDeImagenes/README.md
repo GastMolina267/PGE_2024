@@ -1,4 +1,5 @@
 # 🖼️ Editor de Imágenes en WinForms
+---
 
 ## 📋 Descripción del Proyecto
 El proyecto "Editor de Imágenes" es una aplicación de Windows Forms diseñada para aplicar diversas transformaciones y efectos a imágenes. Permite a los usuarios cargar imágenes, aplicar filtros, redimensionar y rotar las imágenes, entre otras funcionalidades. Es una herramienta sencilla pero potente para realizar ediciones básicas de imágenes.
