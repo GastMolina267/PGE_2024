@@ -1,4 +1,5 @@
 # 📊 Visualización de Ventas Mensuales en WPF
+---
 
 ## 📋 Descripción del Proyecto
 Este proyecto es una aplicación de Windows Presentation Foundation (WPF) que permite visualizar los datos de ventas mensuales en un gráfico de barras. La aplicación proporciona una representación gráfica de las ventas de diferentes productos a lo largo del año, facilitando el análisis visual de los datos.
