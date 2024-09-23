@@ -1,4 +1,5 @@
 # 🍔 Proyecto de Recomendación de Comida en WPF
+---
 
 ## 📋 Descripción del Proyecto
 Esta aplicación de Windows Presentation Foundation (WPF) permite a los usuarios explorar y calificar diferentes productos de comida rápida. La aplicación ofrece un sistema de recomendación intuitivo, donde los usuarios pueden ver categorías de productos, seleccionar alimentos, ver detalles e imágenes, y calificar los productos utilizando un sistema de estrellas.
