@@ -1,4 +1,5 @@
 # 🎨 Dibujo Libre en WPF
+---
 
 ## 📋 Descripción del Proyecto
 Este proyecto es una aplicación de Windows Presentation Foundation (WPF) que permite a los usuarios realizar dibujos libres sobre un lienzo. La aplicación simula un lienzo digital donde el usuario puede dibujar con el mouse, permitiendo crear ilustraciones de forma sencilla.
