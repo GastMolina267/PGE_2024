@@ -1,4 +1,5 @@
 # 🧮 Simulación de Control de Errores en una Calculadora Científica
+---
 
 ¡Bienvenido/a al repositorio de la Tarea 07 de la materia Programación Genérica y Eventos (PGE)! 🚀
 
@@ -67,4 +68,4 @@ Esta actividad se enfoca en el diseño y desarrollo de una calculadora científi
 Las contribuciones son bienvenidas. Si deseas mejorar este proyecto o añadir nuevas funcionalidades, por favor abre un issue o envía un pull request.
 
 ---
-¡Gracias por visitar este proyecto! Si te ha sido útil o interesante, considera dejar una ⭐ en el repositorio.
+**¡Gracias por visitar este proyecto! Si te ha sido útil o interesante, considera dejar una ⭐ en el repositorio.**
