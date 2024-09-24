@@ -1,4 +1,5 @@
 # Simulación de un Despachador de Eventos
+---
 
 ¡Bienvenido/a al repositorio de la Tarea 05 de la materia Programación Genérica y Eventos (PGE)! 🚀
 
@@ -50,4 +51,4 @@ Esta actividad proporciona dos ejemplos de código que sirven como base para cum
 Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, por favor abre un issue o envía un pull request.
 
 ---
-¡Gracias por visitar este proyecto! Si te ha sido útil o interesante, considera dejar una ⭐ en el repositorio.
+**¡Gracias por visitar este proyecto! Si te ha sido útil o interesante, considera dejar una ⭐ en el repositorio.**
