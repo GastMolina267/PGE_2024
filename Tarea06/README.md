@@ -1,4 +1,5 @@
 # 📊 Calculadora Simple - C# 
+---
 
 > **Nota:** Esta es la primera implementación y uso del lenguaje C#
 
@@ -50,4 +51,4 @@ Este proyecto consiste en el desarrollo de una calculadora simple en C#, que per
 Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, por favor abre un issue o envía un pull request.
 
 ---
-¡Gracias por visitar este proyecto! Si te ha sido útil o interesante, considera dejar una ⭐ en el repositorio.
+**¡Gracias por visitar este proyecto! Si te ha sido útil o interesante, considera dejar una ⭐ en el repositorio.**
