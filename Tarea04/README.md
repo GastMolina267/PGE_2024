@@ -1,4 +1,5 @@
 # 🎮 Simulación de Aventura Pokémon
+---
 
 > **Nota:** Estos ejercicios te guiarán desde conceptos básicos hasta la implementación avanzada de herencia, polimorfismo y más, para reforzar tus conocimientos en POO. Junto a la implementación de CallBacks y Bucles Espaciadores de eventos.
 
@@ -65,4 +66,4 @@ El proyecto implementa funciones callback en diversos puntos para una mayor flex
 Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, realiza un fork del repositorio y envía un pull request con tus mejoras. ¡Aportaciones de código, reportes de bugs y sugerencias son siempre bienvenidos!
 
 ---
-¡Gracias por explorar el mundo Pokémon con nosotros! ¡Esperamos que disfrutes de esta aventura y de la experiencia de desarrollo en C++ con funciones callback!
+**¡Gracias por explorar el mundo Pokémon con nosotros! ¡Esperamos que disfrutes de esta aventura y de la experiencia de desarrollo en C++ con funciones callback!**
