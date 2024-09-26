@@ -1,4 +1,5 @@
 # 🎮 **Prototipo de Undertale - Primer Parcial de PGE**
+---
 
 ¡Bienvenido/a al repositorio del **Primer Parcial** de la materia **Programación Genérica y Eventos (PGE)**! 🌟
 
