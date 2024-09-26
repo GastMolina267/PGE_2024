@@ -1,4 +1,5 @@
 # 🚀 Ejercicios de Programación Orientada a Objetos en C++ 
+---
 
 > **Nota:** Estos ejercicios te guiarán desde conceptos básicos hasta la implementación avanzada de herencia, polimorfismo y más, para reforzar tus conocimientos en POO.
 
@@ -86,4 +87,4 @@ Este repositorio contiene una serie de ejercicios diseñados para fortalecer tu 
 Este es un trabajo grupal, así que se fomenta el ooder compartir ideas y discutir enfoques en las sesiones de estudio. 
 
 ---
-¡Buena suerte y disfruta aprendiendo C++ con POO! 🎉
+**¡Buena suerte y disfruta aprendiendo C++ con POO! 🎉**
