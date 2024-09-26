@@ -1,6 +1,7 @@
 # Clase 2: Programación Orientada a Objetos en C++ 💻
+---
 
-¡Bienvenido a la segunda actividad de nuestra clase de Programación Orientada a Objetos (POO) utilizando C++! En esta tarea, tendrás la oportunidad de aplicar tus conocimientos de POO para resolver múltiples situaciones problemáticas y luego integrarlas en un proyecto unificado.
+**¡Bienvenido a la segunda actividad de nuestra clase de Programación Orientada a Objetos (POO) utilizando C++! En esta tarea, tendrás la oportunidad de aplicar tus conocimientos de POO para resolver múltiples situaciones problemáticas y luego integrarlas en un proyecto unificado.**
 
 ## Presentación de la Actividad 📋
 
@@ -76,4 +77,5 @@ Esta actividad se divide en tres partes principales:
 - [Principios SOLID en POO](https://es.wikipedia.org/wiki/SOLID)
 - [Patrones de Diseño en C++](https://refactoring.guru/design-patterns/cpp)
 
-¡Buena suerte! Esta es tu oportunidad para demostrar tu dominio de la Programación Orientada a Objetos en C++. Recuerda, la clave está en la planificación, la implementación cuidadosa y la integración creativa de los conceptos. ¡A programar!
+---
+**¡Buena suerte! Esta es tu oportunidad para demostrar tu dominio de la Programación Orientada a Objetos en C++. Recuerda, la clave está en la planificación, la implementación cuidadosa y la integración creativa de los conceptos. ¡A programar!**
