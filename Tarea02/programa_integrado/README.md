@@ -1,4 +1,5 @@
 # 🛠️ Programa_Integrado
+---
 
 ## 📜 Descripción Básica
 
@@ -51,4 +52,4 @@
 Este proyecto es una parte fundamental del aprendizaje colaborativo, por lo que se anima a los estudiantes a compartir ideas y discutir diferentes enfoques en las sesiones grupales.
 
 ---
-¡Buena suerte y sigue desarrollando tus habilidades en C++ con este Programa_Integrado! 🎉
+**¡Buena suerte y sigue desarrollando tus habilidades en C++ con este Programa_Integrado! 🎉**
