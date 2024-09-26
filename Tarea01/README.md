@@ -1,4 +1,5 @@
 # Recuperando Saberes: Programación Orientada a Objetos en C++ 💻
+---
 
 ¡Bienvenido a la primera actividad de **Recuperando Saberes** en Programación Orientada a Objetos (POO) utilizando C++! En esta tarea, tendrás la oportunidad de aplicar tus conocimientos de POO para resolver una de varias situaciones problemáticas. Este ejercicio te permitirá demostrar tu destreza en la programación orientada a objetos, mientras te sumerges en escenarios desafiantes y creativos.
 
@@ -73,4 +74,4 @@ Este es un trabajo grupal, así que se fomenta el ooder compartir ideas y discut
 
 ---
 
-¡Buena suerte! Y recuerda, este es tu momento para demostrar lo que has aprendido y crear algo increíble utilizando la programación orientada a objetos en C++.
+**¡Buena suerte! Y recuerda, este es tu momento para demostrar lo que has aprendido y crear algo increíble utilizando la programación orientada a objetos en C++.**
