@@ -1,4 +1,6 @@
 # Programación Genérica y Eventos 🚀
+---
+
 > [!IMPORTANT]
 > Este es un repositorio dedicado a las clases dadas en Programación Genérica y Eventos
 
