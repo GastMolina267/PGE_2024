@@ -10,7 +10,7 @@ namespace RecomendacionComida
     {
         private Dictionary<string, List<Producto>> productosPorCategoria;
         private int calificacionTemporal = 0; // Calificación temporal antes de confirmar
-        private string starFilled = "/Img/star_filled.png";
+        private string starFilled = "/Img/star_empty.png";
         private string starEmpty = "/Img/star_empty.png";
         private string starBlack = "/Img/star_black.png";
 
