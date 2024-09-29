@@ -1,4 +1,5 @@
 # 📝 Tarea 08: Parte 2 - Manejo de Excepciones Básico en C#
+---
 
 ## 🎯 Objetivo General
 Aprender y aplicar el manejo de excepciones en C# utilizando bloques `try-catch` para capturar y gestionar errores comunes durante la ejecución de una aplicación.
@@ -38,5 +39,4 @@ Aprender y aplicar el manejo de excepciones en C# utilizando bloques `try-catch`
   - Un informe detallado sobre el manejo de excepciones en C#, con ejemplos de código y análisis de cuándo utilizar excepciones específicas.
 
 ---
-
 ✨ **¡Buena suerte aplicando el manejo de excepciones!** ✨
