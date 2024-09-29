@@ -1,4 +1,5 @@
 # 📝 Tarea 08: Parte 1 - Gestión de Recursos y Uso de Dispose() en C#
+---
 
 ## 🎯 Objetivo General
 Desarrollar una comprensión profunda sobre la gestión de recursos en C# mediante el uso de `Dispose()` y el patrón `using`, asegurando la liberación adecuada de recursos no administrados.
@@ -37,5 +38,4 @@ Desarrollar una comprensión profunda sobre la gestión de recursos en C# median
   - Un informe que detalla la gestión de recursos y el uso de `Dispose()` en C#, con ejemplos y explicaciones.
 
 ---
-
 ✨ **¡Buena suerte con la implementación y la investigación!** ✨
