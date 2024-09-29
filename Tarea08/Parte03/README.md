@@ -1,4 +1,5 @@
 # 📝 Tarea 08: Parte 3 - Excepciones de la Librería Estándar en C#
+---
 
 ## 🎯 Objetivo General
 Aplicar y profundizar en el uso de excepciones específicas de la librería estándar de .NET para manejar errores y validar entradas de manera eficiente en aplicaciones C#.
@@ -38,5 +39,4 @@ Aplicar y profundizar en el uso de excepciones específicas de la librería est�
   - Un informe sobre las excepciones específicas de la librería estándar de .NET, con descripciones, usos, y ejemplos aplicados en la aplicación.
 
 ---
-
 ✨ **¡Sigue explorando y mejorando el manejo de excepciones en tus aplicaciones C#!** ✨
