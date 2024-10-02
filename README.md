@@ -74,6 +74,6 @@ Las contribuciones son bienvenidas. Si deseas mejorar el material o agregar nuev
 - **Documentación de C++**: [cppreference.com](https://en.cppreference.com/w/)
 - **Qt Framework**: [qt.io](https://www.qt.io/)
 - **Tutoriales de C++**: [LearnCpp.com](https://www.learncpp.com/)
----
 
-¡Gracias por visitar el repositorio de **Programación Genérica y Eventos**! Espero que encuentres el contenido útil y que te ayude en tu aprendizaje de C++.
+---
+**¡Gracias por visitar el repositorio de **Programación Genérica y Eventos**! Espero que encuentres el contenido útil y que te ayude en tu aprendizaje de C++.**
