@@ -87,7 +87,7 @@ while True:
             letter = classify_letter(features)
             gesture = classify_gesture(hand_landmarks.landmark)
 
-            if gesture == "Comiste":
+            if gesture == "Comiste":    
                 cv2.putText(image, gesture, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
             elif gesture == "Mover ventana":
                 cv2.putText(image, "Moviendo ventana...", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
