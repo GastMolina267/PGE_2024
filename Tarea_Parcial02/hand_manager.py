@@ -69,6 +69,8 @@ def classify_letter(features):
     return 'Unknown'
 
 closing = False
+moving_window = False
+prev_hand_center = None
 
 while True:
     success, image = cap.read()
@@ -87,17 +89,43 @@ while True:
             letter = classify_letter(features)
             gesture = classify_gesture(hand_landmarks.landmark)
 
+            # Calcular el centro de la mano
+            hand_center = np.mean([(lm.x, lm.y) for lm in hand_landmarks.landmark], axis=0)
+
             if gesture == "Comiste":    
                 cv2.putText(image, gesture, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+                moving_window = False
             elif gesture == "Mover ventana":
-                cv2.putText(image, "Moviendo ventana...", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
-                x, y = pyautogui.position()
-                win32gui.SetWindowPos(hwnd, win32con.HWND_TOP, x, y, 0, 0, win32con.SWP_NOSIZE)
+                cv2.putText(image, "Moviendo ventana... ", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
+                moving_window = True
+                if prev_hand_center is not None:
+                    # Calcular el desplazamiento de la mano
+                    dx = hand_center[0] - prev_hand_center[0]
+                    dy = hand_center[1] - prev_hand_center[1]
+                    
+                    # Obtener la posición actual de la ventana
+                    rect = win32gui.GetWindowRect(hwnd)
+                    x, y = rect[0], rect[1]
+                    
+                    # Calcular la nueva posición de la ventana
+                    new_x = int(x + dx * image.shape[1] * 2)  # Multiplicar por 2 para aumentar la sensibilidad
+                    new_y = int(y + dy * image.shape[0] * 2)
+                    
+                    # Mover la ventana
+                    win32gui.SetWindowPos(hwnd, win32con.HWND_TOP, new_x, new_y, 0, 0, win32con.SWP_NOSIZE)
             elif gesture == "Cerrar aplicación":
                 cv2.putText(image, "Cerrando aplicación...", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
                 closing = True
+                moving_window = False
             else:
                 cv2.putText(image, f"Letra: {letter}", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+                moving_window = False
+
+            # Actualizar la posición previa de la mano
+            prev_hand_center = hand_center
+    else:
+        moving_window = False
+        prev_hand_center = None
 
     cv2.imshow(window_name, image)
 
