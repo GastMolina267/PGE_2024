@@ -111,7 +111,7 @@ def update_snake_direction():
         avg_y = sum([pos[1] for pos in finger_positions]) / len(finger_positions)
 
         # Definir zonas de control claras usando el promedio
-        if avg_x < 0.3 and snake_direction != 'RIGHT':
+        if avg_x < 0.3 and snake_direction != 'RIGHT':  
             snake_direction = 'LEFT'
         elif avg_x > 0.7 and snake_direction != 'LEFT':
             snake_direction = 'RIGHT'
