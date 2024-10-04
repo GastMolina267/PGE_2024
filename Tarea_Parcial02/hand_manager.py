@@ -217,7 +217,7 @@ prev_hand_center = None
 
 while True:
     success, image = cap.read()
-    if not success:
+    if not success: 
         print("No se pudo leer el frame de la cámara.")
         break
 
