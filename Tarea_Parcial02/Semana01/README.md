@@ -1,4 +1,5 @@
 # 🐍 Gesture-Controlled Snake Game & Sign Language Detection 🎮
+---
 
 ## 📋 Descripción General
 
