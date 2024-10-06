@@ -1,4 +1,5 @@
 # 🧠 Proyecto Parcial 02 - **Language Signal Bridging** 👐
+---
 
 ## 📝 Descripción General
 
