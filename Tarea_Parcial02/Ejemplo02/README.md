@@ -1,4 +1,5 @@
 # ✋🗿📰✂️ Piedra, Papel, Tijeras - Reconocimiento de Señas
+---
 
 ## 📋 Descripción General
 
