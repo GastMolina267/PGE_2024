@@ -42,3 +42,23 @@ python piedra_papel_tijeras_señas.py
     - Piedra: Mano cerrada.
     - Papel: Mano abierta.
     -Tijeras: Mano en forma de tijeras (índice y medio levantados).
+
+## 🖱️ Controles del Juego
+- Presionar "S": Inicia el juego y pone en marcha el reconocimiento de gestos.
+- Levantamiento de la mano: Indica al sistema que el jugador está listo para hacer una jugada.
+- Tres movimientos: Realiza tres movimientos consecutivos con la mano para seleccionar tu jugada (piedra, papel o tijeras).
+- IA hace su jugada: La IA selecciona aleatoriamente una jugada.
+
+## 🧠 Lógica del Juego
+-> **Flujo del Juego:**
+- El jugador presiona la tecla S para iniciar la partida.
+- La cámara comienza a detectar la presencia de una mano levantada para confirmar que hay un jugador listo para jugar contra la IA.
+- Tres movimientos de mano: El jugador debe mover su mano tres veces frente a la cámara para indicar su elección:
+- **Piedra:** Mano cerrada.
+- **Papel:** Mano abierta.
+- **Tijeras:** Mano en forma de tijeras.
+- La **IA** hace una jugada aleatoria entre piedra, papel, o tijeras.
+- El sistema compara las dos jugadas (la del jugador y la de la IA) y determina el ganador.
+- El resultado se muestra en pantalla (gana el jugador, la IA o empate).
+-> **IA:**
+- La **IA** selecciona aleatoriamente entre las tres opciones y compite con el jugador, creando una experiencia similar a la clásica piedra, papel o tijeras, pero controlada por gestos.
