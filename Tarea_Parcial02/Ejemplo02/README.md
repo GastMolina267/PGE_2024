@@ -62,3 +62,14 @@ python piedra_papel_tijeras_señas.py
 - El resultado se muestra en pantalla (gana el jugador, la IA o empate).
 -> **IA:**
 - La **IA** selecciona aleatoriamente entre las tres opciones y compite con el jugador, creando una experiencia similar a la clásica piedra, papel o tijeras, pero controlada por gestos.
+
+## 🎨 Reconocimiento de Señas
+- El sistema detecta tres gestos principales de la mano:
+- **Piedra:** Mano completamente cerrada.
+- **Papel:** Mano completamente abierta.
+- **Tijeras:** Mano en forma de tijeras, con el dedo índice y el dedo medio levantados.
+->¿Cómo selecciona el jugador su jugada?
+- El jugador debe realizar tres movimientos frente a la cámara para que el sistema entienda cuál es su jugada final. Al finalizar, el sistema toma la última seña capturada como la jugada final.
+
+---
+**¡Gracias por jugar a Piedra, Papel, Tijeras con reconocimiento de señas!**
