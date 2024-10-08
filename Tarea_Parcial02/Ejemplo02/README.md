@@ -1,21 +1,44 @@
-# Piedra-Papel-o-Tijera-con-IA
-Hola chicos en este repositorio encontraran el codigo fuente para crear un algoritmo capaz de jugar piedra papel o tijera con ustedes utilizando vision artificial e inteligencia artificial.
+# ✋🗿📰✂️ Piedra, Papel, Tijeras - Reconocimiento de Señas
 
-### Explicacion:
-- En el archivo Juego.py encontraras el codigo general que debes implementar en Python con el fin de que puedas ejecutar tu propio juego de piedra papel o tijera en tiempo real, en este [Video](https://youtu.be/STXo_3V4gRE) te explico toda la programacion.
+## 📋 Descripción General
 
-- Recuerda que debes tener en tu carpeta el archivo SeguimientoManos.py, te explico el funcionamiento completo en este [Video](https://youtu.be/YLrjXRTDq6I), o lo repasamos de forma general en este [Video](https://youtu.be/STXo_3V4gRE)
+Este proyecto implementa el clásico juego de **Piedra, Papel, Tijeras**, pero con una vuelta moderna: el jugador utiliza **señas** para seleccionar su jugada. El sistema utiliza **reconocimiento de gestos de la mano** mediante la cámara, permitiendo al jugador interactuar con la IA (Inteligencia Artificial) de manera natural, levantando la mano para empezar a jugar y luego realizando tres movimientos para elegir la seña deseada (piedra, papel o tijeras).
 
-- En este video encontraras toda la programacion desde cero para que aprendas como funciona el programa [Video](https://youtu.be/STXo_3V4gRE).
+El juego detecta la mano del jugador y compara su jugada contra una **selección aleatoria** hecha por la IA. Este proyecto usa **OpenCV** y **MediaPipe** para capturar y procesar los gestos, haciendo que el juego sea intuitivo y divertido.
 
-- Todos los requerimientos aprenderas a instalarlos en este [Video](https://youtu.be/STXo_3V4gRE), tambien puedes instalarlos con el archivo requirements.txt. Recuerda que fue ejecutado con Python 3.7
+## 🚀 Funcionalidades
 
-![Mini](https://user-images.githubusercontent.com/85022752/197960733-12fb7ac7-9005-45c1-a88f-b2afb3e4670f.jpg)
+- **Detección de la mano en tiempo real**: El programa detecta cuando una mano está levantada para indicar que hay una persona lista para jugar.
+- **Selección de seña mediante gestos**: El jugador mueve la mano tres veces para indicar su jugada entre las opciones de **Piedra**, **Papel** o **Tijeras**.
+- **IA integrada**: La IA selecciona aleatoriamente entre las tres jugadas y compite con el jugador.
+- **Tecla "S" para iniciar**: El jugador debe presionar la tecla **S** para comenzar el juego.
 
-# Recuerda que puedes contribuir a que siga desarrollando:
-Simplemente suscribiendote a mi canal de YouTube:
-- [Canal YouTube](https://www.youtube.com/channel/UCzwHEOCbsZLjfELperJ6VeQ/videos)
+## 🛠️ Requisitos
 
-### Siguiendome en mis redes sociales: 
-- [Instagram](https://www.instagram.com/santiagsanchezr/)
-- [Twitter](https://twitter.com/SantiagSanchezR)
+Para ejecutar este proyecto, necesitarás las siguientes dependencias:
+
+- **Python 3.x**
+- **OpenCV** para la captura de video y procesamiento de imágenes.
+- **MediaPipe** para el reconocimiento de gestos de la mano.
+- **Numpy** (opcional) para cálculos adicionales.
+
+### Instalación de dependencias:
+
+```bash
+pip install opencv-python mediapipe numpy
+```
+
+## 🔧 Cómo Ejecutar el Proyecto
+1. Clonar el repositorio o copiar el código fuente en tu entorno local.
+2. Instalar las dependencias listadas arriba si no lo has hecho.
+3. Ejecutar el script para iniciar el juego:
+```bash
+python piedra_papel_tijeras_señas.py
+```
+4. Iniciar el juego:
+- Presiona la tecla S para comenzar.
+- Levanta tu mano frente a la cámara para indicarle a la IA que hay un jugador.
+- Realiza tres movimientos con tu mano para seleccionar tu jugada:
+    - Piedra: Mano cerrada.
+    - Papel: Mano abierta.
+    -Tijeras: Mano en forma de tijeras (índice y medio levantados).
