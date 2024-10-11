@@ -56,10 +56,10 @@ python hand_manager.py
 -Si realizas el gesto de pulgar arriba, el programa cerrará.
 
 ### 🖱️ Controles del Juego y Gestos
-1. Dedo índice levantado: Inicia el juego de Snake.
-2. Mover el dedo índice: Controla la dirección del Snake (izquierda, derecha, arriba, abajo).
-3. Mano abierta: Mueve la ventana de la aplicación (solo si el juego Snake no está activo).
-4. Pulgar hacia arriba: Cierra la aplicación.
+1. **Dedo índice levantado:** Inicia el juego de Snake.
+2. **Mover el dedo índice:** Controla la dirección del Snake (izquierda, derecha, arriba, abajo).
+3. **Mano abierta:** Mueve la ventana de la aplicación (solo si el juego Snake no está activo).
+4. **Pulgar hacia arriba:** Cierra la aplicación.
 
 ### 🧠 Lógica de Control del Snake
 El control del Snake utiliza la posición del dedo índice capturada por MediaPipe. Las coordenadas del dedo índice se actualizan continuamente y el sistema mantiene un promedio móvil de las últimas 5 posiciones para hacer el movimiento más fluido y estable. La dirección de la serpiente se determina de la siguiente manera:
