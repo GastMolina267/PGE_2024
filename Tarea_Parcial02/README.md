@@ -38,7 +38,7 @@ Este proyecto corresponde al tema de **Construcción de sistemas basados en dive
 
 ## 🚀 Requisitos Funcionales
 
-- Un sistema que capture la imagen de la cámara en tiempo real y detecte **gestos de manos**.
+- Un sistema que capture la imagen de la **cámara en tiempo real** y detecte **gestos de manos**.
 - Traducción en tiempo real del **lenguaje de señas** a **texto** o **voz**.
 - Manejo de eventos para procesar los gestos y realizar la traducción de manera eficiente.
 - Implementación de una **interfaz amigable e intuitiva** para el usuario.
