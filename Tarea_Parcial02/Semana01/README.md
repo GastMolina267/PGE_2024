@@ -83,10 +83,10 @@ El control del Snake utiliza la posición del dedo índice capturada por MediaPi
 - Pygame se utiliza para crear la interfaz del juego Snake, que incluye el control de la serpiente y el manejo de la comida.
 
 ### 🐍 Detalles del Juego Snake
-- Control de la serpiente: Se basa en el movimiento de tu dedo índice capturado por la cámara.
-- Comida: Aparece aleatoriamente, y la serpiente crece al comerla.
-- Pantalla envolvente: La serpiente reaparece en el lado opuesto si atraviesa los bordes de la pantalla.
-- Colisión con la serpiente: Si la serpiente se choca con su propio cuerpo, el juego termina.
+- **Control de la serpiente:** Se basa en el movimiento de tu dedo índice capturado por la cámara.
+- **Comida:** Aparece aleatoriamente, y la serpiente crece al comerla.
+- **Pantalla envolvente:** La serpiente reaparece en el lado opuesto si atraviesa los bordes de la pantalla.
+- **olisión con la serpiente:** Si la serpiente se choca con su propio cuerpo, el juego termina.
 
 ### 📝 Futuras Mejoras
 - **Añadir más gestos:** Ampliar el reconocimiento de gestos para controlar otras funcionalidades.
