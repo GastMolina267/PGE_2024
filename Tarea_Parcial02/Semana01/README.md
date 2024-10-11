@@ -89,10 +89,10 @@ El control del Snake utiliza la posición del dedo índice capturada por MediaPi
 - Colisión con la serpiente: Si la serpiente se choca con su propio cuerpo, el juego termina.
 
 ### 📝 Futuras Mejoras
-- Añadir más gestos: Ampliar el reconocimiento de gestos para controlar otras funcionalidades.
-- Modo multijugador: Integrar varios jugadores controlados por diferentes gestos.
-- Interfaz gráfica avanzada: Usar una GUI completa para mejorar la experiencia del usuario.
-- Compatibilidad multiplataforma: Mejorar la compatibilidad en otros sistemas operativos como Linux o macOS.
+- **Añadir más gestos:** Ampliar el reconocimiento de gestos para controlar otras funcionalidades.
+- **Modo multijugador:** Integrar varios jugadores controlados por diferentes gestos.
+- **Interfaz gráfica avanzada:** Usar una GUI completa para mejorar la experiencia del usuario.
+- **Compatibilidad multiplataforma:** Mejorar la compatibilidad en otros sistemas operativos como Linux o macOS.
 
 ---
 **¡Gracias por usar el Snake controlado por gestos y el sistema de detección de lenguaje de señas!**
