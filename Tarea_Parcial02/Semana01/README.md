@@ -70,11 +70,11 @@ El control del Snake utiliza la posición del dedo índice capturada por MediaPi
 -Si el dedo índice está en la zona inferior (y > 0.7) y no se dirige hacia arriba, la serpiente bajará.
 
 ### 🛠️ Tecnologías Utilizadas
-- Python: Lenguaje de programación principal.
-- OpenCV: Para la captura de imágenes en tiempo real.
-- MediaPipe: Para la detección de manos y gestos.
-- Pygame: Para el desarrollo del juego Snake.
-- PyAutoGUI y Win32: Para la manipulación de ventanas (en sistemas Windows).
+- **Python:** Lenguaje de programación principal.
+- **OpenCV:** Para la captura de imágenes en tiempo real.
+- **MediaPipe:** Para la detección de manos y gestos.
+- **Pygame:** Para el desarrollo del juego Snake.
+- **PyAutoGUI y Win32:** Para la manipulación de ventanas (en sistemas Windows).
 
 ### 🏗️ Estructura del Código
 - MediaPipe se encarga de la detección de manos y la extracción de puntos clave (landmarks).
