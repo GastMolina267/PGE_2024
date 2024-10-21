@@ -15,7 +15,6 @@ La IA aprende a tomar decisiones basadas en el estado actual del juego, incluyen
 - **Aprendizaje por refuerzo**: El agente mejora su estrategia a través de múltiples episodios de juego.
 - **Visualización del aprendizaje**: Gráficos que muestran el progreso del aprendizaje del agente.
 - **Modo de juego autónomo**: Observa cómo la IA juega Snake por sí misma.
-- **Modo de entrenamiento**: Permite entrenar al modelo desde cero o continuar el entrenamiento desde un punto guardado.
 
 ## 🛠️ Requisitos
 
