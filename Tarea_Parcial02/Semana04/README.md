@@ -1,14 +1,10 @@
 # 🖥️ Proyecto de Traducción de Lengua de Señas a Texto - Semana 04
 
----
-
 ## 📅 Descripción de la Semana 04
 
 En esta última semana del proyecto, nos enfocamos en la implementación del **software traductor de lengua de señas a texto** utilizando **PyTorch** y **PyQt5**. El sistema captura las posiciones de las manos y la pose del cuerpo en tiempo real y realiza la predicción de señas, traduciendo gestos a texto de manera eficiente.
 
 Este proyecto combina conceptos fundamentales de **aprendizaje profundo**, con especial enfoque en la arquitectura de **Transformers**, y técnicas de **visión por computadora** para capturar y procesar secuencias de imágenes de una cámara frontal.
-
----
 
 ## 🛠️ Especificaciones Técnicas
 
@@ -25,8 +21,6 @@ El modelo fue desarrollado utilizando **PyTorch** y **PyTorch Lightning** como f
 ### 🖼️ Interfaz de Usuario
 
 La interfaz gráfica fue desarrollada utilizando **PyQt5**, proporcionando una experiencia interactiva que permite seleccionar la cámara y visualizar la predicción en tiempo real.
-
----
 
 ## ⚙️ Funcionamiento del Programa
 
