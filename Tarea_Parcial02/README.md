@@ -1,4 +1,5 @@
 # 🧠 Proyecto Parcial 02 - **Language Signal Bridging** 👐
+
 ---
 
 ## 📝 Descripción General
@@ -14,9 +15,10 @@ El objetivo principal de este proyecto es demostrar la capacidad de **reconocer 
 ## 🖥️ ¿Qué se espera?
 
 ### En este proyecto deberán:
+
 1. **Elegir el tema**: Nos enfocaremos en la construcción de **sistemas basados en diversidad**, utilizando la tecnología para crear **interfaces inclusivas**.
-   
 2. **Desarrollar un prototipo funcional** que:
+
    - Realice el **reconocimiento en tiempo real** de señas mediante el uso de una cámara.
    - **Traduzca los gestos** a texto o voz, permitiendo una interacción fluida y accesible.
    - Use el manejo de **eventos programáticos** para procesar la detección de gestos y realizar la traducción.
@@ -26,6 +28,7 @@ El objetivo principal de este proyecto es demostrar la capacidad de **reconocer 
 4. **Elaborar una propuesta formal** que justifique el diseño del sistema, describiendo el uso de las tecnologías de reconocimiento y cómo aborda la problemática de accesibilidad.
 
 ## 📚 Temas que se abarca
+
 Este proyecto corresponde al tema de **Construcción de sistemas basados en diversidad**, uno de los pilares de la **Interacción Humano Computadora**. A través de la creación de este sistema, estarán desarrollando software inclusivo, contribuyendo a una sociedad más equitativa, donde las interfaces puedan ser utilizadas por personas con diferentes capacidades.
 
 ## 🛠️ Herramientas y Tecnologías sugeridas
@@ -44,11 +47,13 @@ Este proyecto corresponde al tema de **Construcción de sistemas basados en dive
 - Implementación de una **interfaz amigable e intuitiva** para el usuario.
 
 ## 👥 Inclusión y Accesibilidad
+
 Este proyecto busca **incluir a personas con discapacidades auditivas** en la interacción diaria con sistemas digitales. Aborda los principios de **diseño inclusivo**, permitiendo que el sistema sea utilizado por una amplia diversidad de personas, independientemente de sus capacidades auditivas.
 
 ## 🎯 Criterios de Evaluación
 
 El proyecto será evaluado considerando los siguientes aspectos:
+
 - **Funcionalidad**: ¿El sistema reconoce y traduce correctamente las señas?
 - **Uso de programación genérica y eventos**: ¿Han aplicado los principios de la materia?
 - **Innovación**: ¿Qué tan efectivo es el sistema para mejorar la accesibilidad?
@@ -60,9 +65,10 @@ Este parcial es una **gran oportunidad** para demostrar la capacidad de **crear 
 
 ## 📝 Entregables
 
-- Código fuente del proyecto.
-- Documento formal justificando el diseño del sistema y las tecnologías utilizadas.
+- **Código fuente** del proyecto.
+- Documento formal justificando el **diseño del sistema** y las **tecnologías utilizadas**.
 - Un video demostrativo opcional, mostrando cómo el sistema funciona en la práctica.
 
 ---
+
 **Próximas actualizaciones**
